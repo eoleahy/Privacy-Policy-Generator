@@ -1,0 +1,42 @@
+---Current privacy policy generators---
+
+What they always ask for: 
+    Website or Mobile App
+
+    1)website URL
+    2)Website name
+    3)Company name
+
+    4)Business or Individual
+    5)Country
+
+
+    -*)Phone Number
+    -*)Address 
+
+
+What kind of information is collected
+    -Email, names, phone numbers, location, address, "others"
+
+Extra headings:
+    Do you send emails?
+    Location information?
+    Do users pay?
+    Tracking or analytics tools - Google analytics, Firebase
+    Are ads shown - Google adsense? Bings ads?
+    Will the site disclose personal information of users to law?
+    Will the site be sold, acquired, merged?
+
+    -Usage of cookies
+    -Aggregated Statistics
+
+    -Some allow a custom term
+
+    -GDPR wording
+    -CalOPPA wording 
+
+how can users contact you for questions regarding Privacy Policy
+    -Email
+    -Page on the website
+    -Phone number
+    -Post
