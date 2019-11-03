@@ -1,10 +1,13 @@
-from jinja2 import Template
+from flask import Flask,render_template,request
+app = Flask(__name__)
 
 
-def main():
+@app.route('/')
+def hello_world():
+    return render_template('home.html', username = "Eoin")
 
-    template = Template('Hello {{ name }}')
-    template.render(name= input("Name:"))
 
-if __name__ == "__main__":
-    main()
+
+
+if __name__ == '__main__':
+    app.run()    
