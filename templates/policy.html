@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/> 
+    <title>Privacy Policy</title>
+</head>
+
+<body>
+    <h1>{{company}} Privacy Policy</h1>
+    <p>Effective date: {{date}}</p>
+    <p>This privacy policy will explain how our organization uses the personal data we collect from you when you use our website</p>
+
+
+    <h2>Topics:</h2>
+    <ul>
+    {% for topic in topic_list %}
+        <li>{{topic}}</li>
+    {% endfor %}
+    </ul>
+
+ 
+    {% for topic in topic_list%}
+        <h2> {{topic}} </h2>
+        {% if topic == "What data do we collect?" %}
+            <ul>
+                {% for data_type in types_of_data %}
+                    <li> {{data_type}} </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Placeholder</p>
+        {% endif %}
+    {% endfor %}
+    
+</body>
+
+</html>
