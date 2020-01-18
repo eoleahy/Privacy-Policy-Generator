@@ -1,28 +1,57 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request 
+from wtforms import Form, BooleanField, StringField, validators
+from flask_bootstrap import Bootstrap
 import datetime
 app = Flask(__name__)
 
 @app.route('/', methods = ['POST','GET'])
 def create_policy():
 
-    company_name = ""
+    args={}
+    #args["is_website"] = False
+    #args["is_app"] = False
 
     if request.method == 'POST':
-        company_name = request.form["company_name"]
+        args["company_name"] = request.form["company_name"]
+        args["website_url"] = request.form["web_url"]
+        args["email_addr"] = request.form["email_addr"]
+        args["tel_number"] = request.form["tel_number"]
+        args["street_addr"] = request.form["street_addr"]
+        args["zip"] = request.form["zip"]
+        args["country"] = request.form["country"]
 
+        #print(request.form["is_website"])
+        args["is_website"] = request.form.get("is_website") != None
+        args["is_app"] = request.form.get("is_app") != None
+        args["collects_email"] = request.form.get("collects_email") != None
+        args["collects_name"] = request.form.get("collects_name") != None
+        args["collects_phone"] = request.form.get("collects_phone") != None
+        args["collects_address"] = request.form.get("collects_address") != None
+        args["collects_smi"] = request.form.get("collects_smi") != None
+        args["collects_others"] = request.form.get("collects_others") != None
 
-    return render_template('create_policy.html')    
+        args["has_cookies"] = request.form.get("has_cookies") != None
+        args["has_advertisements"] = request.form.get("has_advertisements") != None
+        args["has_tracking"] = request.form.get("has_tacking") != None
+        args["has_payments"] = request.form.get("has_payments") != None
+        args["external_links"] = request.form.get("external_links") != None
+        args["collects_u18"] = request.form.get("collects_u18") != None
+        args["collects_u13"] = request.form.get("collects_u13") != None
+    
+
+    return render_template('create_policy.html',
+                            page_vars=args)    
 
 @app.route('/policy', methods = ['POST', 'GET'])
 def policy():
 
-    company_name = "Eoin"
-    email = "eoin.97@live.ie"
-    phone_number = "085 244 0001"
+    company_name = "Testcompany"
+    email = "test@test.ie"
+    phone_number = "12345678"
     address = "13 Waterloo Rd, Dublin 4, Dublin"
 
     date = datetime.date.today()
-    date = date.strftime("%B %d. %Y")
+    date = date.strftime("%B %d, %Y")
 
     topics = ["What data do we collect?",
                 "How will we collect your data?",
@@ -69,6 +98,7 @@ def policy():
                             contact_methods = contact_methods
                             )
 
+Bootstrap(app)
 
 
 if __name__ == '__main__':
