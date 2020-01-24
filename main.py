@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from wtforms import Form, BooleanField, StringField, validators
 from flask_bootstrap import Bootstrap
 import datetime
+import rdflib
 app = Flask(__name__)
 
 @app.route('/', methods = ['POST','GET'])
@@ -44,6 +45,12 @@ def create_policy():
 
 @app.route('/policy', methods = ['POST', 'GET'])
 def policy():
+
+    g = rdflib.Graph()
+    g.parse("static/dpv.ttl",format="ttl")
+
+    for s,p,o in g:
+        print(s)
 
     company_name = "Testcompany"
     email = "test@test.ie"
@@ -88,8 +95,9 @@ def policy():
                        "Or write to us at: " + address]                 
 
     return render_template('policy.html',
-                            company=company_name,
-                            date=date,
+                            dpv = g,
+                            company = company_name,
+                            date = date,
                             topic_list = topics,
                             types_of_data = types_of_data,
                             collection_types = collection_types,
