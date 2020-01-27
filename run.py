@@ -3,7 +3,7 @@ import datetime
 import rdflib
 app = Flask(__name__)
 
-@app.route('/', methods = ['POST','GET'])
+@app.route('/create', methods = ['POST','GET'])
 def create_policy():
 
     args={}
@@ -41,7 +41,7 @@ def create_policy():
     return render_template('create_policy.html',
                             page_vars=args)    
 
-@app.route('/policy', methods = ['POST', 'GET'])
+@app.route('/', methods = ['POST', 'GET'])
 def policy():
 
     '''
