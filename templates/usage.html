@@ -1,0 +1,9 @@
+{% extends "default.html" %}
+{%block content %}
+    <h2>How will we use your data?</h2>
+    <p>{{company}} collects your data so that we can:</p>
+    {{ render_list(data_usage) }}   
+
+    <p>If you agree, {{company}} will share your data with our partner companies so that they may offer you their products and services.</p>
+    {{ render_list(data_sharing) }}
+{% endblock %}

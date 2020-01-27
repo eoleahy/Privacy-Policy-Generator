@@ -31,10 +31,6 @@
         <li>{{topic}}</li>
     {% endfor %}
     </ul>
-
-
-
- 
     {% for topic in topic_list%}
         <h2> {{topic}} </h2>
         {% if topic == "What data do we collect?" %}
@@ -42,42 +38,15 @@
             {{ render_list(types_of_data) }}
      
         {% elif topic == "How will we collect your data?" %}    
-            <p>You directly provide {{company}} with most of the data we collect. We collect data and process data when you:</p>
-            {{ render_list(collection_types) }}
+            {% include 'collect.html'%}
 
         {% elif topic == "How will we use your data?" %}
-            <p>{{company}} collects your data so that we can:</p>
-            {{ render_list(data_usage) }}
+            {% include 'usage.html' %}  
 
-            <p>If you agree, {{company}} will share your data with our partner companies so that they may offer you their products and services.</p>
-            {{ render_list(data_sharing) }}
         {% elif topic == "What are your data protection rights?" %}
-            <p>{{company}} would like to make sure you are fully aware of all of your data protection rights. 
-                Every user is entitled to the following: </p>
+            {% include 'rights.html' %}
 
-            <p><b>The right to access -</b> You have the right to request {{company}} for copies of your personal data. 
-                We may charge you a small fee for this service.</p>
-
-            <p><b>The right to rectification -</b> You have the right to rquest that {{company}} 
-                correct any information that you believe is inaccurate. 
-                You also have the right to request {{company}} to complete information you believe is incomplete.</p>
-
-            <p><b>The right to erasure -</b> You have the right to request that {{company}} 
-                erase your personal data, under certain conditions.</p> 
-            
-            <p><b>The right to restrict processing -</b> You have the right to request that {{company}} 
-                restrict the processing of your personal data, under certain conditions.</p>
-
-            <p><b>The right to object to processing -</b> You have the right to object to {{company}}'s processing
-                of your personal data, under certain conditions.</p>
-
-            <p><b>The right to data portability -</b> You have the right to request that {{company}} 
-                transfer the data that we have collected to another organization, or directly to you, under certain conditions.</p>
-
-            <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights,
-                please contact us:
-                {{render_list(contact_methods)}}
-            </p>    
+      
 
         {% elif topic == "How to contact us" %}
             <p>If you have any questions about {{company}}'s privacy policy, 
@@ -85,8 +54,6 @@
                 please do not hesitate to contact us:</p>
             {{ render_list(contact_methods)}}
 
-        {% else %}
-            <p>Placeholder</p>
         {% endif %}
     {% endfor %}
     
