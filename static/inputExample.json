@@ -1,0 +1,34 @@
+{
+    "company_name": "Test Company",
+    "company_email": "test@test.ie",
+    "company_address": "13 Test road, Dublin 4, Dublin",
+    "company_phone_number": "000 000 0000",
+    "collected_data": [
+        "Name",
+        "Email address",
+        "Phone Number",
+        "IP address",
+        "Payment Data",
+        "Encrypted Password",
+        "Login Token"
+    ],
+    "collection_types": [
+        "Register Online.",
+        "Place an order for any of our products or services.",
+        "Voluntarily complete a customer survey or provide feedback on any of our message boards.",
+        "Use or view our website via your browser's cookies."
+    ],
+    "data_usage": [
+        "Manage your account.",
+        "Process your orders.",
+        "Email you with special offers on other products and services we think you might like."
+    ],
+    "data_sharing_recipient": [
+        "Amazon.co.uk",
+        "Another test company"
+    ],
+    "cookie_usage": [
+        "Keeping you signed in",
+        "Understanding how you use our website"
+    ]
+}

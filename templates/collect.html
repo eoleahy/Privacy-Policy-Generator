@@ -1,6 +1,5 @@
 {% extends "default.html" %}
 {%block content %}
-    <h2>How will we collect your data?</h2>
     <p>You directly provide {{company}} with most of the data we collect. We collect data and process data when you:</p>
-    {{ render_list(collection_types) }}
+    {{ render_list(data["collection_types"]) }}
 {% endblock %}

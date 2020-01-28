@@ -1,0 +1,7 @@
+{% extends "default.html" %}
+
+{% block content %}
+    <p>{{data["company_name"]}} collects the following data: </p>
+    {{ render_list(data["collected_data"]) }}
+
+{% endblock %}

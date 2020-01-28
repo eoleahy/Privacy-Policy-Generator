@@ -1,0 +1,23 @@
+{% extends "default.html" %}
+
+{% block content %}
+
+    <h3>What are cookies?</h3>
+    <p>Cookies are text files placed on your computer to collect standard 
+        Internet log information and visitor behavior information. When you visit our websites,
+        we may collect information from you automatically through cookies or similar technology.</p>
+    
+    <p> For further information visit <a href="allaboutcookies.org">allaboutcookies.org</a></p>
+
+    <h3>How do we use cookies?</h3>
+    <p>Our company uses cookies in a range of ways to improves your experience on ou website, including:</p>
+    {{ render_list(data["cookie_usage"]) }}
+
+    <h3>What types of cookies do we use?</h3>
+    <p>Placeholder</p>
+    <h3>How to manage cookies</h3>
+    <p>You can set your browser not to accept cookies, and the above website tells you how to remove cookies from 
+        your browser. However, in a few cases, some of you website features may not function as a result.
+    </p>
+
+{% endblock %}
