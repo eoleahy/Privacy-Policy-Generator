@@ -4,5 +4,9 @@
     {{ render_list(data["data_usage"]) }}   
 
     <p>If you agree, {{company}} will share your data with our partner companies so that they may offer you their products and services.</p>
-    {{ render_list(data["data_sharing_recipients"]) }}
+    <ul>
+    {% for recip in data["data_sharing_recipient"] %}
+        <li class="dpv:Recipient">{{recip}}</li>
+    {% endfor %}
+    </ul>
 {% endblock %}

@@ -4,6 +4,10 @@ div.section {
     margin: auto;
 }
 
+article{
+    border: 1px solid grey;
+}
+
 .section h2 {
     margin-left: 10px;
     font-family: Arial, Helvetica, sans-serif;
