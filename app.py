@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import datetime
 import rdflib
 import json
+from personalDataCategory import PersonalDataCategory
 
 app = Flask(__name__)
 json_path = "static/inputExample.json"
@@ -9,6 +10,9 @@ json_path = "static/inputExample.json"
 @app.route('/', methods = ['GET'])
 
 def policy():
+
+    pers = PersonalDataCategory("Name",["send updates","market"],["consent","contract"], ["Amazon.co.uk"], ["store"], ["Amazon.co.uk"])
+    pers.toString()
 
     data = {}
 

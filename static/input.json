@@ -1,11 +1,27 @@
 {
-    "company_name": "",
-    "company_email": "",
-    "company_address": "",
-    "company_phone_number": "",
-    "collected_data": [],
-    "collection_types": [],
-    "data_usage": [],
-    "data_sharing_recipients": [],
+    "context":"https://www.w3.org/ns/dpv",
+    "dataController":[
+        {
+        "name":"",
+        "physicalddress":"",
+        "emailAddress":"",
+        "telephoneNumber":""
+         }
+    ],
+    "personalDataCategory": [
+        {
+        "class": "",
+        "purpose": [],
+        "legalBasis": [],
+        "dataController": [],
+        "processing": [],
+        "recipient": []
+        }
+    ],
+    "recipient":[
+        {
+            "name":""
+        }
+    ],
     "cookie_usage": []
 }
