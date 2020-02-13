@@ -1,0 +1,106 @@
+{
+    "context": "https://www.w3.org/ns/dpv",
+    "dataController": 
+    {
+        "properties": 
+            {
+                "name": "Test Company",
+                "physicaladdress": "13 Test road,\nDublin 4,\nDublin",
+                "emailAddress": "test@test.ie",
+                "telephoneNumber": "000 000 0000"
+            },
+        "technicalMeasure": ["Encryption in Rest"],
+        "storage": {
+            "duration": "as long as you use our service, and up to 30 days after that",
+            "location": "with our cloud Service Provider, AWS",
+            "measures": ["encryption","authentication procedure"]
+        }
+    }
+    ,
+    "personalDataCategory": [
+        {
+            "class": "Name",
+            "purpose": ["Identity Verification","Sell Targetted Advertisements","Create Personalized Recommendations"],
+            "legalBasis": ["Consent"],
+            "processing": ["Collect","Store","Share"],
+            "recipient": ["Amazon.com"]
+        },
+        {
+            "class": "Age",
+            "purpose": ["Sell Targetted Advertisements","Create Personalized Recommendations"],
+            "legalBasis": ["Consent"],
+            "processing": ["Collect","Store","Share"],
+            "recipient": ["Amazon.com"]
+        },
+        {
+            "class": "Email Address",
+            "purpose": ["News","Email Marketing","Identity Verification","Customer Care"],
+            "legalBasis": ["Consent"],
+            "processing": ["Collect","Store","Share"],
+            "recipient": ["Amazon.com"]
+        },
+        {
+            "class": "Telephone Number",
+            "purpose": ["Identity Verification","Marketing"],
+            "legalBasis": ["Consent"],
+            "processing": ["Collect","Store"],
+            "recipient": []
+        },
+        {
+            "class": "IP Address",
+            "purpose": ["Statistics","Admin","Service Provision"],
+            "legalBasis": ["Consent"],
+            "processing": ["Collect","Store","Anonymise","Move","Analyse"],
+            "recipient": ["Google LLC"]
+        },
+        {
+            "class": "Credit Card Number",
+            "purpose": ["Fraud Prevention and Detection","Payment"],
+            "legalBasis": ["Consent"],
+            "processing": ["Collect","Store"],
+            "recipient": ["Stripe,Inc"]
+        },
+        {
+            "class": "Password",
+            "purpose": ["Access Control","Security"],
+            "legalBasis": ["Consent"],
+            "processing": ["Collect","Store","Alter"],
+            "recipient": []
+        }
+    ],
+    "recipient": [
+        {
+            "properties": 
+                {
+                    "name": "Stripe,Inc",
+                    "physicalAddress": "Stripe, Inc.,\nCalifornia,\n510 Townsend Street,\nSan Francisco, California 94103,\nUSA."
+                },
+            "legalBasis": ["Consent"],
+            "class": ["Credit Card Number"],
+            "purpose": ["Payment"],
+            "privacyPolicy": ["https://stripe.com/privacy-center/legal"]
+        },
+        {
+            "properties": 
+                {
+                    "name": "Google LLC",
+                    "physicalAddress": "Google LLC,\n1600 Amphitheatre Pkwy,\nMountain View,\nCalifornia 94043,\nUSA."
+                },
+            "legalBasis": ["Consent"],
+            "class": ["IP Address"],
+            "purpose": ["Statistics"],
+            "privacyPolicy": ["https://policies.google.com/privacy?hl=en"]
+        },
+        {
+            "properties": 
+                {
+                    "name": "Amazon.com",
+                    "physicalAddress": "410 Terry Ave.\nNorth Seattle,\nWA,\nUSA"
+                },
+            "legalBasis": ["Consent"],
+            "class": ["Name","Age","Email Address"],
+            "purpose": ["Email Marketing","Sell Targetted Advertisements","Create Personalized Recommendations"],
+            "privacyPolicy": ["https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"]
+        }
+    ]
+}

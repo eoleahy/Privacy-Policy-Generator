@@ -1,0 +1,33 @@
+{
+    "context": "https://www.w3.org/ns/dpv",
+    "dataController": {
+        "properties": {
+            "name": "",
+            "physicaladdress": "",
+            "emailAddress": "",
+            "telephoneNumber": ""
+        },
+        "technicalMeasure": []
+    },
+    "personalDataCategory": [
+        {
+            "class": "",
+            "purpose": [],
+            "legalBasis": [],
+            "processing": [],
+            "recipient": []
+        }
+    ],
+    "recipient": [
+        {
+            "properties": {
+                "name": "",
+                "physicalAddress": ""
+            },
+            "legalBasis": [],
+            "class": [],
+            "purpose": [],
+            "privacyPolicy": []
+        }
+    ]
+}

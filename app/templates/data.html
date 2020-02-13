@@ -1,0 +1,15 @@
+{% extends "default.html" %}
+
+{% block content %}
+    <p>{{ company }} collects the following data: </p>
+    <ul>
+    {% for personalData in data["personalDataCategory"] %}
+        <li>{{ personalData["class"] }}</li>
+    {% endfor %}
+    </ul>
+    {% for personalData in data["personalDataCategory"] %}
+        
+        {% include "personalData.html" %}
+
+    {% endfor %}
+{% endblock %}

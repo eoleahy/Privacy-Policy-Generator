@@ -1,18 +1,23 @@
 from flask import Flask, render_template, request 
+#from personalDataCategory import PersonalDataCategory
 import datetime
 import rdflib
 import json
-from personalDataCategory import PersonalDataCategory
+import os
+import sys
+
 
 app = Flask(__name__)
-json_path = "static/inputExample.json"
+
+BASE_PATH = os.path.dirname(__file__)
+if(sys.platform=="win32"):
+    json_path = os.path.join(BASE_PATH,"static\inputExample.json")
+else:
+    json_path = os.path.join(BASE_PATH,"static/inputExample.json")
 
 @app.route('/', methods = ['GET'])
 
 def policy():
-
-    pers = PersonalDataCategory("Name",["send updates","market"],["consent","contract"], ["Amazon.co.uk"], ["store"], ["Amazon.co.uk"])
-    pers.toString()
 
     data = {}
 
@@ -22,12 +27,18 @@ def policy():
     date = datetime.date.today()
     date = date.strftime("%B %d, %Y")
 
+    purpose_set = set()
+
+    for cat in data["personalDataCategory"]:
+        purpose_set.update(cat["purpose"])
+
     data["date"] = date
 
     topics = ["What data do we collect?",
                 "How will we collect your data?",
                 "How will we use your data?",
                 "How do we store your data?",
+                "Who do we share your data with?",
                 "Cookies",
                 "What are your data protection rights?",
                 "Changes to our privacy policy",
@@ -36,10 +47,11 @@ def policy():
     return render_template('policy.html',
                             #dpv = g,
                             topics = topics,
-                            data = data
+                            data = data,
+                            purpose_set=purpose_set
                             )
 
-def parse_rdf():
+
 
     '''
     g = rdflib.Graph()

@@ -1,0 +1,7 @@
+{% macro render_list(list_items) %}
+<ul>
+    {% for item in list_items %}
+    <li> {{item}} </li>
+    {% endfor %}
+</ul>
+{% endmacro %}

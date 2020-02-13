@@ -12,30 +12,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Eoin Leahy">
-    <meta name="created" content="2020-01-24">
+    <meta name="created" content="2020-02-13">
     <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <title>Privacy Policy</title>
 </head>
 
-<body>
+<body vocab = "http://w3.org/ns/dpv">
 
-        {% set company = data["company_name"] %}
-        {% set contact_methods = [data["company_phone_number"], data["company_email"], data["company_address"]] %}
+        {% set controller = data["dataController"] %}
+        {% set company = controller["properties"]["name"] %}
+        {% set contact_methods = controller["properties"].values() %}
 
-    <div class="section" vocab = "http://w3.org/ns/dpv">
+    <div class="section">
         <h1><span class="dpv:Recipient">{{ company }}</span> Privacy Policy</h1>
         <p>Effective date: {{data["date"]}}</p>
         <p>This privacy policy will explain how our organization uses the personal data we collect from you when you use our website</p>
     </div>
-    {#
-    <h2>Topics:</h2>
-    <ul>
-    {% for topic in topics %}
-        <li>{{topic}}</li>
-    {% endfor %}
-    </ul>
-    #}
 
     {% for topic in topics %}
         {% if topic == "What data do we collect?" %}
@@ -44,8 +37,11 @@
         {% elif topic == "How will we collect your data?" %}    
             {% include 'collect.html'%}
 
+        {% elif topic == "Who do we share your data with?" %}    
+            {% include 'share.html' %}
+
         {% elif topic == "How will we use your data?" %}
-            {% include 'usage.html' %}
+            {% include 'purpose.html' %}
             
         {% elif topic == "How do we store your data?" %}
             {% include 'store.html' %}

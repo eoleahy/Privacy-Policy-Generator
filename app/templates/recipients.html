@@ -1,0 +1,21 @@
+<article class="dpv:Recipients">
+    {% set name = recip["properties"]["name"] %}
+
+    <p>What we share with {{ name}}: </p>
+    {{render_list(recip["class"])}}
+
+    <p>We share this data for the following purpose(s):</p>
+    {{render_list(recip["purpose"])}}
+
+    {% autoescape false %}
+    <p>{{name}}'s contact details are:</br>
+
+        {{ recip["properties"]["physicalAddress"] | replace("\n","<br/>") }}</p>
+    {% endautoescape %}
+
+    <p>Our legal basis for our purpose is {{','.join(recip["legalBasis"])}}</p>
+
+    {% if recip["privacyPolicy"] %}
+        <p>View {{name}}'s privacy policy <a href={{recip["privacypolicy"]}}>here</a>
+    {% endif %}
+</article>

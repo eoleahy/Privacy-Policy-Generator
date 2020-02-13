@@ -1,0 +1,14 @@
+{% extends "default.html" %}
+{% block content %}
+
+    <p> We disclose your personal data to the following recipients: </p>
+    <ul>
+        {% for recip in data["recipient"] %}
+        <li>{{recip["properties"]["name"]}}</li>
+        {% endfor %}
+    </ul>
+
+    {% for recip in data["recipient"] %}
+        {% include "recipients.html" %}
+    {% endfor %}
+{% endblock %}

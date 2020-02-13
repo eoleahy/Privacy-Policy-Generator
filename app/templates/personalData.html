@@ -1,0 +1,17 @@
+
+<article class="dpv:PersonalDataCategory">
+    {% set class = personalData["class"] %}
+    <h3>Your {{ class }}:</h3>
+  
+    <p>We collect your {{ class }} for the following purpose(s):</p>
+    {{ render_list(personalData["purpose"]) }}
+    <p>The processing for your {{class}} includes: {{render_list(personalData["processing"])}} </p>
+
+    <p>{% if personalData["recipient"] | length == 0 %}
+        We do not share your {{class}}
+    {% else %}
+        We share your {{class}} with: {{ render_list(personalData["recipient"]) }}
+    {% endif %}</p>
+    <p>The legal basis for our purpose is {{",".join(personalData["legalBasis"])}}.</p>
+
+</article>
