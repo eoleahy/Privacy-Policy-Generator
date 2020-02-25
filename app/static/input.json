@@ -15,7 +15,8 @@
             "purpose": [],
             "legalBasis": [],
             "processing": [],
-            "recipient": []
+            "recipient": [],
+            "collection": []
         }
     ],
     "recipient": [
@@ -27,7 +28,17 @@
             "legalBasis": [],
             "class": [],
             "purpose": [],
-            "privacyPolicy": []
+            "privacyPolicy": ""
+        }
+    ],
+    "cookie": [
+        {
+            "purpose": [],
+            "textualDescription":"",
+            "firstParty": "",
+            "thirdParty": "",
+            "duration": "",
+            "legalBasis":[]
         }
     ]
 }
