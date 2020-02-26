@@ -5,6 +5,9 @@
     <p>If you have any questions about {{company}}'s privacy policy,
         the data we hold on you, or you would like us to exercise one of your data protection rights,
         please do not hesitate to contact us:</p>
-    {{ render_list(contact_methods) }}
+    <address>    
+        {{ render_list(contact_methods) }}
+    </address>
+
 
 {% endblock %}

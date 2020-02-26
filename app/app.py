@@ -44,6 +44,7 @@ def policy():
               "Cookies",
               "What are your data protection rights?",
               "Changes to our privacy policy",
+              "Data protection officer",
               "How to contact us"]
 
     return render_template('policy.html',

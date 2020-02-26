@@ -9,8 +9,9 @@
 
     {% autoescape false %}
     <p>{{name}}'s contact details are:</br>
-
-        {{ recip["properties"]["physicalAddress"] | replace("\n","<br/>") }}</p>
+        <address>
+        {{ recip["properties"]["physicalAddress"] | replace("\n","<br/>") }}
+        </address>
     {% endautoescape %}
 
     <p>Our legal basis for our purpose is {{','.join(recip["legalBasis"])}}</p>

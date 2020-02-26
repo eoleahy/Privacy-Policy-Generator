@@ -112,18 +112,19 @@
     ],
     "cookie": [
         {
-            "purpose": ["Statistics"],
+            "purpose": "Statistics",
             "textualDescription":"We use this cookie to create and analyse statistics about how you use our website",
-            "firstParty":"True",
-            "thirdParty": "False",
-            "duration": "Session cookie",
+            "type": "analytical",
+            "Provenance":"First",
+            "duration": "Session",
             "legalBasis":["consent"]
         },
         {
-            "purpose": ["Access Control"],
+            "purpose": "Access Control",
             "textualDescription":"We use this cookie to help facilitate our sign up and login features",
-            "provenance":"1st party",
-            "duration": "Persistent cookie",
+            "type":"necessary",
+            "provenance":"First",
+            "duration": "Persistent",
             "legalBasis":["consent"]
         }
     ]

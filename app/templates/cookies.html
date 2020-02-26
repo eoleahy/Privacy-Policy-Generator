@@ -13,8 +13,25 @@
     <p>Our company uses cookies in a range of ways to improves your experience on our website, including:</p>
     
     {% for cookie in data["cookie"]  %}
-        <p>{{cookie["purpose"]}} - {{cookie["textualDescription"]}} </p>
+        <article>
+            <p>{{ cookie["purpose"] }} - 
+             {% if cookie["textualDescription"] %}
+                {{ cookie["textualDescription"] }} </p>
+             {% endif %}
+             </p>
+            <p>Our legal basis for this is {{ ",".join(cookie["legalBasis"]) }}.</p>
+
+            {% if cookie["duration"]|lower == "session" %}
+                {% set cookie_string = "This is a session cookie and will expire once you close the browser or the session ends." %}
+            {% elif cookie["duration"]|lower == "persistent" %}
+                {% set cookie_string = "This is a persistent cookie and is saved on your hard drive for future visits." %}
+            {% else %} 
+                {% set cookie_string = "" %}
+            {% endif %}
+            <p>{{ cookie_string }}</p>
+        </article>
     {% endfor %}
+
     <h3>How to manage cookies</h3>
     <p>You can set your browser not to accept cookies, and the above website tells you how to remove cookies from 
         your browser. However, in a few cases, some of you website features may not function as a result.

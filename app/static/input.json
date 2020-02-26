@@ -33,10 +33,10 @@
     ],
     "cookie": [
         {
-            "purpose": [],
+            "purpose": "",
             "textualDescription":"",
-            "firstParty": "",
-            "thirdParty": "",
+            "type":"",
+            "provenance":"",
             "duration": "",
             "legalBasis":[]
         }
