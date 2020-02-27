@@ -1,10 +1,10 @@
 {% extends "default.html" %}
 
 {% block content %}
-    <p>{{ company }} collects the following data: </p>
+    <p><span class="dpv:DataController">{{ company }}</span> collects the following data: </p>
     <ul>
     {% for personalData in data["personalDataCategory"] %}
-        <li>{{ personalData["class"] }}</li>
+        <li><span class="dpv:PersonalDataCategory">{{personalData["class"] }}</span></li>
     {% endfor %}
     </ul>
     {% for personalData in data["personalDataCategory"] %}
@@ -12,4 +12,44 @@
         {% include "personalData.html" %}
 
     {% endfor %}
+{% endblock %}
+
+{% block headingDPV %}
+    <h2>PersonalDataCategory</h2>
+{% endblock %}
+
+{% block contentDPV %}
+    <p>Class</p>
+    <ul>
+        {% for personalData in data["personalDataCategory"] %}
+            <li>{{personalData["class"]}}</li>
+        {% endfor %}
+    </ul>
+
+    {% for personalData in data["personalDataCategory"] %}
+        
+        <article>
+            {% set class = personalData["class"] %}
+            <h3>{{class}}</h3>
+            <p>Purpose:</p>
+            {{render_list(personalData["purpose"])}}
+
+            <p>Processing:</p>
+            {{render_list(personalData["processing"])}}
+
+            <p>{% if personalData["recipient"] | length == 0 %}
+            {% else %}
+            Recipient: {{ render_list(personalData["recipient"]) }}
+            {% endif %}</p>
+            
+            <p>LegalBasis: {{",".join(personalData["legalBasis"])}}</p>
+        </article>
+    {% endfor %}
+{%  endblock %}
+
+
+
+
+{% block headinController %}
+    
 {% endblock %}

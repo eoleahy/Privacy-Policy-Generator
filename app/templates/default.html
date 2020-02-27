@@ -1,8 +1,19 @@
-<div class="section" vocab="http://w3.org/ns/dpv#">
-    <span class="dpv:PersonalDataCategory"></span>
+<div class="subject-section">
     {% block heading %}
-        <h2>{{ topic }} </h2>
+        <h2>{{ topic["heading"] }} </h2>
     {% endblock %}
     {% block content %}
+    {% endblock %}
+</div>
+<div class="dpv-section">
+    {% block headingDPV %}
+    {% endblock %}
+    {% block contentDPV %}
+    {% endblock %}
+</div>
+<div class="controller-section">
+    {% block headingController %}
+    {% endblock %}
+    {% block contentController %}
     {% endblock %}
 </div>

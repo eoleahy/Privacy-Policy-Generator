@@ -6,3 +6,13 @@
     <p>Measures we have taken to ensure your data remains safe include: </p>
     {{ render_list(store["measures"]) }}
 {% endblock %}
+
+{% block headingDPV %}
+    <h2>TechnicalOrganisationalMeasure</h2>
+{% endblock %}
+
+{% block contentDPV %}
+    {{render_list(store["measures"])}}
+
+{% endblock %}
+

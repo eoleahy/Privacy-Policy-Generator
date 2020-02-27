@@ -15,11 +15,13 @@ if(sys.platform == "win32"):
 else:
     json_path = os.path.join(BASE_PATH, "static/inputExample.json")
 
+views = ["dpv","dataSubject","dataController","thirdParty"]
 
 @app.route('/', methods=['GET'])
 def policy():
 
     data = {}
+    
 
     with open(json_path) as f:
         data = json.load(f)
@@ -36,16 +38,16 @@ def policy():
 
     data["date"] = date
 
-    topics = ["What data do we collect?",
-              "How will we collect your data?",
-              "How will we use your data?",
-              "How do we store your data?",
-              "Who do we share your data with?",
-              "Cookies",
-              "What are your data protection rights?",
-              "Changes to our privacy policy",
-              "Data protection officer",
-              "How to contact us"]
+    topics = [{"heading": "What data do we collect?", "page": "data.html"},
+              {"heading": "How will we collect your data?", "page": "collect.html"},
+              {"heading": "How will we use your data?", "page": "purpose.html"},
+              {"heading": "How do we store your data?", "page": "store.html"},
+              {"heading": "Who do we share your data with?", "page": "share.html"},
+              {"heading": "Cookies", "page": "cookies.html"},
+              {"heading": "What are your data protection rights?", "page": "rights.html"},
+              {"heading": "Changes to our privacy policy", "page": "changes.html"},
+              {"heading": "Data protection officer", "page": "dataprotection.html"},
+              {"heading": "How to contact us?", "page": "contact.html"}]
 
     return render_template('policy.html',
                            #dpv = g,
@@ -53,7 +55,6 @@ def policy():
                            data=data,
                            purpose_set=purpose_set,
                            collect_set=collect_set)
-
 
 
 if __name__ == '__main__':

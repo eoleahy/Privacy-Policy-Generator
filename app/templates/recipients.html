@@ -1,4 +1,4 @@
-<article class="dpv:Recipients">
+<article>
     {% set name = recip["properties"]["name"] %}
 
     <p>What we share with {{ name}}: </p>
@@ -17,6 +17,6 @@
     <p>Our legal basis for our purpose is {{','.join(recip["legalBasis"])}}</p>
 
     {% if recip["privacyPolicy"] %}
-        <p>View {{name}}'s privacy policy <a href={{recip["privacypolicy"]}}>here</a>
+        <p>View {{name}}'s privacy policy <a href='{{recip["privacypolicy"]}}'>here</a>
     {% endif %}
 </article>
