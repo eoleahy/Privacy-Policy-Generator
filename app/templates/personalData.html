@@ -2,7 +2,8 @@
 <article>
     {% set class = personalData["class"] %}
     <h3>Your <span class="dpv:PersonalDataCategory">{{ class }}</span>:</h3>
-  
+    {% include "dpvData.html" %}
+    
     <p>We collect your <span class="dpv:PersonalDataCategory">{{ class }}</span> for the following purpose(s):</p>
     {{ render_list(personalData["purpose"]) }}
     <p>The processing for your {{class}} includes: {{render_list(personalData["processing"])}} </p>

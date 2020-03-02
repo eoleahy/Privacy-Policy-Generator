@@ -51,7 +51,7 @@
             "collection": ["Create an account"]
         },
         {
-            "class": "IP Address",
+            "class": "IPAddress",
             "purpose": ["Statistics","Admin","Service Provision"],
             "legalBasis": ["Consent"],
             "processing": ["Collect","Store","Anonymise","Move","Analyse"],
