@@ -1,10 +1,10 @@
 {% extends "default.html" %}
 
 {% block content %}
-    <p><span class="dpv:DataController">{{ company }}</span> collects the following data: </p>
+    <p>{{ company }}collects the following data: </p>
     <ul>
     {% for personalData in data["personalDataCategory"] %}
-        <li><span class="dpv:PersonalDataCategory">{{personalData["class"] }}</span></li>
+        <li>{{personalData["class"] }}</li>
     {% endfor %}
     </ul>
     {% for personalData in data["personalDataCategory"] %}
@@ -13,7 +13,7 @@
 
     {% endfor %}
 {% endblock %}
-
+{#
 {% block headingDPV %}
     <h2>PersonalDataCategory</h2>
 {% endblock %}
@@ -47,7 +47,7 @@
     {% endfor %}
 {%  endblock %}
 
-
+#}
 
 
 {% block headinController %}

@@ -1,13 +1,12 @@
 
 <article>
     {% set class = personalData["class"] %}
-    <h3>Your <span class="dpv:PersonalDataCategory">{{ class }}</span>:</h3>
+    <h3>Your {{ class }}:</h3>
     {% include "dpvData.html" %}
-    
-    <p>We collect your <span class="dpv:PersonalDataCategory">{{ class }}</span> for the following purpose(s):</p>
+    {{ macros.rdfa(class, "dpv:PersonalDataCategory") }}
+    <p>We collect your {{ class }} for the following purpose(s):</p>
     {{ render_list(personalData["purpose"]) }}
     <p>The processing for your {{class}} includes: {{render_list(personalData["processing"])}} </p>
-
     <p> You supply your {{class}} when you:<p>
     {{ render_list(personalData["collection"]) }}
 
@@ -16,6 +15,6 @@
     {% else %}
         We share your {{class}} with: {{ render_list(personalData["recipient"]) }}
     {% endif %}</p>
-    <p>The legal basis for our purpose is <span class="dpv:LegalBasis">{{",".join(personalData["legalBasis"])}}</span>.</p>
+    <p>The legal basis for our purpose is {{",".join(personalData["legalBasis"])}}.</p>
 
 </article>

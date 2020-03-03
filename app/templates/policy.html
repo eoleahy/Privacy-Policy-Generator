@@ -21,23 +21,30 @@
 
 <body onload="openPage('Subject')" vocab="http://w3.org/ns/dpv#">
 
+    {% import "macros.jinja" as macros %}
+
+
     {% set controller = data["dataController"] %}
     {% set company = controller["properties"]["name"] %}
     {% set contact_methods = controller["properties"].values() %}
 
-    <div class="section" resource="#{{company}}" typeof="DataController">
-        <h1><span class="dpv:DataController">{{ company }}</span> Privacy Policy</h1>
+    <div class="section">
+        {{macros.rdfa(company,"dpv:DataController")}}
+
+        <h1>{{ company }} Privacy Policy</h1>
         <p>Effective date: {{ data["date"] }}</p>
         <p>This privacy policy will explain how our organization uses the personal data we collect from you when you use
             our website</p>
         
         <p>Some context to the phrasing used can be found <a href="http://w3.org/ns/dpv#">here</a>.</p>
     </div>
+    {#
     <div class="section">
         <button class="tablink" onclick="openPage('Subject')">Data Subject</button>
         <button class="tablink" onclick="openPage('DPV')"">DPV</button>
-        <button class="tablink" onclick="openPage('DataController')"">Data Controller</button>#}
+        <button class="tablink" onclick="openPage('DataController')"">Data Controller</button>
     </div>
+    #}
     {% for topic in topics %}
         {% include topic["page"] %}
     {% endfor %}

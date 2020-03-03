@@ -3,12 +3,14 @@
     <p>{{company}} collects your data for the following purposes:</p>
 
     {% for purp in purpose_set %}
+        {{ macros.rdfa(purp,"Purpose") }}
         <li>{{purp}}</li>
     {% endfor %}
 
     <p>If you agree, {{company}} will share your data with our partner companies so that they may offer you their products and services.</p>
 {% endblock %}
 
+{#
 {% block headingDPV %}
     <h2>Purpose</h2>
 {% endblock %}
@@ -18,3 +20,4 @@
         <li>{{purp}}</li>
     {% endfor %}
 {% endblock %}
+#}

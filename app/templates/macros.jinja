@@ -5,3 +5,12 @@
     {% endfor %}
 </ul>
 {% endmacro %}
+
+
+{% macro rdfa(instance, class) %}
+    {% set instance = instance|lower|replace(' ','-') %}
+    <div resource="#{{ instance }}" typeof="{{class}}">
+        {#convert to lowercase and replace spaces with dashes(as it appears in dpv)#}
+    </div>
+
+{% endmacro %}
