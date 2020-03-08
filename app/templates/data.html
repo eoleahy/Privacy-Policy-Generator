@@ -1,17 +1,19 @@
 {% extends "default.html" %}
 
 {% block content %}
-    <p>{{ company }}collects the following data: </p>
+    <div id="#DataView">
+    <p>{{ company }} collects the following data: </p>
     <ul>
-    {% for personalData in data["personalDataCategory"] %}
-        <li>{{personalData["class"] }}</li>
+    {% for personalData in data["personalDataHandling"] %}
+        <li>{{personalData["category"] }}</li>
     {% endfor %}
     </ul>
-    {% for personalData in data["personalDataCategory"] %}
+    {% for personalData in data["personalDataHandling"] %}
         
         {% include "personalData.html" %}
 
     {% endfor %}
+    </div>
 {% endblock %}
 {#
 {% block headingDPV %}

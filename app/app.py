@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request
+from rdflib import Graph,plugin
+from rdflib.serializer import Serializer
 from bs4 import BeautifulSoup
 import datetime
 import requests
@@ -17,8 +19,11 @@ if(sys.platform == "win32"):
 else:
     json_path = os.path.join(BASE_PATH, "static/inputExample.json")
 
-views = ["dpv", "dataSubject", "dataController", "thirdParty"]
+
+
 dpv_url = "http://w3.org/ns/dpv#"
+
+
 
 
 @app.route('/', methods=['GET'])
@@ -29,6 +34,9 @@ def policy():
     with open(json_path) as f:
         data = json.load(f)
 
+    #data = jsonld["@graph"]
+    #print(data)
+
     date = datetime.date.today()
     date = date.strftime("%B %d, %Y")
 
@@ -37,10 +45,10 @@ def policy():
 
     data_classes = []
 
-    for cat in data["personalDataCategory"]:
+    for cat in data["personalDataHandling"]:
         purpose_set.update(cat["purpose"])
         collect_set.update(cat["collection"])
-        data_classes.append(cat["class"])
+        data_classes.append(cat["category"])
 
     #print(data_classes)
     dpvDescriptions = descriptions(data_classes)
@@ -82,6 +90,9 @@ def get_description(soup, sectionId):
 
     div = soup.find("section", {"id": sectionId})
     return div
+
+def read_rdf():
+    return 1
 
 
 if __name__ == '__main__':

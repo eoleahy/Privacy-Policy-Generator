@@ -1,20 +1,27 @@
-
 <article>
-    {% set class = personalData["class"] %}
-    <h3>Your {{ class }}:</h3>
-    {% include "dpvData.html" %}
-    {{ macros.rdfa(class, "dpv:PersonalDataCategory") }}
-    <p>We collect your {{ class }} for the following purpose(s):</p>
-    {{ render_list(personalData["purpose"]) }}
-    <p>The processing for your {{class}} includes: {{render_list(personalData["processing"])}} </p>
-    <p> You supply your {{class}} when you:<p>
-    {{ render_list(personalData["collection"]) }}
+    {% set category = personalData["category"] %}
+    {% set instanceId = class|lower|replace(' ','-') %}
 
-    <p>{% if personalData["recipient"] | length == 0 %}
-        We do not share your {{class}}
-    {% else %}
-        We share your {{class}} with: {{ render_list(personalData["recipient"]) }}
-    {% endif %}</p>
-    <p>The legal basis for our purpose is {{",".join(personalData["legalBasis"])}}.</p>
+    <div id="#DataView-{{category}}" resource="#{{category}}" typeof="dpv:{{category}}">
+    <h2>Personal Data View</h2>
+    <h3>Your <span class="dpv:PersonalDataCategory">{{ category }}</span>:</h3>
+        {% include "dpvData.html" %}
 
+        <h4>Used for purposes:</h4>
+        {{ macros.embed_rdfa(personalData["purpose"], category, "Purpose") }}
+
+        <h4>The processing for your {{category}} includes: </h4>
+        {{ macros.embed_rdfa(personalData["processing"], category, "Processing") }}
+ 
+        {#<p> You supply your {{class}} when you:<p>
+                {{ render_list(personalData["collection"]) }}#}
+
+        {% if personalData["recipient"] | length != 0 %}
+            <h4>Shared with:</h4>
+        {{ macros.embed_rdfa(personalData["recipient"], category, "Recipient") }}
+        {% endif %}
+
+        <h4>Legal basis: </h4>
+        {{ macros.embed_rdfa(personalData["legalBasis"], category, "LegalBasis")}}
+    </div>
 </article>

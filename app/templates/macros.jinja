@@ -7,10 +7,13 @@
 {% endmacro %}
 
 
-{% macro rdfa(instance, class) %}
-    {% set instance = instance|lower|replace(' ','-') %}
-    <div resource="#{{ instance }}" typeof="{{class}}">
-        {#convert to lowercase and replace spaces with dashes(as it appears in dpv)#}
-    </div>
-
+{% macro embed_rdfa(list, class, property) %}
+    <ul>
+        {% for prop in list %}
+            <li><span resource ="#PDH{{class}}" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#{{class|replace(' ','')}}"></span>
+                <span property ="dpv:has{{property}}" resource ="#{{prop|replace(' ','')}}" typeof="dpv:{{property}}">{{prop}}</span>
+            </span></li>
+        {% endfor %}
+    </ul>
 {% endmacro %}

@@ -4,7 +4,7 @@
     {
         "properties": 
             {
-                "name": "Test Company",
+                "name": "Company",
                 "physicaladdress": "13 Test road,\nDublin 4,\nDublin",
                 "emailAddress": "test@test.ie",
                 "telephoneNumber": "000 000 0000"
@@ -17,9 +17,9 @@
         }
     }
     ,
-    "personalDataCategory": [
+    "personalDataHandling": [
         {
-            "class": "Name",
+            "category": "Name",
             "purpose": ["Identity Verification","Sell Targetted Advertisements","Create Personalized Recommendations"],
             "legalBasis": ["Consent"],
             "processing": ["Collect","Store","Share"],
@@ -27,7 +27,7 @@
             "collection": ["Create an account"]
         },
         {
-            "class": "Age",
+            "category": "Age",
             "purpose": ["Sell Targetted Advertisements","Create Personalized Recommendations"],
             "legalBasis": ["Consent"],
             "processing": ["Collect","Store","Share"],
@@ -35,15 +35,15 @@
             "collection": ["Create an account"]
         },
         {
-            "class": "Email Address",
+            "category": "Email Address",
             "purpose": ["News","Email Marketing","Identity Verification","Customer Care"],
             "legalBasis": ["Consent"],
             "processing": ["Collect","Store","Share"],
-            "recipient": ["Amazon.com"],
+            "recipient": ["Amazon.com","Google LLC"],
             "collection":["Create an account"]
         },
         {
-            "class": "Telephone Number",
+            "category": "Telephone Number",
             "purpose": ["Identity Verification","Marketing"],
             "legalBasis": ["Consent"],
             "processing": ["Collect","Store"],
@@ -51,7 +51,7 @@
             "collection": ["Create an account"]
         },
         {
-            "class": "IPAddress",
+            "category": "IPAddress",
             "purpose": ["Statistics","Admin","Service Provision"],
             "legalBasis": ["Consent"],
             "processing": ["Collect","Store","Anonymise","Move","Analyse"],
@@ -59,7 +59,7 @@
             "collection": ["Visit our website"]
         },
         {
-            "class": "Credit Card Number",
+            "category": "Credit Card Number",
             "purpose": ["Fraud Prevention and Detection","Payment"],
             "legalBasis": ["Consent"],
             "processing": ["Collect","Store"],
@@ -67,7 +67,7 @@
             "collection": ["Use our service"]
         },
         {
-            "class": "Password",
+            "category": "Password",
             "purpose": ["Access Control","Security"],
             "legalBasis": ["Consent"],
             "processing": ["Collect","Store","Alter"],
@@ -83,7 +83,7 @@
                     "physicalAddress": "Stripe, Inc.,\nCalifornia,\n510 Townsend Street,\nSan Francisco, California 94103,\nUSA."
                 },
             "legalBasis": ["Consent"],
-            "class": ["Credit Card Number"],
+            "category": ["Credit Card Number"],
             "purpose": ["Payment"],
             "privacyPolicy": "https://stripe.com/privacy-center/legal"
         },
@@ -94,7 +94,7 @@
                     "physicalAddress": "Google LLC,\n1600 Amphitheatre Pkwy,\nMountain View,\nCalifornia 94043,\nUSA."
                 },
             "legalBasis": ["Consent"],
-            "class": ["IP Address"],
+            "category": ["IP Address"],
             "purpose": ["Statistics"],
             "privacyPolicy": "https://policies.google.com/privacy?hl=en"
         },
@@ -105,7 +105,7 @@
                     "physicalAddress": "410 Terry Ave.\nNorth Seattle,\nWA,\nUSA"
                 },
             "legalBasis": ["Consent"],
-            "class": ["Name","Age","Email Address"],
+            "category": ["Name","Age","Email Address"],
             "purpose": ["Email Marketing","Sell Targetted Advertisements","Create Personalized Recommendations"],
             "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
         }

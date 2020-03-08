@@ -1,4 +1,7 @@
-dpv-gdpr.ttl
-dpv.ttl
+
 templates\create_policy.html
 .vscode
+.env
+__pycache__
+dpv*.*
+*.jsonld

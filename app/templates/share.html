@@ -4,7 +4,7 @@
     <p> We disclose your personal data to the following recipients: </p>
     <ul>
         {% for recip in data["recipient"] %}
-        {{ macros.rdfa(recip["properties"]["name"], "Recipient") }}
+        {#{{ macros.rdfa(recip["properties"]["name"], "Recipient") }}#}
         <li>{{recip["properties"]["name"]}}</li>
         {% endfor %}
     </ul>

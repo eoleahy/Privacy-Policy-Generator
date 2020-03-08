@@ -9,13 +9,15 @@
         },
         "technicalMeasure": []
     },
-    "personalDataCategory": [
+    "personalDataHandling": [
         {
-            "class": "",
-            "purpose": [],
+            "category": "",
+            "dataController":[],
             "legalBasis": [],
             "processing": [],
+            "purpose": [],
             "recipient": [],
+            "technicalOrganisationalMeasure":[],
             "collection": []
         }
     ],
@@ -26,7 +28,7 @@
                 "physicalAddress": ""
             },
             "legalBasis": [],
-            "class": [],
+            "categrory": [],
             "purpose": [],
             "privacyPolicy": ""
         }

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!doctype html>
 {% macro render_list(list_items) %}
 <ul>
@@ -7,7 +8,7 @@
 </ul>
 {% endmacro %}
 
-<html lang="en" xmlns:dpv="http://w3.org/ns/dpv#">
+<html xml:lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -19,32 +20,22 @@
 </head>
 <script src="{{ url_for('static',filename='scripts.js')}}"></script>
 
-<body onload="openPage('Subject')" vocab="http://w3.org/ns/dpv#">
+<body onload="openPage('Subject')" vocab="http://w3.org/ns/dpv#"  prefix ="dpv: http://w3.org/ns/dpv#">
 
     {% import "macros.jinja" as macros %}
-
-
     {% set controller = data["dataController"] %}
     {% set company = controller["properties"]["name"] %}
     {% set contact_methods = controller["properties"].values() %}
 
     <div class="section">
-        {{macros.rdfa(company,"dpv:DataController")}}
 
-        <h1>{{ company }} Privacy Policy</h1>
+        <h1><span resource="#{{ company }}" typeof="dpv:DataController">{{ company }}</span> Privacy Policy</h1>
         <p>Effective date: {{ data["date"] }}</p>
         <p>This privacy policy will explain how our organization uses the personal data we collect from you when you use
             our website</p>
         
         <p>Some context to the phrasing used can be found <a href="http://w3.org/ns/dpv#">here</a>.</p>
     </div>
-    {#
-    <div class="section">
-        <button class="tablink" onclick="openPage('Subject')">Data Subject</button>
-        <button class="tablink" onclick="openPage('DPV')"">DPV</button>
-        <button class="tablink" onclick="openPage('DataController')"">Data Controller</button>
-    </div>
-    #}
     {% for topic in topics %}
         {% include topic["page"] %}
     {% endfor %}
