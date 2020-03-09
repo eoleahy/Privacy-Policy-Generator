@@ -1,0 +1,41 @@
+@prefix dpv: <https://www.w3.org/ns/dpv#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <#> .
+ 
+:Company a dpv:DataController ;
+    rdfslabel: "" ;
+    schema:address ""^^schema:Text ;
+    schema:email "" ;
+    schema:telephone "" ;
+
+
+#The properties should point to nodes defined below
+:PDH1 a dpv:PersonalDataHandling ;
+    dpv:hasPersonalDataCategory : ;
+    dpv:hasDataController :Company ;
+    dpv:hasDataSubject : ;
+    dpv:hasPurpose : ;
+    dpv:hasProcessing : ;
+    dpv:hasRecipient :DataSharing1 ;
+    dpv:hasTechnicalOrganisationalMeasure : ;
+    dpv:hasLegalBasis : .
+
+#PDH1 property nodes
+: a dpv:PersonalDataCategory ;
+    rdfs:label ""@en .
+
+: a dpv:DataSubject ;
+    rdfs:label ""@en .
+
+: a dpv:Purpose ;
+    rdfs:label ""@en .
+
+: a dpv:Processing ;
+    rdfs:label ""@en .
+
+: a dpv:TechnicalOrganisationalMeasure ;
+    rdfs:label ""@en .
+
+: a dpv:LegalBasis ;
+    rdfs:label ""@en .

@@ -1,0 +1,107 @@
+@prefix dpv: <https://www.w3.org/ns/dpv#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <#> .
+ 
+:Company a dpv:DataController ;
+    rdfs:label "Test Company" ;
+    schema:address "address"^^schema:Text ;
+    schema:email "test@gmail.com" ;
+    schema:telephone "656 444 2301" .
+
+#The properties should point to nodes defined below
+:PDH1 a dpv:PersonalDataHandling ;
+    dpv:hasPersonalDataCategory :Name ;
+    dpv:hasDataController :Company ;
+    dpv:hasDataSubject :Subject ;
+    dpv:hasPurpose :IdentityVerification ;
+    dpv:hasPurpose :SellTargettedAdvertisements ;
+    dpv:hasPurpose :CreatePersonalizedRecommendations ;
+    dpv:hasProcessing :Collect ;
+    dpv:hasProcessing :Store ;
+    dpv:hasProcessing :Share ;
+    dpv:hasRecipient :Amazon ;
+    dpv:hasTechnicalOrganisationalMeasure :EncryptionInRest ;
+    dpv:hasLegalBasis :Consent .
+
+:PDH2 a dpv:PersonalDataHandling ;
+    dpv:hasPersonalDataCategory :EmailAddress ;
+    dpv:hasDataController :Company ;
+    dpv:hasDataSubject :Subject ;
+    dpv:hasPurpose :IdentityVerification ;
+    dpv:hasPurpose :News ;
+    dpv:hasPurpose :EmailMarketing ;
+    dpv:hasPurpose :CustomerCare ;
+    dpv:hasProcessing :Collect ;
+    dpv:hasProcessing :Store ;
+    dpv:hasProcessing :Share ;
+    dpv:hasRecipient :Amazon ;
+    dpv:hasRecipient :Google ;
+    dpv:hasTechnicalOrganisationalMeasure :EncryptionInRest ;
+    dpv:hasLegalBasis :Consent .
+
+:PDH3 a dpv:PersonalDataHandling ;
+    dpv:hasPersonalDataCategory :Age ;
+    dpv:hasDataController :Company ;
+    dpv:hasDataSubject :Subject ;
+    dpv:hasPurpose :SellTargettedAdvertisements ;
+    dpv:hasPurpose :CreatePersonalizedRecommendations ;
+    dpv:hasProcessing :Collect ;
+    dpv:hasProcessing :Store ;
+    dpv:hasProcessing :Share ;
+    dpv:hasRecipient :Amazon ;
+    dpv:hasLegalBasis :Consent .
+
+#PDH1 property nodes
+:Name a dpv:PersonalDataCategory ;
+    rdfs:label "Name"@en .
+
+:Subject a dpv:DataSubject ;
+    rdfs:label "User"@en .
+
+:IdentityVerification a dpv:Purpose ;
+    rdfs:label "Identity Verification"@en .
+
+:SellTargettedAdvertisements a dpv:Purpose ;
+    rdfs:label "Sell Targetted Advertisements"@en .
+
+:CreatePersonalizedRecommendations a dpv:Purpose ;
+    rdfs:label "Identity Verification"@en .       
+
+:Collect a dpv:Processing ;
+    rdfs:label "Collect"@en .
+
+:Store a dpv:Processing ;
+    rdfs:label "Store"@en .
+
+:Share a dpv:Processing ;
+    rdfs:label "Share"@en .
+
+:Amazon a dpv:Recipient ;
+    rdfs:label "Amazon"@en .    
+
+:EncryptionInRest a dpv:TechnicalOrganisationalMeasure ;
+    rdfs:label "Encryption in Rest"@en .
+
+:Consent a dpv:LegalBasis ;
+    rdfs:label "Consent"@en .
+#PDH2 property nodes
+:EmailAddress a dpv:PersonalDataCategory ;
+    rdfs:label "Email Address"@en .
+
+:News a dpv:Purpose ;
+    rdfs:label "News"@en .
+
+:EmailMarketing a dpv:Purpose ;
+    rdfs:label "Email Marketing"@en .    
+
+:CustomerCare a dpv:Purpose ;
+    rdfs:label "Customer Care"@en .
+
+:Google a dpv:Recipient ;
+    rdfs:label "Google LLC"@en .
+
+#PDH3 property nodes
+
+:Age a dpv:PersonalDataCategory ;
+    rdfs:label "Age"@en .
