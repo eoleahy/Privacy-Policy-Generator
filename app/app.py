@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from rdflib import Graph, plugin, Namespace
-from rdflib.namespace import RDF
-from rdflib.graph import Seq
+from PersonalDataClasses import DataController, PersonalData, DataSubject, Purpose, Processing, Recipient, LegalBasis, TechnicalOrgMeasure
+from personalDataHandling import PersonalDataHandling
 from bs4 import BeautifulSoup
 import datetime
 import requests
@@ -11,8 +11,7 @@ import re
 import os
 import sys
 from rdf import rdf
-from PersonalDataClasses import DataController, PersonalData, DataSubject, Purpose, Processing, Recipient, LegalBasis, TechnicalOrgMeasure
-from personalDataHandling import PersonalDataHandling
+
 
 app = Flask(__name__)
 
@@ -57,7 +56,7 @@ def policy():
     data_controller = parsed_data[2]
 
     print(data_controller.label)
-   
+    dc_markup = data_controller.generate_markup()
 
     with open(json_path) as f:
         data = json.load(f)
@@ -96,7 +95,7 @@ def policy():
               {"heading": "How to contact us?", "page": "contact.html"}]
 
     return render_template('policy.html',
-                           #dpv = g,
+                           controller_markup = dc_markup,
                            topics=topics,
                            data=data,
                            dpv=dpvDescriptions,
