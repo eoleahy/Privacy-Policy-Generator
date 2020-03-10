@@ -3,6 +3,7 @@
 class PersonalDataHandling:
 
     iri = "" 
+    properties =[]
     data_category = ""
     subject = ""
     controller = ""
@@ -14,6 +15,7 @@ class PersonalDataHandling:
 
     def __init__(self,iri):
         self.iri = iri
+        self.properties = []
         print("Created class:",self.iri)
 
 

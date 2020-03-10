@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from rdflib import Graph, plugin, Namespace
-from rdflib.serializer import Serializer
+from rdflib.namespace import RDF
+from rdflib.graph import Seq
 from bs4 import BeautifulSoup
 import datetime
 import requests
@@ -10,7 +11,7 @@ import re
 import os
 import sys
 from rdf import rdf
-from dataController import DataController
+from PersonalDataClasses import DataController, PersonalData, DataSubject, Purpose, Processing, Recipient, LegalBasis, TechnicalOrgMeasure
 from personalDataHandling import PersonalDataHandling
 
 app = Flask(__name__)
@@ -25,22 +26,41 @@ else:
 
 
 views = ["default", "data", "purpose", "collection",
-                  "storage", "sharing", "legalBasis", "rights", "techOrgMeasures"]
+         "storage", "sharing", "legalBasis", "rights", "techOrgMeasures"]
 
 
-dpv_classes = ["PersonalDataCategory","DataController","DataSubject","Purpose","Processing","Recipient","TechnicalOrganisationalMeasure","LegalBasis"]
+dpv_classes = ["PersonalDataCategory", "DataController", "DataSubject", "Purpose",
+               "Processing", "Recipient", "TechnicalOrganisationalMeasure", "LegalBasis"]
 dpv_url = "http://w3.org/ns/dpv#"
 
+class_map = {"PersonalDataCategory": PersonalData,
+             "DataController": DataController,
+             "DataSubject": DataSubject,
+             "Purpose": Purpose,
+             "Processing": Processing,
+             "Recipient": Recipient,
+             "LegalBasis": LegalBasis,
+             "TechnicalOrganisationalMeasure": TechnicalOrgMeasure}
+
 classes = []
+
 
 @app.route('/', methods=['GET'])
 def policy():
 
     data = {}
 
+    trips = parse_rdf(file_path)
+    parsed_data = parse_triples(trips)    
+    personal_data_dict = parsed_data[0]
+    nodes_dict = parsed_data[1]
+    data_controller = parsed_data[2]
+
+    print(data_controller.label)
+   
+
     with open(json_path) as f:
         data = json.load(f)
-
 
     #data = jsonld["@graph"]
     # print(data)
@@ -53,7 +73,6 @@ def policy():
 
     data_classes = []
 
-    '''
     for cat in data["personalDataHandling"]:
         purpose_set.update(cat["purpose"])
         collect_set.update(cat["collection"])
@@ -61,10 +80,7 @@ def policy():
 
     # print(data_classes)
     dpvDescriptions = descriptions(data_classes)
-    '''
-    # print(dpvDescriptions)
     data["date"] = date
-
 
     topics = [{"heading": "What data do we collect?", "page": "data.html"},
               {"heading": "How will we collect your data?", "page": "collect.html"},
@@ -82,10 +98,10 @@ def policy():
     return render_template('policy.html',
                            #dpv = g,
                            topics=topics,
-                           data=data)#,
-                           #dpv=dpvDescriptions,
-                         #purpose_set=purpose_set,
-                          #collect_set=collect_set)
+                           data=data,
+                           dpv=dpvDescriptions,
+                           purpose_set=purpose_set,
+                           collect_set=collect_set)
 
 
 def descriptions(data):
@@ -109,72 +125,101 @@ def parse_rdf(file_path):
     g = Graph()
     g.parse(file_path, format="ttl")
 
-    triples=[]
-    #Cleaning the triples
-    for s,p,o in g:
+    triples = []
+    # Cleaning the triples
+    for s, p, o in g:
 
-        sub=(s.split('#')[1])
+        sub = (s.split('#')[1])
 
-        pred=""
+        pred = ""
         if("#") in p:
-            pred=(p.split('#')[1])
+            pred = (p.split('#')[1])
         else:
-            pred=str(p)
+            pred = str(p)
 
-        obj=""
+        obj = ""
 
-        if(type(o)==rdflib.term.Literal):
+        if(type(o) == rdflib.term.Literal):
             #print("literal found:",o)
-            obj=(str(o))
-        elif(type(o)==rdflib.term.URIRef):
+            obj = (str(o))
+        elif(type(o) == rdflib.term.URIRef):
             if("#" in o):
-                obj=(o.split('#')[1])
+                obj = (o.split('#')[1])
 
-        triples.append((sub,pred,obj))
+        triples.append((sub, pred, obj))
 
-                    
+    # TODO create class for purposes etc, load into dict by IRI, load into corresponding classes
+    # print(triples)
     return triples
+
 
 def parse_triples(triples):
 
-    #Creating the base instances
+    # Creating the base instances
     nodes = {}
-    for triple in triples:
+    pdh = {}
+    preds_filter = ["type", "label"]
+    pdh_properties = ["hasRecipient", "hasPersonalDataCategory",
+                      "hasDataController", "hasDataSubject"]
+    dc_iri = ""
 
-        sub,pred,obj = triple
+    node_declare = [x for x in triples if (x[1] == "type")]
+    labels = [x for x in triples if(x[1] == "label")]
+    dc_properties = [x for x in triples if ("schema.org" in x[1])]
+    # Filtering the predicates
+    triples = [x for x in triples if (x[1] not in preds_filter)]
 
-        if(pred) == "type":
-            if(obj) == "DataController":
-                nodes[sub] = DataController(sub)
+    # Declaring the nodes
+    for triple in node_declare:
 
-            elif(obj) == "PersonalDataHandling":
-                personalData = PersonalDataHandling(sub)
-                classes.append(personalData)
-                nodes[sub] = personalData
+        sub, pred, obj = triple
 
-            elif(obj) in dpv_classes:
-                nodes[sub] = obj
-            triples.remove(triple)
+        if(obj) == "DataController":
+            nodes[sub] = DataController(sub)
+            dc_iri = sub
 
-    for key in nodes:
-        print(key, ":", nodes[key])
+        elif(obj) == "PersonalDataHandling":
+            personalData = PersonalDataHandling(sub)
+            classes.append(personalData)
+            pdh[sub] = personalData
 
-    for triple in triples:
+        elif(obj) in class_map.keys():
+            dpv_class = class_map[obj]
+            nodes[sub] = dpv_class(obj)
 
-        print(triple)
-        sub,pred,obj = triple
+    # assigning labels
+    for triple in labels:
 
-    return 0   
+        sub, pred, obj = triple
+        # print(triple)
+        node = nodes[sub]
+        node.label = obj
+        nodes[sub] = node
 
-def generate_classes(triples):
+    # print(dc_properties)
+    # Assign data controller's properties
+    for triple in dc_properties:
 
-    personal_data_classes= ""
-    parse_triples(triples)
-    return personal_data_classes
-    
+        sub, pred, obj = triple
+        controller = nodes[sub]
+        controller.properties.append((pred, obj))
+        nodes[sub] = controller
+
+    # Another filter to remove the data controller's properties
+    triples = [x for x in triples if("schema.org" not in x[1])]
+
+    #[print(x) for x in triples]
+    # Assigning properties to each instance of personal data handling
+    for sub, pred, obj in triples:
+
+        data_handling = pdh[sub]
+        # Create a link between the personal data handling instance and the property's node
+        data_handling.properties.append((pred, nodes[obj]))
+        pdh[sub] = data_handling
+
+
+    return (pdh,nodes,nodes[dc_iri])
+
+
 if __name__ == '__main__':
-
-    trips = parse_rdf(file_path)
-    data_classes = generate_classes(trips)
-
     app.run()

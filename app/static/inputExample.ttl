@@ -14,12 +14,8 @@
     dpv:hasPersonalDataCategory :Name ;
     dpv:hasDataController :Company ;
     dpv:hasDataSubject :Subject ;
-    dpv:hasPurpose :IdentityVerification ;
-    dpv:hasPurpose :SellTargettedAdvertisements ;
-    dpv:hasPurpose :CreatePersonalizedRecommendations ;
-    dpv:hasProcessing :Collect ;
-    dpv:hasProcessing :Store ;
-    dpv:hasProcessing :Share ;
+    dpv:hasPurpose :IdentityVerification , :SellTargettedAdvertisements , :CreatePersonalizedRecommendations ;
+    dpv:hasProcessing :Collect , :Store , :Share ;
     dpv:hasRecipient :Amazon ;
     dpv:hasTechnicalOrganisationalMeasure :EncryptionInRest ;
     dpv:hasLegalBasis :Consent .
@@ -28,15 +24,9 @@
     dpv:hasPersonalDataCategory :EmailAddress ;
     dpv:hasDataController :Company ;
     dpv:hasDataSubject :Subject ;
-    dpv:hasPurpose :IdentityVerification ;
-    dpv:hasPurpose :News ;
-    dpv:hasPurpose :EmailMarketing ;
-    dpv:hasPurpose :CustomerCare ;
-    dpv:hasProcessing :Collect ;
-    dpv:hasProcessing :Store ;
-    dpv:hasProcessing :Share ;
-    dpv:hasRecipient :Amazon ;
-    dpv:hasRecipient :Google ;
+    dpv:hasPurpose :IdentityVerification , :News , :EmailMarketing , :CustomerCare ;
+    dpv:hasProcessing :Collect , :Store , :Share ;
+    dpv:hasRecipient :Amazon , :Google ;
     dpv:hasTechnicalOrganisationalMeasure :EncryptionInRest ;
     dpv:hasLegalBasis :Consent .
 
@@ -44,11 +34,8 @@
     dpv:hasPersonalDataCategory :Age ;
     dpv:hasDataController :Company ;
     dpv:hasDataSubject :Subject ;
-    dpv:hasPurpose :SellTargettedAdvertisements ;
-    dpv:hasPurpose :CreatePersonalizedRecommendations ;
-    dpv:hasProcessing :Collect ;
-    dpv:hasProcessing :Store ;
-    dpv:hasProcessing :Share ;
+    dpv:hasPurpose :SellTargettedAdvertisements , :CreatePersonalizedRecommendations ;
+    dpv:hasProcessing :Collect , :Store , :Share ;
     dpv:hasRecipient :Amazon ;
     dpv:hasLegalBasis :Consent .
 
