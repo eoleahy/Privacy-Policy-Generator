@@ -14,6 +14,7 @@ MarkupSafe==1.1.1
 pycodestyle==2.5.0
 pyparsing==2.4.6
 rdflib==4.2.2
+rdflib-jsonld==0.4.0
 requests==2.23.0
 six==1.14.0
 soupsieve==2.0

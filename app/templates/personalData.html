@@ -1,27 +1,5 @@
 <article>
-    {% set category = personalData["category"] %}
-    {% set instanceId = class|lower|replace(' ','-') %}
-
-    <div id="#DataView-{{category}}" resource="#{{category}}" typeof="dpv:{{category}}">
-    <h2>Personal Data View</h2>
-    <h3>Your <span class="dpv:PersonalDataCategory">{{ category }}</span>:</h3>
-        {% include "dpvData.html" %}
-
-        <h4>Used for purposes:</h4>
-        {{ macros.embed_rdfa(personalData["purpose"], category, "Purpose") }}
-
-        <h4>The processing for your {{category}} includes: </h4>
-        {{ macros.embed_rdfa(personalData["processing"], category, "Processing") }}
- 
-        {#<p> You supply your {{class}} when you:<p>
-                {{ render_list(personalData["collection"]) }}#}
-
-        {% if personalData["recipient"] | length != 0 %}
-            <h4>Shared with:</h4>
-        {{ macros.embed_rdfa(personalData["recipient"], category, "Recipient") }}
-        {% endif %}
-
-        <h4>Legal basis: </h4>
-        {{ macros.embed_rdfa(personalData["legalBasis"], category, "LegalBasis")}}
-    </div>
+    {% autoescape false %}
+        {{ markup }}
+    {% endautoescape %}
 </article>

@@ -3,12 +3,8 @@
 {% block content %}
     <div id="#DataView">
     <p>{{ company }} collects the following data: </p>
-    <ul>
-    {% for personalData in data["personalDataHandling"] %}
-        <li>{{personalData["category"] }}</li>
-    {% endfor %}
-    </ul>
-    {% for personalData in data["personalDataHandling"] %}
+  
+    {% for markup in pdh %}
         
         {% include "personalData.html" %}
 

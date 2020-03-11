@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request
 from rdflib import Graph, plugin, Namespace
-from PersonalDataClasses import DataController, PersonalData, DataSubject, Purpose, Processing, Recipient, LegalBasis, TechnicalOrgMeasure
-from personalDataHandling import PersonalDataHandling
 from bs4 import BeautifulSoup
-from node import Node, NodeGraph
+from node import Node, PDH, NodeGraph
 import datetime
 import requests
 import rdflib
@@ -28,20 +26,9 @@ views = ["default", "data", "purpose", "collection",
          "storage", "sharing", "legalBasis", "rights", "techOrgMeasures"]
 
 
-dpv_classes = ["PersonalDataCategory", "DataController", "DataSubject", "Purpose",
-               "Processing", "Recipient", "TechnicalOrganisationalMeasure", "LegalBasis"]
 dpv_url = "http://w3.org/ns/dpv#"
 
-class_map = {"PersonalDataCategory": PersonalData,
-             "DataController": DataController,
-             "DataSubject": DataSubject,
-             "Purpose": Purpose,
-             "Processing": Processing,
-             "Recipient": Recipient,
-             "LegalBasis": LegalBasis,
-             "TechnicalOrganisationalMeasure": TechnicalOrgMeasure}
 
-classes = []
 
 
 @app.route('/', methods=['GET'])
@@ -56,7 +43,14 @@ def policy():
     date = date.strftime("%B %d, %Y")
 
     dc_markup = g.create_dc_markup(date)
-    pdh_markup = g.create_pdh_markup()
+
+    pdh = g.get_nodes_by_type("PersonalDataHandling")
+
+    pdh_markup = []
+
+    for p in pdh:
+        pdh_markup.append(p.generate_markup())
+
 
     with open(json_path) as f:
         data = json.load(f)
@@ -92,6 +86,7 @@ def policy():
 
     return render_template('policy.html',
                            topics=topics,
+                           pdh = pdh_markup,
                            controller_markup = dc_markup,
                            data=data,
                            dpv=dpvDescriptions,
@@ -151,16 +146,10 @@ def parse_rdf(file_path):
 def parse_triples(triples):
 
     # Creating the base instances
-    nodes = {}
-    pdh = {}
     preds_filter = ["type", "label"]
-    pdh_properties = ["hasRecipient", "hasPersonalDataCategory",
-                      "hasDataController", "hasDataSubject"]
-    dc_iri = ""
 
-
-
-    node_declare = [x for x in triples if (x[1] == "type")]
+    node_declare = [x for x in triples if (x[1] == "type" and x[2] != "PersonalDataHandling")]
+    pdh_declare = [x for x in triples if (x[1] == "type" and x[2] == "PersonalDataHandling")]
     labels = [x for x in triples if(x[1] == "label")]
     dc_properties = [x for x in triples if ("schema.org" in x[1])]
     # Filtering the predicates
@@ -168,8 +157,9 @@ def parse_triples(triples):
     
 
     nodes = [Node(x[0],x[2]) for x in node_declare]
+    pdh = [PDH(x[0],x[2]) for x in pdh_declare]
 
-    g = NodeGraph(nodes)
+    g = NodeGraph(nodes+pdh)
 
     for s,p,o in labels:
         node = g.get_node_by_iri(s)
@@ -177,14 +167,21 @@ def parse_triples(triples):
 
     #Assign purpose,process. etc to the graph
     g.assign_types()
-    #Find the properties for each node in the graph
+
+    #Assigning child nodes to the PDH instance
     for s,p,o in triples:
 
         #print(s,p,o)
         node = g.get_node_by_iri(s)
         node.properties.append((p,g.get_node_by_iri(o)))
    
-    g.print_graph()
+    pdh = g.get_nodes_by_type("PersonalDataHandling")
+
+    for p in pdh:
+        p.assign_properties()
+
+    #g.print_graph()
+
     return (g) #Return the graph
 
 
