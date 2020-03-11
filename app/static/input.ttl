@@ -1,13 +1,14 @@
 @prefix dpv: <https://www.w3.org/ns/dpv#> .
 @prefix schema: <http://schema.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix : <#> .
  
 :Company a dpv:DataController ;
-    rdfslabel: "" ;
-    schema:address ""^^schema:Text ;
-    schema:email "" ;
-    schema:telephone "" ;
+    rdfslabel: ""@en ;
+    schema:address ""@en ;
+    schema:email ""@en ;
+    schema:telephone ""@en ;
 
 
 #The properties should point to nodes defined below
@@ -17,9 +18,18 @@
     dpv:hasDataSubject : ;
     dpv:hasPurpose : ;
     dpv:hasProcessing : ;
-    dpv:hasRecipient :DataSharing1 ;
+    dpv:hasRecipient : ;
     dpv:hasTechnicalOrganisationalMeasure : ;
     dpv:hasLegalBasis : .
+
+:Cookie a dpv:Store ;
+    ;
+
+: a dpv:Recipient ;
+    rdfs:label ""@en .
+    schema:address ""^^@en ;
+    schema:description ""^^@en.
+    
 
 #PDH1 property nodes
 : a dpv:PersonalDataCategory ;

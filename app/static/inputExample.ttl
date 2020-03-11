@@ -5,7 +5,7 @@
  
 :Company a dpv:DataController ;
     rdfs:label "Test Company" ;
-    schema:address "address"^^schema:Text ;
+    schema:address "123 Fake street"^^schema:Text ;
     schema:email "test@gmail.com" ;
     schema:telephone "656 444 2301" .
 
@@ -53,7 +53,7 @@
     rdfs:label "Sell Targetted Advertisements"@en .
 
 :CreatePersonalizedRecommendations a dpv:Purpose ;
-    rdfs:label "Identity Verification"@en .       
+    rdfs:label "Create Personalized Recommendations"@en .       
 
 :Collect a dpv:Processing ;
     rdfs:label "Collect"@en .
@@ -65,7 +65,7 @@
     rdfs:label "Share"@en .
 
 :Amazon a dpv:Recipient ;
-    rdfs:label "Amazon"@en .    
+    rdfs:label "Amazon.co.uk"@en .    
 
 :EncryptionInRest a dpv:TechnicalOrganisationalMeasure ;
     rdfs:label "Encryption in Rest"@en .

@@ -3,6 +3,7 @@ from rdflib import Graph, plugin, Namespace
 from PersonalDataClasses import DataController, PersonalData, DataSubject, Purpose, Processing, Recipient, LegalBasis, TechnicalOrgMeasure
 from personalDataHandling import PersonalDataHandling
 from bs4 import BeautifulSoup
+from node import Node, NodeGraph
 import datetime
 import requests
 import rdflib
@@ -10,7 +11,6 @@ import json
 import re
 import os
 import sys
-from rdf import rdf
 
 
 app = Flask(__name__)
@@ -50,23 +50,19 @@ def policy():
     data = {}
 
     trips = parse_rdf(file_path)
-    parsed_data = parse_triples(trips)    
-    personal_data_dict = parsed_data[0]
-    nodes_dict = parsed_data[1]
-    data_controller = parsed_data[2]
+    g = parse_triples(trips)    
 
-    print(data_controller.label)
-    dc_markup = data_controller.generate_markup()
+    date = datetime.date.today()
+    date = date.strftime("%B %d, %Y")
+
+    dc_markup = g.create_dc_markup(date)
+    pdh_markup = g.create_pdh_markup()
 
     with open(json_path) as f:
         data = json.load(f)
 
     #data = jsonld["@graph"]
     # print(data)
-
-    date = datetime.date.today()
-    date = date.strftime("%B %d, %Y")
-
     purpose_set = set()
     collect_set = set()
 
@@ -95,8 +91,8 @@ def policy():
               {"heading": "How to contact us?", "page": "contact.html"}]
 
     return render_template('policy.html',
-                           controller_markup = dc_markup,
                            topics=topics,
+                           controller_markup = dc_markup,
                            data=data,
                            dpv=dpvDescriptions,
                            purpose_set=purpose_set,
@@ -162,62 +158,34 @@ def parse_triples(triples):
                       "hasDataController", "hasDataSubject"]
     dc_iri = ""
 
+
+
     node_declare = [x for x in triples if (x[1] == "type")]
     labels = [x for x in triples if(x[1] == "label")]
     dc_properties = [x for x in triples if ("schema.org" in x[1])]
     # Filtering the predicates
     triples = [x for x in triples if (x[1] not in preds_filter)]
+    
 
-    # Declaring the nodes
-    for triple in node_declare:
+    nodes = [Node(x[0],x[2]) for x in node_declare]
 
-        sub, pred, obj = triple
+    g = NodeGraph(nodes)
 
-        if(obj) == "DataController":
-            nodes[sub] = DataController(sub)
-            dc_iri = sub
+    for s,p,o in labels:
+        node = g.get_node_by_iri(s)
+        node.label = o
 
-        elif(obj) == "PersonalDataHandling":
-            personalData = PersonalDataHandling(sub)
-            classes.append(personalData)
-            pdh[sub] = personalData
+    #Assign purpose,process. etc to the graph
+    g.assign_types()
+    #Find the properties for each node in the graph
+    for s,p,o in triples:
 
-        elif(obj) in class_map.keys():
-            dpv_class = class_map[obj]
-            nodes[sub] = dpv_class(obj)
-
-    # assigning labels
-    for triple in labels:
-
-        sub, pred, obj = triple
-        # print(triple)
-        node = nodes[sub]
-        node.label = obj
-        nodes[sub] = node
-
-    # print(dc_properties)
-    # Assign data controller's properties
-    for triple in dc_properties:
-
-        sub, pred, obj = triple
-        controller = nodes[sub]
-        controller.properties.append((pred, obj))
-        nodes[sub] = controller
-
-    # Another filter to remove the data controller's properties
-    triples = [x for x in triples if("schema.org" not in x[1])]
-
-    #[print(x) for x in triples]
-    # Assigning properties to each instance of personal data handling
-    for sub, pred, obj in triples:
-
-        data_handling = pdh[sub]
-        # Create a link between the personal data handling instance and the property's node
-        data_handling.properties.append((pred, nodes[obj]))
-        pdh[sub] = data_handling
-
-
-    return (pdh,nodes,nodes[dc_iri])
+        #print(s,p,o)
+        node = g.get_node_by_iri(s)
+        node.properties.append((p,g.get_node_by_iri(o)))
+   
+    g.print_graph()
+    return (g) #Return the graph
 
 
 if __name__ == '__main__':
