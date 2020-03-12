@@ -5,7 +5,7 @@
 @prefix : <#> .
  
 :Company a dpv:DataController ;
-    rdfslabel: ""@en ;
+    rdfs:label: ""@en ;
     schema:address ""@en ;
     schema:email ""@en ;
     schema:telephone ""@en ;

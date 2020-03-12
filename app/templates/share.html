@@ -1,44 +1,16 @@
 {% extends "default.html" %}
 {% block content %}
+    {% set recipients = data["dpv:Recipient"] %}
+    <div id = "ShareView">
+        <p> We disclose your personal data to the following recipients: </p>
+        <ul>
+            {% for recip in recipients %}
+                <li>{{recip["schema:name"]}}</li>
+            {% endfor %}
+        </ul>
 
-    <p> We disclose your personal data to the following recipients: </p>
-    <ul>
-        {% for recip in data["recipient"] %}
-        {#{{ macros.rdfa(recip["properties"]["name"], "Recipient") }}#}
-        <li>{{recip["properties"]["name"]}}</li>
+        {% for recip in recipients %}
+            {% include "recipients.html" %}
         {% endfor %}
-    </ul>
-
-    {% for recip in data["recipient"] %}
-        {% include "recipients.html" %}
-    {% endfor %}
+    </div>
 {% endblock %}
-
-{#
-{% block headingDPV %}
-    <h2>Recipient</h2>
-{% endblock %}
-
-{% block contentDPV %}
-    <ul>
-    {% for recip in data["recipient"] %}
-        <li>{{recip["properties"]["name"]}}</li>
-    {% endfor %}
-    </ul>
-    {% for recip in data["recipient"] %}
-        <article>
-            {% set name = recip["properties"]["name"] %}
-            <h3>{{name}}</h3>
-
-            <p>PersonalDataCategory:</p>
-            {{render_list(recip["class"])}}
-
-
-            <p>Purpose:</p>
-            {{render_list(recip["purpose"])}}
-
-            <p>LegalBasis: {{','.join(recip["legalBasis"])}}</p>
-        </article>
-    {% endfor %}
-{% endblock %}
-#}

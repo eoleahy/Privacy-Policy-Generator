@@ -1,46 +1,41 @@
 {
-    "context": "https://www.w3.org/ns/dpv",
-    "dataController": {
-        "properties": {
-            "name": "",
-            "physicaladdress": "",
-            "emailAddress": "",
-            "telephoneNumber": ""
-        },
-        "technicalMeasure": []
+    "dpv:DataController": {
+        "resource": "",
+        "schema:name": "",
+        "schema:address": "",
+        "schema:email": "",
+        "schema:telephone": ""
     },
-    "personalDataHandling": [
+    "dpv:PersonalDataHandling": [
         {
-            "category": "",
-            "dataController":[],
-            "legalBasis": [],
-            "processing": [],
-            "purpose": [],
-            "recipient": [],
-            "technicalOrganisationalMeasure":[],
-            "collection": []
+            "resource": "",
+            "dpv:hasPersonalDataCategory": "",
+            "dpv:hasDataController": "",
+            "dpv:hasDataSubject": "",
+            "dpv:hasPurpose": [],
+            "dpv:hasProcessing": [],
+            "dpv:hasRecipient": [],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [],
+            "dpv:Collect": []
         }
     ],
-    "recipient": [
+    "dpv:Recipient": [
         {
-            "properties": {
-                "name": "",
-                "physicalAddress": ""
-            },
-            "legalBasis": [],
-            "category": [],
-            "purpose": [],
-            "privacyPolicy": ""
+            "resource": "",
+            "schema:name": "",
+            "schema:address": "",
+            "schema:description": ""
         }
     ],
-    "cookie": [
+    "dpv:Store": {
+        "resource": ""
+    },
+    "Cookie": [
         {
-            "purpose": "",
-            "textualDescription":"",
-            "type":"",
-            "provenance":"",
-            "duration": "",
-            "legalBasis":[]
+            "resource": "",
+            "dpv:hasPurpose": "",
+            "schema:description": ""
         }
     ]
 }

@@ -1,24 +1,9 @@
 {% extends "default.html" %}
 {%block content %}
-    <p>{{company}} collects your data for the following purposes:</p>
-    {#
-    {% for purp in purpose_set %}
-        {{ macros.rdfa(purp,"Purpose") }}
-        <li>{{purp}}</li>
-    {% endfor %}
-    #}
+    <div id="PurposeView">
+        <p>{{company}} collects your data for the following purposes:</p>
 
-    <p>If you agree, {{company}} will share your data with our partner companies so that they may offer you their products and services.</p>
-{% endblock %}
+        {{macros.render_list(purpose_set)}}
 
-{#
-{% block headingDPV %}
-    <h2>Purpose</h2>
+    </div>
 {% endblock %}
-
-{% block contentDPV %}
-    {% for purp in purpose_set %}
-        <li>{{purp}}</li>
-    {% endfor %}
-{% endblock %}
-#}

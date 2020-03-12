@@ -20,19 +20,33 @@
 </head>
 <script src="{{ url_for('static',filename='scripts.js')}}"></script>
 
-<body onload="openPage('Subject')" vocab="http://w3.org/ns/dpv#"  prefix ="dpv: http://w3.org/ns/dpv#">
+<body vocab="http://w3.org/ns/dpv#" vocab="http://schema.org/"
+    prefix="dpv: http://w3.org/ns/dpv#">
 
     {% import "macros.jinja" as macros %}
-    {% set controller = data["dataController"] %}
-    {% set company = controller["properties"]["name"] %}
-    {% set contact_methods = controller["properties"].values() %}
+    {% set controller = data["dpv:DataController"] %}
+    {% set company = controller["schema:name"] %}
+    {% set resource = controller["resource"] %}
+    
+    <div class="section">
+        
+        <span resource="#{{resource}}" typeof="dpv:DataController">
+            <h1><span property="schema:name">{{company}}</span> Privacy Policy</h1>
+            <p><span property="schema:address">{{controller["schema:address"]}}</span></p>
+            <p>Email:<a href="{{controller['schema:email']}}" property="schema:email"> {{controller["schema:email"]}}</a></p>
+            <p>Telephone Number:<span property="schema:telephone"> {{controller["schema:telephone"]}}</span></p>
+        </span>
+        <p>Effective date: {{ data["date"] }}</p>
+        <p>This privacy policy will explain how our organisation uses the personal data we collect from you when you use
+            our website.</p>
 
-    {% autoescape false %}
-        {{controller_markup}}
-    {% endautoescape %}
+        <p>This privacy policy uses terms defined in the <a href=" http://w3.org/ns/dpv#">Digital Protection
+                Vocabulary</a>.</p>
+    </div>
     {% for topic in topics %}
-        {% include topic["page"] %}
+    {% include topic["page"] %}
     {% endfor %}
 
 </body>
+
 </html>

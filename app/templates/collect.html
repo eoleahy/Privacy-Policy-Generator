@@ -1,5 +1,12 @@
 {% extends "default.html" %}
 {%block content %}
-    <p>You directly provide {{company}} with most of the data we collect. We collect and proces your data when you:</p>
-    {{ render_list(collect_set) }}
+    <div id = "CollectView">
+        <p>Data sources:</p>
+        {{ render_list(collect.keys()) }}
+
+        {% for key in collect %}
+            {% set col=collect[key] %}
+            {% include "collectViews.html" %}
+        {% endfor %}
+    </div>
 {% endblock %}

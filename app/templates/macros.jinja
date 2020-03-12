@@ -7,12 +7,12 @@
 {% endmacro %}
 
 
-{% macro embed_rdfa(list, class, property) %}
+{% macro embed_rdfa(list, id, class_id, property,type) %}
     <ul>
-        {% for prop in list %}
-            <li><span resource ="#PDH{{class}}" typeof="dpv:PersonalDataHandling">
-                <span property ="dpv:hasPersonalDataCategory" href="#{{class|replace(' ','')}}"></span>
-                <span property ="dpv:has{{property}}" resource ="#{{prop|replace(' ','')}}" typeof="dpv:{{property}}">{{prop}}</span>
+        {% for prop in list[property] %}
+            <li><span resource ="#{{id}}" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#{{class_id}}"></span>
+                <span property ="{{property}}" resource ="#{{prop|replace(' ','')}}" typeof="{{type}}">{{prop}}</span>
             </span></li>
         {% endfor %}
     </ul>

@@ -1,131 +1,129 @@
 {
-    "context": "https://www.w3.org/ns/dpv",
-    "dataController": 
-    {
-        "properties": 
-            {
-                "name": "Company",
-                "physicaladdress": "13 Test road,\nDublin 4,\nDublin",
-                "emailAddress": "test@test.ie",
-                "telephoneNumber": "000 000 0000"
-            },
-        "technicalMeasure": ["Encryption in Rest"],
-        "storage": {
-            "duration": "as long as you use our service, and up to 30 days after that",
-            "location": "with our cloud Service Provider, AWS",
-            "measures": ["encryption","authentication procedure"]
+    "dpv:DataController": {
+        "resource": "Company",
+        "schema:name": "Social Web",
+        "schema:address": "150 George's Dock,\n1st Floor,\nIFSC,\nDublin 1",
+        "schema:email": "info@socialweb.com",
+        "schema:telephone": "656 150 2234"
+    },
+    "dpv:PersonalDataHandling": [
+        {
+            "resource": "PDH1",
+            "dpv:hasPersonalDataCategory": "Name",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Identity Verification","Sell Targetted Advertisements","Create Personalized Recommendations"],
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasRecipient": ["Amazon"],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."]
+        },
+        {
+            "resource": "PDH2",
+            "dpv:hasPersonalDataCategory": "Age",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Sell Targetted Advertisements","Create Personalized Recommendations"],
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasRecipient": ["Amazon"],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."]
+        },
+        {
+            "resource": "PDH3",
+            "dpv:hasPersonalDataCategory": "Email Address",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["News","Email Marketing","Identity Verification","Customer Care"],
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasRecipient": ["Amazon","Google"],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."]
+        },
+        {
+            "resource": "PDH4",
+            "dpv:hasPersonalDataCategory": "Telephone Number",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Marketing"],
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasRecipient": [],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."]
+        },
+        {
+            "resource": "PDH5",
+            "dpv:hasPersonalDataCategory": "IPAddress",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Statistics","Admin"],
+            "dpv:hasProcessing": ["Collect","Store","Anonymise","Move","Analyse"],
+            "dpv:hasRecipient": ["Google"],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Encryption in Rest","Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Automatic collection using surveillance."]
+        },
+        {
+            "resource": "PDH6",
+            "dpv:hasPersonalDataCategory": "Credit Card Number",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Fraud Prevention and Detection","Service Provision"],
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasRecipient": ["Stripe"],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure","Encryption in Rest"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."]
+        },
+        {
+            "resource": "PDH7",
+            "dpv:hasPersonalDataCategory": "Password",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Access Control","Security"],
+            "dpv:hasProcessing": ["Collect","Store","Alter"],
+            "dpv:hasRecipient": [],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Encryption in Rest","Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."]
         }
-    }
-    ,
-    "personalDataHandling": [
+        
+    ],
+    "dpv:Recipient": [
         {
-            "category": "Name",
-            "purpose": ["Identity Verification","Sell Targetted Advertisements","Create Personalized Recommendations"],
-            "legalBasis": ["Consent"],
-            "processing": ["Collect","Store","Share"],
-            "recipient": ["Amazon.com"],
-            "collection": ["Create an account"]
+            "resource": "Amazon",
+            "dpv:hasPurpose":["Sell Targetted Advertisements","Create Personalized Recommendations"],
+            "schema:name": "Amazon.com, Inc",
+            "schema:address": "410 Terry Ave.\nNorth Seattle,\nWA,\nUSA",
+            "schema:description": "Data storage Provider"
         },
         {
-            "category": "Age",
-            "purpose": ["Sell Targetted Advertisements","Create Personalized Recommendations"],
-            "legalBasis": ["Consent"],
-            "processing": ["Collect","Store","Share"],
-            "recipient": ["Amazon.com"],
-            "collection": ["Create an account"]
+            "resource": "Google",
+            "dpv:hasPurpose": ["Statistics"],
+            "schema:name": "Google LLC",
+            "schema:address": "Google LLC,\n1600 Amphitheatre Pkwy,\nMountain View,\nCalifornia 94043,\nUSA.",
+            "schema:description": "Analytics Provider"
         },
         {
-            "category": "Email Address",
-            "purpose": ["News","Email Marketing","Identity Verification","Customer Care"],
-            "legalBasis": ["Consent"],
-            "processing": ["Collect","Store","Share"],
-            "recipient": ["Amazon.com","Google LLC"],
-            "collection":["Create an account"]
-        },
-        {
-            "category": "Telephone Number",
-            "purpose": ["Identity Verification","Marketing"],
-            "legalBasis": ["Consent"],
-            "processing": ["Collect","Store"],
-            "recipient": [],
-            "collection": ["Create an account"]
-        },
-        {
-            "category": "IPAddress",
-            "purpose": ["Statistics","Admin","Service Provision"],
-            "legalBasis": ["Consent"],
-            "processing": ["Collect","Store","Anonymise","Move","Analyse"],
-            "recipient": ["Google LLC"],
-            "collection": ["Visit our website"]
-        },
-        {
-            "category": "Credit Card Number",
-            "purpose": ["Fraud Prevention and Detection","Payment"],
-            "legalBasis": ["Consent"],
-            "processing": ["Collect","Store"],
-            "recipient": ["Stripe,Inc"],
-            "collection": ["Use our service"]
-        },
-        {
-            "category": "Password",
-            "purpose": ["Access Control","Security"],
-            "legalBasis": ["Consent"],
-            "processing": ["Collect","Store","Alter"],
-            "recipient": [],
-            "collection": ["Create an account"]
+            "resource": "Stripe",
+            "dpv:hasPurpose": ["Service Provision"],
+            "schema:name": "Stripe, Inc",
+            "schema:address": "Stripe, Inc.,\nCalifornia,\n510 Townsend Street,\nSan Francisco, California 94103,\nUSA.",
+            "schema:description": "Secure Payments Provider"
         }
     ],
-    "recipient": [
+    "dpv:Store": {
+        "resource": ""
+    },
+    "Cookie": [
         {
-            "properties": 
-                {
-                    "name": "Stripe,Inc",
-                    "physicalAddress": "Stripe, Inc.,\nCalifornia,\n510 Townsend Street,\nSan Francisco, California 94103,\nUSA."
-                },
-            "legalBasis": ["Consent"],
-            "category": ["Credit Card Number"],
-            "purpose": ["Payment"],
-            "privacyPolicy": "https://stripe.com/privacy-center/legal"
-        },
-        {
-            "properties": 
-                {
-                    "name": "Google LLC",
-                    "physicalAddress": "Google LLC,\n1600 Amphitheatre Pkwy,\nMountain View,\nCalifornia 94043,\nUSA."
-                },
-            "legalBasis": ["Consent"],
-            "category": ["IP Address"],
-            "purpose": ["Statistics"],
-            "privacyPolicy": "https://policies.google.com/privacy?hl=en"
-        },
-        {
-            "properties": 
-                {
-                    "name": "Amazon.com",
-                    "physicalAddress": "410 Terry Ave.\nNorth Seattle,\nWA,\nUSA"
-                },
-            "legalBasis": ["Consent"],
-            "category": ["Name","Age","Email Address"],
-            "purpose": ["Email Marketing","Sell Targetted Advertisements","Create Personalized Recommendations"],
-            "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
-        }
-    ],
-    "cookie": [
-        {
-            "purpose": "Statistics",
-            "textualDescription":"We use this cookie to create and analyse statistics about how you use our website",
-            "type": "analytical",
-            "Provenance":"First",
-            "duration": "Session",
-            "legalBasis":["consent"]
-        },
-        {
-            "purpose": "Access Control",
-            "textualDescription":"We use this cookie to help facilitate our sign up and login features",
-            "type":"necessary",
-            "provenance":"First",
-            "duration": "Persistent",
-            "legalBasis":["consent"]
+            "resource": "",
+            "dpv:hasPurpose": "",
+            "schema:description": ""
         }
     ]
 }

@@ -1,22 +1,13 @@
 <article>
-    {% set name = recip["properties"]["name"] %}
+    {% set name = recip["schema:name"] %}
+    <h3>{{name}} - {{recip["schema:description"]}}</h3>
 
-    <p>What we share with {{ name}}: </p>
-    {{render_list(recip["class"])}}
+    <h4>We share your data with {{name}} for the following purpose(s):</h4>
+        {{render_list(recip["dpv:hasPurpose"])}}
 
-    <p>We share this data for the following purpose(s):</p>
-    {{render_list(recip["purpose"])}}
 
+    <h4>{{name}}'s contact details are as follows:</h4>
     {% autoescape false %}
-    <p>{{name}}'s contact details are:</br>
-        <address>
-        {{ recip["properties"]["physicalAddress"] | replace("\n","<br/>") }}
-        </address>
+        <h4>{{recip["schema:address"]|replace("\n","</br>")}}</h4>
     {% endautoescape %}
-
-    <p>Our legal basis for our purpose is {{','.join(recip["legalBasis"])}}</p>
-
-    {% if recip["privacyPolicy"] %}
-        <p>View {{name}}'s privacy policy <a href='{{recip["privacypolicy"]}}'>here</a>
-    {% endif %}
 </article>

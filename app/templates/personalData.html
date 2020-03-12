@@ -1,5 +1,35 @@
 <article>
-    {% autoescape false %}
-        {{ markup }}
-    {% endautoescape %}
+    {% set category = personalData["dpv:hasPersonalDataCategory"] %}
+    {% set id = category|replace(' ','') %}
+    {% set resource = personalData["resource"] %}
+
+    <div resource="#{{id}}" typeof="{{id}}">
+        <h3>Your {{category}}</h3>
+        {% include "dpvData.html" %}
+
+        {% if personalData["dpv:hasPurpose"] | length != 0 %}
+        <h4>Used for purposes:</h4>
+        {{ macros.embed_rdfa(personalData,resource, id,"dpv:hasPurpose", "dpv:Purpose")}}
+        {% endif %}
+        {% if personalData["dpv:hasProcessing"] | length != 0 %}
+        <h4>The processing for your {{category}} includes: </h4>
+        {{ macros.embed_rdfa(personalData,resource, id,"dpv:hasProcessing", "dpv:Processing") }}
+        {% endif %}
+        {% if personalData["dpv:hasRecipient"] | length != 0 %}
+        <h4>Shared with:</h4>
+        {{ macros.embed_rdfa(personalData,resource, id,"dpv:hasRecipient" ,"dpv:Recipient") }}
+        {% endif %}
+        {% if personalData["dpv:Collect"] | length != 0 %}
+        <h4>Data source:</h4>
+        {{ macros.embed_rdfa(personalData,resource, id,"dpv:Collect" ,"dpv:Collect") }}
+        {% endif %}
+        {% if personalData["dpv:hasTechnicalOrganisationalMeasure"] | length != 0 %}
+        <h4>The safety measures we take include:</h4>
+        {{ macros.embed_rdfa(personalData,resource, id,"dpv:hasTechnicalOrganisationalMeasure", "dpv:TechnicalOrganisationalMeasure") }}
+        {% endif %}
+        {% if personalData["dpv:hasLegalBasis"] | length != 0 %}
+        <h4>Legal basis: </h4>
+        {{ macros.embed_rdfa(personalData,resource, id,"dpv:hasLegalBasis", "dpv:LegalBasis")}}
+        {%  endif %}
+    </div>
 </article>
