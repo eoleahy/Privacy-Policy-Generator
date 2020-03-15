@@ -43,6 +43,8 @@ def policy():
 
     #print(data)
 
+    print(data["dpv:PersonalDataHandling"])
+ 
     for cat in data["dpv:PersonalDataHandling"]:
         purpose_set.update(cat["dpv:hasPurpose"])
         collect_set.update(cat["dpv:Collect"])
@@ -56,7 +58,9 @@ def policy():
         collect_view[key] = {"PersonalDataCategory":set(),
                              "Purpose":set(),
                              "Processing":set(),
-                             "Recipient":set()}
+                             "Recipient":set(),
+                             "StorageLocation":set(),
+                             "StorageDuration":set()}
 
         for cat in data["dpv:PersonalDataHandling"]:
             if(key in cat["dpv:Collect"]):
@@ -64,8 +68,11 @@ def policy():
                 collect_view[key]["Purpose"].update(cat["dpv:hasPurpose"])
                 collect_view[key]["Processing"].update(cat["dpv:hasProcessing"])
                 collect_view[key]["Recipient"].update(cat["dpv:hasRecipient"])
+                collect_view[key]["StorageLocation"].add(cat["dpv:StorageLocation"])
+                collect_view[key]["StorageDuration"].add(cat["dpv:StorageDuration"])
 
-    #print(collect_view)
+
+    print(collect_view)
     #print(data_classes)  
     dpvDescriptions = Description.descriptions(data_classes)
     #print(dpvDescriptions)
@@ -76,10 +83,7 @@ def policy():
               {"heading": "Purpose View", "page": "purpose.html"},
               {"heading": "Data Storage View", "page": "store.html"},
               {"heading": "Data Sharing View", "page": "share.html"},
-              {"heading": "Cookies", "page": "cookies.html"},
-              {"heading": "Digital Rights View","page": "rights.html"},
-              {"heading": "Changes to our privacy policy", "page": "changes.html"},
-              {"heading": "How to contact us?", "page": "contact.html"}]
+              {"heading": "Cookies", "page": "cookies.html"}]
 
     return render_template('policy.html',
                            topics=topics,

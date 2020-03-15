@@ -1,4 +1,3 @@
-{% extends "default.html" %}
 {%block content %}
 
 <div id="Rights">
@@ -37,5 +36,14 @@
             {{render_list(contact_methods)}}
         </address>
     </p>
+
+    <p>If you have any questions about {{company}}'s privacy policy,
+        the data we hold on you, or you would like us to exercise one of your data protection rights,
+        please do not hesitate to contact us.</p>
+
+    <h3>Changes to our policy.</h3>
+    <p>{{company}} keeps its privacy policy under regular review and places any updates on this web page. This privacy
+        was last updated on {{ data["date"] }}.</p>
+
 </div>
 {% endblock %}

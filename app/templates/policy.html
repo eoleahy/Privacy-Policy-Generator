@@ -16,9 +16,11 @@
     <meta name="created" content="2020-02-13">
     <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
     <title>Privacy Policy</title>
 </head>
 <script src="{{ url_for('static',filename='scripts.js')}}"></script>
+
 
 <body vocab="http://w3.org/ns/dpv#" vocab="http://schema.org/"
     prefix="dpv: http://w3.org/ns/dpv#">
@@ -40,7 +42,7 @@
         <p>This privacy policy will explain how our organisation uses the personal data we collect from you when you use
             our website.</p>
 
-        <p>This privacy policy uses terms defined in the <a href=" http://w3.org/ns/dpv#">Digital Protection
+        <p>This privacy policy uses terms defined in the <a href=" http://w3.org/ns/dpv#">Data Privacy
                 Vocabulary</a>.</p>
     </div>
     {% for topic in topics %}

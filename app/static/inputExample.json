@@ -17,7 +17,9 @@
             "dpv:hasRecipient": ["Amazon"],
             "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
             "dpv:hasLegalBasis": ["Consent"],
-            "dpv:Collect": ["Explicit provision by user."]
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
         },
         {
             "resource": "PDH2",
@@ -29,7 +31,10 @@
             "dpv:hasRecipient": ["Amazon"],
             "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
             "dpv:hasLegalBasis": ["Consent"],
-            "dpv:Collect": ["Explicit provision by user."]
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
+
         },
         {
             "resource": "PDH3",
@@ -41,7 +46,9 @@
             "dpv:hasRecipient": ["Amazon","Google"],
             "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
             "dpv:hasLegalBasis": ["Consent"],
-            "dpv:Collect": ["Explicit provision by user."]
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
         },
         {
             "resource": "PDH4",
@@ -53,7 +60,10 @@
             "dpv:hasRecipient": [],
             "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
             "dpv:hasLegalBasis": ["Consent"],
-            "dpv:Collect": ["Explicit provision by user."]
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
+
         },
         {
             "resource": "PDH5",
@@ -65,7 +75,9 @@
             "dpv:hasRecipient": ["Google"],
             "dpv:hasTechnicalOrganisationalMeasure": ["Encryption in Rest","Authentication Procedure"],
             "dpv:hasLegalBasis": ["Consent"],
-            "dpv:Collect": ["Automatic collection using surveillance."]
+            "dpv:Collect": ["Automatic collection using surveillance."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
         },
         {
             "resource": "PDH6",
@@ -77,7 +89,9 @@
             "dpv:hasRecipient": ["Stripe"],
             "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure","Encryption in Rest"],
             "dpv:hasLegalBasis": ["Consent"],
-            "dpv:Collect": ["Explicit provision by user."]
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
         },
         {
             "resource": "PDH7",
@@ -89,7 +103,10 @@
             "dpv:hasRecipient": [],
             "dpv:hasTechnicalOrganisationalMeasure": ["Encryption in Rest","Authentication Procedure"],
             "dpv:hasLegalBasis": ["Consent"],
-            "dpv:Collect": ["Explicit provision by user."]
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
+
         }
         
     ],
@@ -116,9 +133,6 @@
             "schema:description": "Secure Payments Provider"
         }
     ],
-    "dpv:Store": {
-        "resource": ""
-    },
     "Cookie": [
         {
             "resource": "",

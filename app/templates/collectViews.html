@@ -1,9 +1,11 @@
 <article>
-    <h3>{{ key }}</h3>
+    <h3>Data Source - {{ key }}</h3>
     {% set data = col["PersonalDataCategory"] %}
     {% set purp = col["Purpose"] %}
     {% set proc = col["Processing"] %}
     {% set recip = col["Recipient"] %}
+    {% set storeL = col["StorageLocation"] %}
+    {% set storeD = col["StorageDuration"] %}
 
     <h4>The data we collect through this method include:</h4>
     {{macros.render_list(data)}}
@@ -14,9 +16,11 @@
     <h4>This data is collected to undergo the following processing:</h4>
     {{macros.render_list(proc)}}
 
-    {#<h4>Store:</h4>
-    
-    <h4>Data Rights:</h4>#}
+    <h4>This data is stored according to the following details:</h4>
+        <h5>Storage Location</h5>
+        {{macros.render_list(storeL)}}
+        <h5>Storage Duration</h5>
+        {{macros.render_list(storeD)}}
 
     <h4>This data is shared with the following recipients:</h4>
     {{macros.render_list(recip)}}    

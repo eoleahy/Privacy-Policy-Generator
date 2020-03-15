@@ -17,7 +17,13 @@
             "dpv:hasRecipient": [],
             "dpv:hasTechnicalOrganisationalMeasure": [],
             "dpv:hasLegalBasis": [],
-            "dpv:Collect": []
+            "dpv:Collect": [],
+            "dpv:Store": [
+                {
+                    "dpv:StorageDuration": "",
+                    "dpv:StorageLocation": ""
+                }
+            ]
         }
     ],
     "dpv:Recipient": [
@@ -28,9 +34,6 @@
             "schema:description": ""
         }
     ],
-    "dpv:Store": {
-        "resource": ""
-    },
     "Cookie": [
         {
             "resource": "",
