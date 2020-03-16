@@ -2,8 +2,15 @@
 {%block content %}
     <div id="PurposeView">
         <p>{{company}} collects your data for the following purposes:</p>
+        <ul>
+            {% for purpose in purpose_set %}
+                <li>{{ purpose }}</li>
+            {% endfor %}
+        </ul>
 
-        {{macros.render_list(purpose_set)}}
-
+        {% for category in purpose_view %}
+            {% set col=purpose_view[category] %}
+            {% include "purposeView.html" %}
+        {% endfor %}
     </div>
 {% endblock %}

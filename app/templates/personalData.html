@@ -5,7 +5,7 @@
 
     <div resource="#{{id}}" typeof="{{id}}">
         <h3>Your {{category}}</h3>
-        {% include "dpvData.html" %}
+        {{ macros.tooltip(dpv, category) }}
 
         {% if personalData["dpv:hasPurpose"] | length != 0 %}
             <h4>Used for purposes:</h4>

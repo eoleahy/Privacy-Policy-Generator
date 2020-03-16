@@ -1,13 +1,29 @@
 <article>
     {% set name = recip["schema:name"] %}
-    <h3>{{name}} - {{recip["schema:description"]}}</h3>
+    <span resource="#{{recip['resource']}}" typeof="dpv:Recipient">
+        <h3><span property="schema:name">{{name}}</span> - 
+        <span property="schema:description">{{recip["schema:description"]}}</span></h3>
 
-    <h4>We share your data with {{name}} for the following purpose(s):</h4>
-        {{render_list(recip["dpv:hasPurpose"])}}
+        {% if recip["PersonalDataCategory"]|length != 0 %}
+            <h4>Data we share with {{name}}:</h4>
+            <ul>
+                {% for item in recip["PersonalDataCategory"] %}
+                    <li><span property="dpv:hasPersonalDataCategory" resource="#{{item|replace(' ','')}}">{{item}}</span></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
 
-
-    <h4>{{name}}'s contact details are as follows:</h4>
-    {% autoescape false %}
-        <h4>{{recip["schema:address"]|replace("\n","</br>")}}</h4>
-    {% endautoescape %}
+        {% if recip["dpv:hasPurpose"]|length != 0 %}
+            <h4>We share your data with {{name}} for the following purpose(s)</h4>
+            <ul>
+                {% for item in recip["dpv:hasPurpose"] %}
+                    <li><span property="dpv:hasPurpose" resource="#{{item|replace(' ','')}}">{{item}}</span></li>
+                {% endfor %}
+            </ul>
+        {% endif %}      
+        <h4>{{name}}'s contact details are as follows:</h4>
+        {% autoescape false %}
+            <h4><span property="schema:address">{{recip["schema:address"]|replace("\n","</br>")}}</span></h4>
+        {% endautoescape %}
+    </span>
 </article>

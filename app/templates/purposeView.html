@@ -1,3 +1,12 @@
 <article>
-    
+
+    {% set data = col["PersonalDataCategory"] %}
+    <h3>{{category}}</h3>
+    {{ macros.tooltip(dpv, category)}}
+    <h4>Personal data required for this purpose: </h4>
+    <ul>
+        {% for item in data %}
+            <li>{{item}}</li>
+        {% endfor %}
+    </ul>
 </article>

@@ -1,29 +1,75 @@
 <article>
-    <h3>Data Source - {{ key }}</h3>
-    {% set data = col["PersonalDataCategory"] %}
-    {% set purp = col["Purpose"] %}
-    {% set proc = col["Processing"] %}
-    {% set recip = col["Recipient"] %}
-    {% set storeL = col["StorageLocation"] %}
-    {% set storeD = col["StorageDuration"] %}
+    {% set id = "Collect:"+key|replace(' ','') %}
+    <div resource = "#{{id}}" typeof="dpv:Collect">
+        <h3>Data Source - {{ key }}</h3>
+        {% set data = col["PersonalDataCategory"] %}
+        {% set purp = col["Purpose"] %}
+        {% set proc = col["Processing"] %}
+        {% set recip = col["Recipient"] %}
+        {% set storeL = col["StorageLocation"] %}
+        {% set storeD = col["StorageDuration"] %}
 
-    <h4>The data we collect through this method include:</h4>
-    {{macros.render_list(data)}}
-
-    <h4>We collect this data for the following purpose(s):</h4>    
-    {{macros.render_list(purp)}}
-
-    <h4>This data is collected to undergo the following processing:</h4>
-    {{macros.render_list(proc)}}
-
-    <h4>This data is stored according to the following details:</h4>
-        <h5>Storage Location</h5>
-        {{macros.render_list(storeL)}}
-        <h5>Storage Duration</h5>
-        {{macros.render_list(storeD)}}
-
-    <h4>This data is shared with the following recipients:</h4>
-    {{macros.render_list(recip)}}    
-    
-    <h4>The rights this data is subject to includes the rights defined below.</h4>
+        {% if data|length != 0 %}
+            <h4>The data we collect through this method include:</h4>
+            <ul>
+                {% for item in data %}
+                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                        <span property="dpv:hasPersonalDataCategory" resource="#{{item|replace(' ','')}}">{{item}}</span>
+                    </span></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% if purp|length != 0 %}
+            <h4>We collect this data for the following purpose(s):</h4>    
+            <ul>
+                {% for item in purp %}
+                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                        <span property="dpv:hasPurpose" resource="#{{item|replace(' ','')}}">{{item}}</span>
+                    </span></li>
+                {% endfor %}
+            </ul>
+        
+        {% endif %}
+        {% if proc|length != 0 %}
+            <h4>This data is collected to undergo the following processing:</h4>   
+            <ul>
+                {% for item in proc %}
+                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                        <span property="dpv:hasProcessing" resource="#{{item|replace(' ','')}}">{{item}}</span>
+                    </span></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <h4>This data is stored according to the following details:</h4>  
+        {% if storeL|length != 0 %}  
+            <h5>Storage Location</h5>
+            <ul>
+                {% for item in storeL %}
+                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                        <span property="dpv:location">{{item}}</span>
+                    </span></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% if storeD|length != 0 %}  
+            <h5>Storage Duration</h5>
+            <ul>
+                {% for item in storeD %}
+                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                        <span property="dpv:duration">{{item}}</span>
+                    </span></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% if recip|length != 0 %}  
+            <h4>This data is shared with the following recipients:</h4>
+            <ul>
+                {% for item in recip %}
+                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                        <span property="dpv:hasRecipient" resource="#{{item|replace(' ','')}}">{{item}}</span>
+                    </span></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
 </article>

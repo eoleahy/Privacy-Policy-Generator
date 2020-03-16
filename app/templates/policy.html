@@ -16,26 +16,68 @@
     <meta name="created" content="2020-02-13">
     <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        .accordion {
+            background-color: #eee;
+            width: 1000px;
+            color: #444;
+            margin: 0 auto;
+            cursor: pointer;
+            padding: 18px;
+            position: relative;
+            border: 1px;
+            outline: none;
+            font-size: 15px;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+    </style>
 
     <title>Privacy Policy</title>
 </head>
-<script src="{{ url_for('static',filename='scripts.js')}}"></script>
+<script>
+    function accordion(){
+    var acc = document.getElementsByClassName("accordion");
+    console.log(acc);
+    var i;
+    console.log(acc.length);
+    for (i = 0; i < acc.length; i++) {
+        console.log("I:");
+        
+        acc[i].addEventListener("click", function () {
 
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+    console.log("After loop omegalul")
+}
+</script>
 
-<body vocab="http://w3.org/ns/dpv#" vocab="http://schema.org/"
-    prefix="dpv: http://w3.org/ns/dpv#">
+<body onload="accordion()" vocab="http://w3.org/ns/dpv#" vocab="http://schema.org/" prefix="dpv: http://w3.org/ns/dpv#">
 
     {% import "macros.jinja" as macros %}
     {% set controller = data["dpv:DataController"] %}
     {% set company = controller["schema:name"] %}
     {% set resource = controller["resource"] %}
-    
-    <div class="section">
-        
+
+    <div class="top-section">
+
         <span resource="#{{resource}}" typeof="dpv:DataController">
             <h1><span property="schema:name">{{company}}</span> Privacy Policy</h1>
             <p><span property="schema:address">{{controller["schema:address"]}}</span></p>
-            <p>Email:<a href="{{controller['schema:email']}}" property="schema:email"> {{controller["schema:email"]}}</a></p>
+            <p>Email:<a href="{{controller['schema:email']}}" property="schema:email">
+                    {{controller["schema:email"]}}</a></p>
             <p>Telephone Number:<span property="schema:telephone"> {{controller["schema:telephone"]}}</span></p>
         </span>
         <p>Effective date: {{ data["date"] }}</p>

@@ -1,49 +1,48 @@
+{% extends "default.html" %}
 {%block content %}
 
-<div id="Rights">
-    <p>{{company}} would like to make sure you are fully aware of all of your data protection rights.
-        Every user is entitled to the following: </p>
+    <div id="Rights">
+        <p>{{company}} would like to make sure you are fully aware of all of your data protection rights.
+            Every user is entitled to the following: </p>
 
-    <h3>The right to access</h3>
-    <p>You have the right to request {{company}} for copies of your personal data.
-        We may charge you a small fee for this service.</p>
+        <h3>The Right to access</h3>
+        <p>You have the right to request {{company}} for copies of your personal data.
+            We may charge you a small fee for this service.</p>
 
-    <h3>The right to rectification</h3>
-    <p>You have the right to request that {{company}}
-        correct any information that you believe is inaccurate.
-        You also have the right to request {{company}} to complete information you believe is incomplete.</p>
+        <h3>The Right to rectification</h3>
+        <p>You have the right to request that {{company}}
+            correct any information that you believe is inaccurate.
+            You also have the right to request {{company}} to complete information you believe is incomplete.</p>
 
-    <h3>The right to erasure</h3>
-    <p>You have the right to request that {{company}}
-        erase your personal data, under certain conditions.</p>
+        <h3>The Right to erasure</h3>
+        <p>You have the right to request that {{company}}
+            erase your personal data, under certain conditions.</p>
 
-    <h3>The right to restrict processing</h3>
-    <p>You have the right to request that {{company}}
-        restrict the processing of your personal data, under certain conditions.</p>
+        <h3>The Right to restrict processing</h3>
+        <p>You have the right to request that {{company}}
+            restrict the processing of your personal data, under certain conditions.</p>
 
-    <h3>The right to object to processing</h3>
-    <p>You have the right to object to {{company}}'s processing
-        of your personal data, under certain conditions.</p>
+        <h3>The Right to object to processing</h3>
+        <p>You have the right to object to {{company}}'s processing
+            of your personal data, under certain conditions.</p>
 
-    <h3>The right to data portability</h3>
-    <p>You have the right to request that {{company}}
-        transfer the data that we have collected to another organization, or directly to you, under certain conditions.
-    </p>
+        <h3>The Right to data portability</h3>
+        <p>You have the right to request that {{company}}
+            transfer the data that we have collected to another organization, or directly to you, under certain conditions.
+        </p>
 
-    <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights,
-        please contact us:
-        <address>
-            {{render_list(contact_methods)}}
-        </address>
-    </p>
+        <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights,
+            please contact us.
+        </p>
 
-    <p>If you have any questions about {{company}}'s privacy policy,
-        the data we hold on you, or you would like us to exercise one of your data protection rights,
-        please do not hesitate to contact us.</p>
+        <p>If you have any questions about {{company}}'s privacy policy,
+            the data we hold on you, or you would like us to exercise one of your data protection rights,
+            please do not hesitate to contact us.</p>
 
-    <h3>Changes to our policy.</h3>
-    <p>{{company}} keeps its privacy policy under regular review and places any updates on this web page. This privacy
-        was last updated on {{ data["date"] }}.</p>
 
-</div>
+        <h3>Changes to our policy.</h3>
+        <p>{{company}} keeps its privacy policy under regular review and places any updates on this web page. This privacy
+            was last updated on {{ data["date"] }}.</p>
+
+    </div>
 {% endblock %}

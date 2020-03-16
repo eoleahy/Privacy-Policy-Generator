@@ -3,18 +3,18 @@
 {% block content %}
 
     <div id="#DataView">
-    <p>{{ company }} collects the following data: </p>
-    <ul>
-    {% for personalData in data["dpv:PersonalDataHandling"] %}
-        <li>{{personalData["dpv:hasPersonalDataCategory"] }}</li>
-    {% endfor %}
-    </ul>
-    {% for personalData in data["dpv:PersonalDataHandling"] %}
-        
-        {% include "personalData.html" %}
+        <p>{{ company }} collects the following data: </p>
+        <ul>
+            {% for personalData in data["dpv:PersonalDataHandling"] %}
+                <li>{{personalData["dpv:hasPersonalDataCategory"] }}</li>
+            {% endfor %}
+        </ul>
+        {% for personalData in data["dpv:PersonalDataHandling"] %}
+            
+            {% include "personalData.html" %}
 
-    {% endfor %}
-    {% include "rights.html" %}
+        {% endfor %}
+        <h4>This data is subject to the rights defined <a href="#Rights">here</a>.</h4>
     </div>
 {% endblock %}
 

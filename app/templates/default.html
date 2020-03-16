@@ -1,21 +1,8 @@
-<div class="subject-section">
+<button class="accordion">{{topic["heading"]}}</button>
+<div class="section">
     {% block heading %}
         <h2>{{ topic["heading"] }} </h2>
     {% endblock %}
     {% block content %}
     {% endblock %}
 </div>
-{#
-<div class="dpv-section">
-    {% block headingDPV %}
-    {% endblock %}
-    {% block contentDPV %}
-    {% endblock %}
-</div>
-<div class="controller-section">
-    {% block headingController %}
-    {% endblock %}
-    {% block contentController %}
-    {% endblock %}
-</div>
-#}

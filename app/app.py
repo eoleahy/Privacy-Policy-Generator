@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from description import Description
+from view import View
 from bs4 import BeautifulSoup
 import datetime
 import json
@@ -17,12 +18,6 @@ if(sys.platform == "win32"):
 else:
     json_path = os.path.join(BASE_PATH, "static/inputExample.json")
 
-
-dpv_url = "http://w3.org/ns/dpv#"
-
-
-
-
 @app.route('/', methods=['GET'])
 def policy():
 
@@ -38,44 +33,32 @@ def policy():
 
     purpose_set = set()
     collect_set = set()
-    
+    process_set = set()
+
     data_classes = []
-
-    #print(data)
-
-    print(data["dpv:PersonalDataHandling"])
- 
+    
+    #Creating sets of different data,purpose,collection and processing catagories
     for cat in data["dpv:PersonalDataHandling"]:
         purpose_set.update(cat["dpv:hasPurpose"])
         collect_set.update(cat["dpv:Collect"])
+        process_set.update(cat["dpv:hasProcessing"])
         data_classes.append(cat["dpv:hasPersonalDataCategory"])
 
-    collect_view = {}
-    for collect in collect_set:
-        collect_view[collect] = {}
+    collect_view = View.create_collect_view(data,collect_set)
+    purpose_view = View.create_purpose_view(data,purpose_set)
 
-    for key in collect_view:
-        collect_view[key] = {"PersonalDataCategory":set(),
-                             "Purpose":set(),
-                             "Processing":set(),
-                             "Recipient":set(),
-                             "StorageLocation":set(),
-                             "StorageDuration":set()}
-
+    #Assigning personal data categories to the relevant recipients 
+    for recip in data["dpv:Recipient"]:
+        recip["PersonalDataCategory"] = set()
         for cat in data["dpv:PersonalDataHandling"]:
-            if(key in cat["dpv:Collect"]):
-                collect_view[key]["PersonalDataCategory"].add(cat["dpv:hasPersonalDataCategory"])
-                collect_view[key]["Purpose"].update(cat["dpv:hasPurpose"])
-                collect_view[key]["Processing"].update(cat["dpv:hasProcessing"])
-                collect_view[key]["Recipient"].update(cat["dpv:hasRecipient"])
-                collect_view[key]["StorageLocation"].add(cat["dpv:StorageLocation"])
-                collect_view[key]["StorageDuration"].add(cat["dpv:StorageDuration"])
+            for cat_recip in cat["dpv:hasRecipient"]:
+                if cat_recip == recip["resource"]:
+                    recip["PersonalDataCategory"].add(cat["dpv:hasPersonalDataCategory"])    
 
-
-    print(collect_view)
-    #print(data_classes)  
     dpvDescriptions = Description.descriptions(data_classes)
-    #print(dpvDescriptions)
+    dpvDescriptions.update(Description.descriptions(purpose_set))
+    dpvDescriptions.update(Description.descriptions(process_set))
+
     data["date"] = date
 
     topics = [{"heading": "Personal Data View", "page": "data.html"},
@@ -83,13 +66,15 @@ def policy():
               {"heading": "Purpose View", "page": "purpose.html"},
               {"heading": "Data Storage View", "page": "store.html"},
               {"heading": "Data Sharing View", "page": "share.html"},
-              {"heading": "Cookies", "page": "cookies.html"}]
+              {"heading": "Cookies", "page": "cookies.html"},
+              {"heading": "Rights", "page": "Rights.html"}]
 
     return render_template('policy.html',
                            topics=topics,
                            data=data,
                            dpv=dpvDescriptions,
                            purpose_set=purpose_set,
+                           purpose_view=purpose_view,
                            collect=collect_view)
 
 
