@@ -31,21 +31,22 @@ def policy():
         data = json.load(f)
 
 
-    purpose_set = set()
     collect_set = set()
     process_set = set()
 
     data_classes = []
+    purposes= []
     
     #Creating sets of different data,purpose,collection and processing catagories
     for cat in data["dpv:PersonalDataHandling"]:
-        purpose_set.update(cat["dpv:hasPurpose"])
         collect_set.update(cat["dpv:Collect"])
         process_set.update(cat["dpv:hasProcessing"])
         data_classes.append(cat["dpv:hasPersonalDataCategory"])
 
+    for purp in data["dpv:Purpose"]:
+         purposes.append(purp["dpv:hasPurpose"]) 
+
     collect_view = View.create_collect_view(data,collect_set)
-    purpose_view = View.create_purpose_view(data,purpose_set)
 
     #Assigning personal data categories to the relevant recipients 
     for recip in data["dpv:Recipient"]:
@@ -53,10 +54,10 @@ def policy():
         for cat in data["dpv:PersonalDataHandling"]:
             for cat_recip in cat["dpv:hasRecipient"]:
                 if cat_recip == recip["resource"]:
-                    recip["PersonalDataCategory"].add(cat["dpv:hasPersonalDataCategory"])    
+                    recip["PersonalDataCategory"].add(cat["dpv:hasPersonalDataCategory"])
 
     dpvDescriptions = Description.descriptions(data_classes)
-    dpvDescriptions.update(Description.descriptions(purpose_set))
+    dpvDescriptions.update(Description.descriptions(purposes))
     dpvDescriptions.update(Description.descriptions(process_set))
 
     data["date"] = date
@@ -64,7 +65,6 @@ def policy():
     topics = [{"heading": "Personal Data View", "page": "data.html"},
               {"heading": "Collection View", "page": "collect.html"},
               {"heading": "Purpose View", "page": "purpose.html"},
-              {"heading": "Data Storage View", "page": "store.html"},
               {"heading": "Data Sharing View", "page": "share.html"},
               {"heading": "Cookies", "page": "cookies.html"},
               {"heading": "Rights", "page": "Rights.html"}]
@@ -73,8 +73,7 @@ def policy():
                            topics=topics,
                            data=data,
                            dpv=dpvDescriptions,
-                           purpose_set=purpose_set,
-                           purpose_view=purpose_view,
+                           purposes=purposes,
                            collect=collect_view)
 
 

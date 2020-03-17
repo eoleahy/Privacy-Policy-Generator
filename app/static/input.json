@@ -26,6 +26,14 @@
             ]
         }
     ],
+    "dpv:Purpose": [
+        {
+            "dpv:hasPurpose": "",
+            "dpv:hasProcessing": [],
+            "dpv:hasPersonalDataCategory": [],
+            "dpv:hasLegalBasis": []
+        }
+    ],
     "dpv:Recipient": [
         {
             "resource": "",

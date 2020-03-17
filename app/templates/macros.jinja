@@ -18,7 +18,7 @@
 {% endmacro %}
 
 {% macro tooltip(dpv, category) %}
-    <div class="tooltip"><a href="http://w3.org/ns/dpv#{{category|replace(' ','')}}">&#x1F6C8</a>
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#{{category|replace(' ','')}}">&#x1F6C8</a>
         {% autoescape false %}
         <span class="tooltiptext">
             {% if(dpv[category] == None) %}

@@ -3,14 +3,14 @@
     <div id="PurposeView">
         <p>{{company}} collects your data for the following purposes:</p>
         <ul>
-            {% for purpose in purpose_set %}
-                <li>{{ purpose }}</li>
+            {% for purp in data["dpv:Purpose"] %}
+                <li>{{ purp["dpv:hasPurpose"] }}</li>
             {% endfor %}
         </ul>
 
-        {% for category in purpose_view %}
-            {% set col=purpose_view[category] %}
+        {% for purp in data["dpv:Purpose"] %}
             {% include "purposeView.html" %}
         {% endfor %}
     </div>
+    <h4>This data is subject to the rights defined <a href="#Rights">here</a>.</h4>
 {% endblock %}

@@ -1,8 +1,10 @@
-<button class="accordion">{{topic["heading"]}}</button>
-<div class="section">
-    {% block heading %}
-        <h2>{{ topic["heading"] }} </h2>
-    {% endblock %}
-    {% block content %}
-    {% endblock %}
+<div class="section-wrapper">
+    <button class="accordion">{{topic["heading"]}}</button>
+    <div class="section">
+        {% block heading %}
+            <h2>{{ topic["heading"] }} </h2>
+        {% endblock %}
+            {% block content %}
+        {% endblock %}
+    </div>
 </div>

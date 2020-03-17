@@ -110,6 +110,80 @@
         }
         
     ],
+    "dpv:Purpose": [
+        {
+            "dpv:hasPurpose": "Identity Verification",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Email Address","Name"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Sell Targetted Advertisements",
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasPersonalDataCategory": ["Age","Name"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Create Personalized Recommendations",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Age","Name"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "News",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Email Address"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Email Marketing",
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasPersonalDataCategory": ["Email Address"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Customer Care",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Email Address"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Marketing",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Telephone Number"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Statistics",
+            "dpv:hasProcessing": ["Collect","Store","Share","Anonymise"],
+            "dpv:hasPersonalDataCategory": ["IPAddress"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Admin",
+            "dpv:hasProcessing": ["Collect","Store","Anonymise"],
+            "dpv:hasPersonalDataCategory": ["IPAddress"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Fraud Prevention and Detection",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Credit Card Number"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Service Provision",
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasPersonalDataCategory": ["Credit Card Number"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Access Control",
+            "dpv:hasProcessing": ["Collect","Store","Alter"],
+            "dpv:hasPersonalDataCategory": ["Password"],
+            "dpv:hasLegalBasis":["Consent"]
+        }
+    ],
     "dpv:Recipient": [
         {
             "resource": "Amazon",

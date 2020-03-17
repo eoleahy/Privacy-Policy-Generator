@@ -5,6 +5,11 @@ div.section {
     display: none;
     overflow: hidden;
 }
+.section-wrapper{
+    margin: auto;
+    width: 75pc;
+}
+
 article{
     border: 1px solid grey;
 }
@@ -62,6 +67,10 @@ li {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+
+  }
+  .tooltip a{
+      position: relative;
   }
   
   /* Tooltip text */
