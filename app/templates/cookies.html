@@ -3,21 +3,29 @@
 {% block content %}
     {% if data["Cookie"] | length != 0 %}
         <h3>What are cookies?</h3>
-        <p>Cookies are text files placed on your computer to collect standard 
+        <p>Cookies are text files placed on your computer to collect standard
             Internet log information and visitor behavior information. When you visit our websites,
             we may collect information from you automatically through cookies or similar technology.</p>
-        
+
         <p> For further information visit <a href="allaboutcookies.org">allaboutcookies.org</a></p>
 
         <h3>How do we use cookies?</h3>
-        <p>Our company uses cookies in a range of ways to improves your experience on our website, including:</p>
-            
-
+        <p>The cookies we use include the following:</p>
+            {% for item in data["Cookie"] %}
+                <article>
+                    <span resource="#{{item['resource']}}" typeof="dpv:Store">
+                        <p><span property="dpv:hasPurpose"
+                                href="#{{item['dpv:hasPurpose']|replace(' ','')}}">{{item['dpv:hasPurpose']}}</span></p>
+                        <p><span property="schema:description">{{item['schema:description']}}</span></p>
+                        <p>Cookie Provenance: {{item['Provenance']}}</p>
+                    </span>
+                </article>
+            {% endfor %}
         <h3>How to manage cookies</h3>
-        <p>You can set your browser not to accept cookies, and the above website tells you how to remove cookies from 
+        <p>You can set your browser not to accept cookies, and the above website tells you how to remove cookies from
             your browser. However, in a few cases, some of you website features may not function as a result.
         </p>
-    {% else %}
-     <p>Our website does not use cookies.</p>
+        {% else %}
+        <p>Our website does not use cookies.</p>
     {%endif%}
 {% endblock %}

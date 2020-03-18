@@ -209,9 +209,16 @@
     ],
     "Cookie": [
         {
-            "resource": "",
-            "dpv:hasPurpose": "",
-            "schema:description": ""
+            "resource": "Cookie1",
+            "dpv:hasPurpose": "Access Control",
+            "schema:description": "This is a necessary cookie we use to help facilitate our sign up and login features.",
+            "Provenance":"First Party"
+        },
+        {
+            "resource": "Cookie2",
+            "dpv:hasPurpose": "Statistics",
+            "schema:description": "This is an optional cookie we use this cookie to create and analyse statistics about how you use our website.",
+            "Provenance":"First Party"
         }
     ]
 }

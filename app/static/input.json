@@ -18,12 +18,9 @@
             "dpv:hasTechnicalOrganisationalMeasure": [],
             "dpv:hasLegalBasis": [],
             "dpv:Collect": [],
-            "dpv:Store": [
-                {
-                    "dpv:StorageDuration": "",
-                    "dpv:StorageLocation": ""
-                }
-            ]
+            "dpv:StorageDuration": "",
+            "dpv:StorageLocation": ""
+   
         }
     ],
     "dpv:Purpose": [
@@ -46,7 +43,8 @@
         {
             "resource": "",
             "dpv:hasPurpose": "",
-            "schema:description": ""
+            "schema:description": "",
+            "Provenance":""
         }
     ]
 }
