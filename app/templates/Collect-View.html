@@ -1,15 +1,12 @@
 {% extends "default.html" %}
-{%block content %}
+{% block content %}
     <div id = "CollectView">
         <p>Data sources:</p>
-        {{ render_list(collect.keys()) }}
-
+        {{ macros.render_list(collect.keys()) }}
         {% for key in collect %}
             {% set col=collect[key] %}
-            {% include "collectViews.html" %}
+            {% include "Collect-Item.html" %}
         {% endfor %}
-
-            
         <h4>This data is subject to the rights defined <a href="#Rights">here</a>.</h4>
     </div>
 {% endblock %}

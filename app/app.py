@@ -23,13 +23,13 @@ def policy():
 
     data = {}
 
-
     date = datetime.date.today()
     date = date.strftime("%B %d, %Y")
 
     with open(json_path) as f:
         data = json.load(f)
 
+    data["date"] = date
 
     collect_set = set()
     process_set = set()
@@ -58,14 +58,12 @@ def policy():
 
     dpvDescriptions = Description.descriptions(data_classes)
     dpvDescriptions.update(Description.descriptions(purposes))
-    dpvDescriptions.update(Description.descriptions(process_set))
+    #dpvDescriptions.update(Description.descriptions(process_set))
 
-    data["date"] = date
-
-    topics = [{"heading": "Personal Data View", "page": "data.html"},
-              {"heading": "Collection View", "page": "collect.html"},
-              {"heading": "Purpose View", "page": "purpose.html"},
-              {"heading": "Data Sharing View", "page": "share.html"},
+    topics = [{"heading": "Personal Data View", "page": "Data-View.html"},
+              {"heading": "Collection View", "page": "Collect-View.html"},
+              {"heading": "Purpose View", "page": "Purpose-View.html"},
+              {"heading": "Data Sharing View", "page": "Share-View.html"},
               {"heading": "Cookies", "page": "cookies.html"},
               {"heading": "Rights", "page": "Rights.html"}]
 

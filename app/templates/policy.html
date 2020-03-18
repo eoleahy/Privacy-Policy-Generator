@@ -1,197 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!doctype html>
-{% macro render_list(list_items) %}
-<ul>
-    {% for item in list_items %}
-    <li> {{item}} </li>
-    {% endfor %}
-</ul>
-{% endmacro %}
-
 <html xml:lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Eoin Leahy">
+        <meta name="created" content="2020-02-13">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <style>
+            div.section {
+                border: 1px solid black;
+                width: 75pc;
+                margin: auto;
+                display: none;
+                overflow: hidden;
+            }
 
-<head>
-    <meta charset="utf-8">
-    <meta name="author" content="Eoin Leahy">
-    <meta name="created" content="2020-02-13">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <style>
-        div.section {
-            border: 1px solid black;
-            width: 75pc;
-            margin: auto;
-            display: none;
-            overflow: hidden;
+            .section-wrapper {
+                margin: auto;
+                width: 75pc;
+            }
+
+            article {
+                border: 1px solid grey;
+            }
+
+            div.top-section {
+                border: 1px solid black;
+                width: 75pc;
+                margin: auto;
+                overflow: hidden;
+            }
+
+            .section h2 {
+                margin-left: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+
+            }
+
+            .section h3 {
+                margin-left: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                display: inline-block;
+            }
+
+            .section p {
+                margin-left: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 18px;
+
+            }
+
+            h4 {
+                margin-left: 10px;
+            }
+
+            h5 {
+                margin-left: 15px;
+                font-size: 15px;
+            }
+
+            h1 {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 45px;
+            }
+
+            p {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+            }
+
+            li {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                margin-left: 20px;
+            }
+
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 500px;
+                background-color: gray;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                top: -5px;
+                left: 110%;
+            }
+
+            .tooltip .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                margin-top: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent black transparent transparent;
+            }
+
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+
+            .accordion {
+                background-color: #eee;
+                width: 75pc;
+                color: #444;
+                margin: 0 auto;
+                cursor: pointer;
+                padding: 18px;
+                border: 1px;
+                font-size: 15px;
+                text-align: center;
+                transition: 0.4s;
+            }
+
+            .active,
+            .accordion:hover {
+                background-color: #ccc;
+            }
+        </style>
+
+        <title>Privacy Policy</title>
+    </head>
+    <script>
+        //Credit to W3S @ https://www.w3schools.com/howto/howto_js_accordion.asp
+        function accordion() {
+            let acc = document.getElementsByClassName("accordion");
+            let i;
+            for (i = 0; i < acc.length; i++) {
+
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
         }
+    </script>
 
-        .section-wrapper {
-            margin: auto;
-            width: 75pc;
-        }
+    <body onload="accordion()" vocab="http://w3.org/ns/dpv#" vocab="http://schema.org/" prefix="dpv: http://w3.org/ns/dpv#">
 
-        article {
-            border: 1px solid grey;
-        }
+        {% import "macros.jinja" as macros %}
+        {% set controller = data["dpv:DataController"] %}
+        {% set company = controller["schema:name"] %}
+        {% set resource = controller["resource"] %}
 
-        div.top-section {
-            border: 1px solid black;
-            width: 75pc;
-            margin: auto;
-            overflow: hidden;
-        }
+        <div class="top-section">
 
-        .section h2 {
-            margin-left: 10px;
-            font-family: Arial, Helvetica, sans-serif;
+            <span resource="#{{resource}}" typeof="dpv:DataController">
+                <h1><span property="schema:name">{{company}}</span> Privacy Policy</h1>
+                <p><span property="schema:address">{{controller["schema:address"]}}</span></p>
+                <p>Email:<a href="{{controller['schema:email']}}" property="schema:email">
+                        {{controller["schema:email"]}}</a></p>
+                <p>Telephone Number:<span property="schema:telephone"> {{controller["schema:telephone"]}}</span></p>
+            </span>
+            <p>Effective date: {{ data["date"] }}</p>
+            <p>This privacy policy will explain how our organisation uses the personal data we collect from you when you use
+                our website.</p>
 
-        }
-
-        .section h3 {
-            margin-left: 10px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            display: inline-block;
-        }
-
-        .section p {
-            margin-left: 10px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-
-        }
-
-        h4 {
-            margin-left: 10px;
-        }
-
-        h5 {
-            margin-left: 15px;
-            font-size: 15px;
-        }
-
-        h1 {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 45px;
-        }
-
-        p {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 15px;
-        }
-
-        li {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
-            margin-left: 20px;
-        }
-
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            border-bottom: 1px dotted black;
-        }
-
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 500px;
-            background-color: gray;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px 0;
-            position: absolute;
-            z-index: 1;
-            top: -5px;
-            left: 110%;
-        }
-
-        .tooltip .tooltiptext::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 100%;
-            margin-top: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: transparent black transparent transparent;
-        }
-
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-        }
-
-        .accordion {
-            background-color: #eee;
-            width: 75pc;
-            color: #444;
-            margin: 0 auto;
-            cursor: pointer;
-            padding: 18px;
-            border: 1px;
-            font-size: 15px;
-            text-align: center;
-            transition: 0.4s;
-        }
-
-        .active,
-        .accordion:hover {
-            background-color: #ccc;
-        }
-    </style>
-
-    <title>Privacy Policy</title>
-</head>
-<script>
-    function accordion() {
-        var acc = document.getElementsByClassName("accordion");
-        console.log(acc);
-        var i;
-        console.log(acc.length);
-        for (i = 0; i < acc.length; i++) {
-            console.log("I:");
-
-            acc[i].addEventListener("click", function () {
-
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }
-        console.log("After loop omegalul")
-    }
-</script>
-
-<body onload="accordion()" vocab="http://w3.org/ns/dpv#" vocab="http://schema.org/" prefix="dpv: http://w3.org/ns/dpv#">
-
-    {% import "macros.jinja" as macros %}
-    {% set controller = data["dpv:DataController"] %}
-    {% set company = controller["schema:name"] %}
-    {% set resource = controller["resource"] %}
-
-    <div class="top-section">
-
-        <span resource="#{{resource}}" typeof="dpv:DataController">
-            <h1><span property="schema:name">{{company}}</span> Privacy Policy</h1>
-            <p><span property="schema:address">{{controller["schema:address"]}}</span></p>
-            <p>Email:<a href="{{controller['schema:email']}}" property="schema:email">
-                    {{controller["schema:email"]}}</a></p>
-            <p>Telephone Number:<span property="schema:telephone"> {{controller["schema:telephone"]}}</span></p>
-        </span>
-        <p>Effective date: {{ data["date"] }}</p>
-        <p>This privacy policy will explain how our organisation uses the personal data we collect from you when you use
-            our website.</p>
-
-        <p>This privacy policy uses terms defined in the <a href=" http://w3.org/ns/dpv#">Data Privacy
-                Vocabulary</a>.</p>
-    </div>
-    {% for topic in topics %}
-    {% include topic["page"] %}
-    {% endfor %}
-
-</body>
+            <p>This privacy policy uses terms defined in the <a href=" http://w3.org/ns/dpv#">Data Privacy
+                    Vocabulary</a>.</p>
+        </div>
+        
+        {% for topic in topics %}
+            {% include topic["page"] %}
+        {% endfor %}
+    </body>
 
 </html>
