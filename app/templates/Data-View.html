@@ -6,7 +6,7 @@
         <p>{{ company }} collects the following data: </p>
         <ul>
             {% for personalData in data["dpv:PersonalDataHandling"] %}
-                <li>{{personalData["dpv:hasPersonalDataCategory"] }}</li>
+                <li><a href="#{{personalData['dpv:hasPersonalDataCategory']|replace(' ','')}}">{{personalData["dpv:hasPersonalDataCategory"] }}</a></li>
             {% endfor %}
         </ul>
         {% for personalData in data["dpv:PersonalDataHandling"] %}

@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="author" content="Eoin Leahy">
-        <meta name="created" content="2020-02-13">
+        <meta name="created" content="2020-18-03">
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
         <style>
             div.section {
@@ -141,7 +141,7 @@
 
                 acc[i].addEventListener("click", function () {
                     this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
+                    let panel = this.nextElementSibling;
                     if (panel.style.display === "block") {
                         panel.style.display = "none";
                     } else {

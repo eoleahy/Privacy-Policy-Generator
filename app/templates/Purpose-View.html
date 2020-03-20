@@ -4,7 +4,7 @@
         <p>{{company}} collects your data for the following purposes:</p>
         <ul>
             {% for purp in data["dpv:Purpose"] %}
-                <li>{{ purp["dpv:hasPurpose"] }}</li>
+                <li><a href="#{{purp['dpv:hasPurpose']|replace(' ','')}}">{{ purp["dpv:hasPurpose"] }}</a></li>
             {% endfor %}
         </ul>
 

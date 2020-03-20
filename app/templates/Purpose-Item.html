@@ -4,7 +4,7 @@
     <h3>{{purpose}}</h3>
     {{ macros.tooltip(dpv, purpose)}}
 
-    <span resource ="#Purpose:{{purpose|replace(' ','')}}" typeof="dpv:Purpose">
+    <span id="{{purpose|replace(' ','')}}" resource ="#Purpose:{{purpose|replace(' ','')}}" typeof="dpv:Purpose">
         <h4>Personal data required for this purpose: </h4>
         <ul>
             {%for item in purp["dpv:hasPersonalDataCategory"] %}

@@ -3,7 +3,7 @@
     {% set id = category|replace(' ','') %}
     {% set resource = personalData["resource"] %}
 
-    <div resource="#{{id}}" typeof="{{id}}">
+    <div resource="#{{id}}" id="{{id}}" typeof="{{id}}">
         <h3>Your {{category}}</h3>
         {{ macros.tooltip(dpv, category) }}
 
