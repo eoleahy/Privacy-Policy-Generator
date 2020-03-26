@@ -1,0 +1,52 @@
+{
+    "dpv:DataController": {
+        "resource": "",
+        "schema:name": "",
+        "schema:legalName": "",
+        "schema:address": "",
+        "schema:email": "",
+        "schema:url": "",
+        "schema:telephone": ""
+    },
+    "dpv:PersonalDataHandling": [
+        {
+            "resource": "",
+            "dpv:hasPersonalDataCategory": "",
+            "dpv:hasDataController": "",
+            "dpv:hasDataSubject": "",
+            "dpv:hasPurpose": [],
+            "dpv:hasProcessing": [],
+            "dpv:hasRecipient": [],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [],
+            "dpv:Collect": [],
+            "dpv:StorageDuration": "",
+            "dpv:StorageLocation": ""
+        }
+    ],
+    "dpv:Purpose": [
+        {
+            "dpv:hasPurpose": "",
+            "dpv:hasProcessing": [],
+            "dpv:hasPersonalDataCategory": [],
+            "dpv:hasLegalBasis": []
+        }
+    ],
+    "dpv:Recipient": [
+        {
+            "resource": "",
+            "schema:name": "",
+            "schema:address": "",
+            "schema:description": ""
+        }
+    ],
+    "Cookie": [
+        {
+            "resource": "",
+            "schema:name": "",
+            "dpv:hasPurpose": "",
+            "schema:description": "",
+            "Provenance": ""
+        }
+    ]
+}

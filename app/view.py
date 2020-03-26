@@ -1,6 +1,5 @@
-
-
 class View:
+    
     @staticmethod
     def create_collect_view(data,collect_set):
 

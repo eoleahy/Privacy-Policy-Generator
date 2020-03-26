@@ -1,50 +1,225 @@
 {
     "dpv:DataController": {
-        "resource": "",
-        "schema:name": "",
-        "schema:address": "",
-        "schema:email": "",
-        "schema:telephone": ""
+        "resource": "Company",
+        "schema:name": "Social Web",
+        "schema:legalName":"Social Web, LLC",
+        "schema:address": "150 George's Dock,\n1st Floor,\nIFSC,\nDublin 1",
+        "schema:email": "info@socialweb.com",
+        "schema:url":"www.socialweb.com",
+        "schema:telephone": "656 150 2234"
     },
     "dpv:PersonalDataHandling": [
         {
-            "resource": "",
-            "dpv:hasPersonalDataCategory": "",
-            "dpv:hasDataController": "",
-            "dpv:hasDataSubject": "",
-            "dpv:hasPurpose": [],
-            "dpv:hasProcessing": [],
+            "resource": "PDH1",
+            "dpv:hasPersonalDataCategory": "Name",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Identity Verification","Sell Targetted Advertisements","Create Personalized Recommendations"],
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasRecipient": ["Amazon"],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
+        },
+        {
+            "resource": "PDH2",
+            "dpv:hasPersonalDataCategory": "Age",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Sell Targetted Advertisements","Create Personalized Recommendations"],
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasRecipient": ["Amazon"],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
+
+        },
+        {
+            "resource": "PDH3",
+            "dpv:hasPersonalDataCategory": "Email Address",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["News","Email Marketing","Identity Verification","Customer Care"],
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasRecipient": ["Amazon","Google"],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
+        },
+        {
+            "resource": "PDH4",
+            "dpv:hasPersonalDataCategory": "Telephone Number",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Marketing"],
+            "dpv:hasProcessing": ["Collect","Store"],
             "dpv:hasRecipient": [],
-            "dpv:hasTechnicalOrganisationalMeasure": [],
-            "dpv:hasLegalBasis": [],
-            "dpv:Collect": [],
-            "dpv:StorageDuration": "",
-            "dpv:StorageLocation": ""
-   
+            "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
+
+        },
+        {
+            "resource": "PDH5",
+            "dpv:hasPersonalDataCategory": "IPAddress",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Statistics","Admin"],
+            "dpv:hasProcessing": ["Collect","Store","Anonymise","Move","Analyse"],
+            "dpv:hasRecipient": ["Google"],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Encryption in Rest","Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Automatic collection using surveillance."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
+        },
+        {
+            "resource": "PDH6",
+            "dpv:hasPersonalDataCategory": "Credit Card Number",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Fraud Prevention and Detection","Service Provision"],
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasRecipient": ["Stripe"],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Authentication Procedure","Encryption in Rest"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
+        },
+        {
+            "resource": "PDH7",
+            "dpv:hasPersonalDataCategory": "Password",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": ["Access Control","Security"],
+            "dpv:hasProcessing": ["Collect","Store","Alter"],
+            "dpv:hasRecipient": [],
+            "dpv:hasTechnicalOrganisationalMeasure": ["Encryption in Rest","Authentication Procedure"],
+            "dpv:hasLegalBasis": ["Consent"],
+            "dpv:Collect": ["Explicit provision by user."],
+            "dpv:StorageDuration": "Data is stored for as long as you use our service and for up to three months after.",
+            "dpv:StorageLocation": "Data is stored on our servers on site."
+
         }
+        
     ],
     "dpv:Purpose": [
         {
-            "dpv:hasPurpose": "",
-            "dpv:hasProcessing": [],
-            "dpv:hasPersonalDataCategory": [],
-            "dpv:hasLegalBasis": []
+            "dpv:hasPurpose": "Identity Verification",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Email Address","Name"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Sell Targetted Advertisements",
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasPersonalDataCategory": ["Age","Name"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Create Personalized Recommendations",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Age","Name"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "News",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Email Address"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Email Marketing",
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasPersonalDataCategory": ["Email Address"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Customer Care",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Email Address"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Marketing",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Telephone Number"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Statistics",
+            "dpv:hasProcessing": ["Collect","Store","Share","Anonymise"],
+            "dpv:hasPersonalDataCategory": ["IPAddress"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Admin",
+            "dpv:hasProcessing": ["Collect","Store","Anonymise"],
+            "dpv:hasPersonalDataCategory": ["IPAddress"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Fraud Prevention and Detection",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Credit Card Number"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Service Provision",
+            "dpv:hasProcessing": ["Collect","Store","Share"],
+            "dpv:hasPersonalDataCategory": ["Credit Card Number"],
+            "dpv:hasLegalBasis":["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Access Control",
+            "dpv:hasProcessing": ["Collect","Store","Alter"],
+            "dpv:hasPersonalDataCategory": ["Password"],
+            "dpv:hasLegalBasis":["Consent"]
         }
     ],
     "dpv:Recipient": [
         {
-            "resource": "",
-            "schema:name": "",
-            "schema:address": "",
-            "schema:description": ""
+            "resource": "Amazon",
+            "schema:name": "Amazon.com, Inc",
+            "schema:address": "410 Terry Ave.\nNorth Seattle,\nWA,\nUSA",
+            "schema:description": "Data storage Provider"
+        },
+        {
+            "resource": "Google",
+            "schema:name": "Google LLC",
+            "schema:address": "Google LLC,\n1600 Amphitheatre Pkwy,\nMountain View,\nCalifornia 94043,\nUSA.",
+            "schema:description": "Analytics Provider"
+        },
+        {
+            "resource": "Stripe",
+            "schema:name": "Stripe, Inc",
+            "schema:address": "Stripe, Inc.,\nCalifornia,\n510 Townsend Street,\nSan Francisco, California 94103,\nUSA.",
+            "schema:description": "Secure Payments Provider"
         }
     ],
     "Cookie": [
         {
-            "resource": "",
-            "dpv:hasPurpose": "",
-            "schema:description": "",
-            "Provenance":""
+            "resource": "Cookie1",
+            "schema:name":"loginControl",
+            "dpv:hasPurpose": "Access Control",
+            "schema:description": "This is a necessary cookie we use to help facilitate our sign up and login features.",
+            "Provenance":"First Party"
+        },
+        {
+            "resource": "Cookie2",
+            "schema:name":"_statistics_",
+            "dpv:hasPurpose": "Statistics",
+            "schema:description": "This is an optional cookie we use this cookie to create and analyse statistics about how you use our website.",
+            "Provenance":"First Party"
         }
     ]
 }

@@ -1,0 +1,529 @@
+{
+    "dpv:DataController": {
+        "resource": "Company",
+        "schema:name": "Twitch",
+        "schema:legalName": "Twitch Interactive, Inc",
+        "schema:address": "350 Bush Street, 2nd Floor, San Francisco, CA 94104",
+        "schema:email": "info@socialweb.com",
+        "schema:url": "www.twitch.tv",
+        "schema:telephone": "656 150 2234"
+    },
+    "dpv:PersonalDataHandling": [
+        {
+            "resource": "PDH1",
+            "dpv:hasPersonalDataCategory": "Name",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Service Provision"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Explicit provision by user."
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH2",
+            "dpv:hasPersonalDataCategory": "Voice Communication Recording",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Service Provision"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Explicit provision by user."
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH3",
+            "dpv:hasPersonalDataCategory": "Picture",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Service Provision"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Explicit provision by user."
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH4",
+            "dpv:hasPersonalDataCategory": "Username",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Service Provision"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon",
+                "Facebook",
+                "Twitter"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Explicit provision by user."
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH5",
+            "dpv:hasPersonalDataCategory": "Email Address",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Customer Care",
+                "Service Provision"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Explicit provision by user."
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH6",
+            "dpv:hasPersonalDataCategory": "Physical Address",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Explicit provision by user."
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH7",
+            "dpv:hasPersonalDataCategory": "Telephone Number",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Customer Care"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Explicit provision by user."
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH8",
+            "dpv:hasPersonalDataCategory": "Credit Card Number",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Delivery Of Goods"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Explicit provision by user."
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH9",
+            "dpv:hasPersonalDataCategory": "IPAddress",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Improve Existing Products And Services",
+                "Optimisation For Consumer",
+                "Service Personalization",
+                "Research And Development"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store",
+                "Share",
+                "Analyse"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Automatic collection"
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH10",
+            "dpv:hasPersonalDataCategory": "UID",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Improve Existing Products And Services",
+                "Optimisation For Consumer",
+                "Service Personalization",
+                "Research And Development"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store",
+                "Share",
+                "Analyse"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Automatic collection"
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH11",
+            "dpv:hasPersonalDataCategory": "Device Based",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Improve Existing Products And Services",
+                "Optimisation For Consumer",
+                "Service Personalization",
+                "Research And Development"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store",
+                "Share",
+                "Analyse"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Automatic collection"
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH12",
+            "dpv:hasPersonalDataCategory": "Browser Fingerprint",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Improve Existing Products And Services",
+                "Optimisation For Consumer",
+                "Service Personalization",
+                "Research And Development"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store",
+                "Share",
+                "Analyse"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Automatic collection"
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH13",
+            "dpv:hasPersonalDataCategory": "ServiceConsumptionBehaviour",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Improve Existing Products And Services",
+                "Optimisation For Consumer",
+                "Service Personalization",
+                "Research And Development"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store",
+                "Share",
+                "Analyse"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Automatic collection"
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH14",
+            "dpv:hasPersonalDataCategory": "Social Network",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Improve Existing Products And Services"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store",
+                "Share",
+                "Analyse"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Gathered from third party"
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH15",
+            "dpv:hasPersonalDataCategory": "Age",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [
+                "Improve Existing Products And Services"
+            ],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store",
+                "Share",
+                "Analyse"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Explicit provision by user."
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        },
+        {
+            "resource": "PDH16",
+            "dpv:hasPersonalDataCategory": "Purchase",
+            "dpv:hasDataController": "Company",
+            "dpv:hasDataSubject": "User",
+            "dpv:hasPurpose": [],
+            "dpv:hasProcessing": [
+                "Collect",
+                "Store",
+                "Share"
+            ],
+            "dpv:hasRecipient": [
+                "Amazon"
+            ],
+            "dpv:hasTechnicalOrganisationalMeasure": [],
+            "dpv:hasLegalBasis": [
+                "Consent"
+            ],
+            "dpv:Collect": [
+                "Explicit provision by user."
+            ],
+            "dpv:StorageDuration": "As long as it is required in order to fulfill the relevant purposes described in this Privacy Notice, as may be required (or permitted) by law such as for tax and accounting purposes, or as otherwise communicated to you.",
+            "dpv:StorageLocation": "Information collected by Twitch may be stored and processed in your region, in the United States (for instance in our major data centers), or in any other country where Twitch or its affiliates, subsidiaries, partners, or service providers are located or maintain facilities. "
+        }
+    ],
+    "dpv:Purpose": [
+        {
+            "dpv:hasPurpose": "Service Provision",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Name","Voice Communication Recording","Picture","Username","Email Address"],
+            "dpv:hasLegalBasis": ["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Customer Care",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Email Address","Telephone Number"],
+            "dpv:hasLegalBasis": ["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Delivery Of Goods",
+            "dpv:hasProcessing": ["Collect","Store"],
+            "dpv:hasPersonalDataCategory": ["Credit Card Number"],
+            "dpv:hasLegalBasis": ["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Improve Existing Products And Services",
+            "dpv:hasProcessing": ["Collect","Store","Share","Analyse"],
+            "dpv:hasPersonalDataCategory": ["IPAddress","Age","Social Network","ServiceConsumptionBehaviour","Browser Fingerprint","Device Based","UID"],
+            "dpv:hasLegalBasis": ["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Optimisation For Consumer",
+            "dpv:hasProcessing": ["Collect","Store","Share","Analyse"],
+            "dpv:hasPersonalDataCategory": ["IPAddress","ServiceConsumptionBehaviour","Browser Fingerprint","Device Based","UID"],
+            "dpv:hasLegalBasis": ["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Service Personalization",
+            "dpv:hasProcessing": ["Collect","Store","Share","Analyse"],
+            "dpv:hasPersonalDataCategory": ["IPAddress","ServiceConsumptionBehaviour","Browser Fingerprint","Device Based","UID"],
+            "dpv:hasLegalBasis": ["Consent"]
+        },
+        {
+            "dpv:hasPurpose": "Research And Development",
+            "dpv:hasProcessing": ["Collect","Store","Share","Analyse"],
+            "dpv:hasPersonalDataCategory": ["IPAddress","ServiceConsumptionBehaviour","Browser Fingerprint","Device Based","UID"],
+            "dpv:hasLegalBasis": ["Consent"]
+        }
+    ],
+    "dpv:Recipient": [
+        {
+            "resource": "Amazon",
+            "schema:name": "Amazon.com, Inc",
+            "schema:address": "",
+            "schema:description": "Twitch may make information available to our affiliates (meaning entities controlled by, controlling, or under common control with Twitch), including Amazon.com, Inc. and its subsidiaries that are either subject to this Privacy Notice or follow practices at least as protective as those described in this Privacy Notice."
+        },
+        {
+            "resource": "Facebook",
+            "schema:name": "Facebook, Inc",
+            "schema:address": "",
+            "schema:description": "If you connect to a third-party service (such as Facebook, Twitter, or another third-party application) through the Twitch Services or otherwise link your Twitch account with a third-party service, you are requesting and authorizing us to share or grant access to information on your behalf (such as your username, the fact that your connection originated from the Twitch Services, and other relevant usage and diagnostic information) with such third party."
+        },
+        {
+            "resource": "Twitter",
+            "schema:name": "Twitter, Inc.",
+            "schema:address": "",
+            "schema:description": "If you connect to a third-party service (such as Facebook, Twitter, or another third-party application) through the Twitch Services or otherwise link your Twitch account with a third-party service, you are requesting and authorizing us to share or grant access to information on your behalf (such as your username, the fact that your connection originated from the Twitch Services, and other relevant usage and diagnostic information) with such third party."
+        }
+    ],
+    "Cookie": [
+        {
+            "resource": "_twitch_session_id",
+            "schema:name": "_twitch_session_id",
+            "dpv:hasPurpose": "Service Optimization",
+            "schema:description": "Used to help users navigate within the website and to allow them to travel back to previous pages. You can control these cookies via your browser setting but please note that the Twitch Services may not function smoothly if you do.",
+            "Provenance": "First party"
+        },
+        {
+            "resource": "GoogleAnalytics",
+            "schema:name": "Google Analytics",
+            "dpv:hasPurpose": "Sell Targetted Advertisements",
+            "schema:description": "Analytics Cookie",
+            "Provenance": "Third party"
+        },
+        {
+            "resource": "DoubleClick",
+            "schema:name": "DoubleClick",
+            "dpv:hasPurpose": "Sell Targetted Advertisements",
+            "schema:description": "Flash Cookie",
+            "Provenance": "Third party"
+        }
+    ]
+}

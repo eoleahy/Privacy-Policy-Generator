@@ -1,8 +1,8 @@
 <article>
     {% set name = recip["schema:name"] %}
     <span resource="#{{recip['resource']}}" typeof="dpv:Recipient">
-        <h3><span property="schema:name">{{name}}</span> - 
-        <span property="schema:description">{{recip["schema:description"]}}</span></h3>
+        <h3><span property="schema:name">{{name}}</span></h3>
+        <p><span property="schema:description">{{recip["schema:description"]}}</span></p>
 
         {% if recip["PersonalDataCategory"]|length != 0 %}
             <h4>Data we share with {{name}}:</h4>

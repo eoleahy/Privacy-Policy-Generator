@@ -1,5 +1,5 @@
 {% extends "default.html" %}
-
+<hr>
 {% block content %}
     {% if data["Cookie"] | length != 0 %}
         <h3>What are cookies?</h3>
@@ -14,6 +14,7 @@
             {% for item in data["Cookie"] %}
                 <article>
                     <span resource="#{{item['resource']}}" typeof="dpv:Store">
+                        <h3><span property="schema:name">{{item['schema:name']}}</span></h3>
                         <p><span property="dpv:hasPurpose"
                                 href="#{{item['dpv:hasPurpose']|replace(' ','')}}">{{item['dpv:hasPurpose']}}</span></p>
                         <p><span property="schema:description">{{item['schema:description']}}</span></p>

@@ -14,9 +14,9 @@ app = Flask(__name__)
 BASE_PATH = os.path.dirname(__file__)
 
 if(sys.platform == "win32"):
-    json_path = os.path.join(BASE_PATH, "static\inputExample.json")
+    json_path = os.path.join(BASE_PATH, "static\input.json")
 else:
-    json_path = os.path.join(BASE_PATH, "static/inputExample.json")
+    json_path = os.path.join(BASE_PATH, "static/input.json")
 
 @app.route('/', methods=['GET'])
 def policy():
@@ -58,7 +58,6 @@ def policy():
 
     dpvDescriptions = Description.descriptions(data_classes)
     dpvDescriptions.update(Description.descriptions(purposes))
-    #dpvDescriptions.update(Description.descriptions(process_set))
 
     topics = [{"heading": "Personal Data View", "page": "Data-View.html"},
               {"heading": "Collection View", "page": "Collect-View.html"},

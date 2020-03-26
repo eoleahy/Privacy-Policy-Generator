@@ -2,8 +2,10 @@
     "dpv:DataController": {
         "resource": "Company",
         "schema:name": "Social Web",
+        "schema:legalName":"Social Web, LLC",
         "schema:address": "150 George's Dock,\n1st Floor,\nIFSC,\nDublin 1",
         "schema:email": "info@socialweb.com",
+        "schema:url":"www.socialweb.com",
         "schema:telephone": "656 150 2234"
     },
     "dpv:PersonalDataHandling": [
@@ -187,21 +189,18 @@
     "dpv:Recipient": [
         {
             "resource": "Amazon",
-            "dpv:hasPurpose":["Sell Targetted Advertisements","Create Personalized Recommendations"],
             "schema:name": "Amazon.com, Inc",
             "schema:address": "410 Terry Ave.\nNorth Seattle,\nWA,\nUSA",
             "schema:description": "Data storage Provider"
         },
         {
             "resource": "Google",
-            "dpv:hasPurpose": ["Statistics"],
             "schema:name": "Google LLC",
             "schema:address": "Google LLC,\n1600 Amphitheatre Pkwy,\nMountain View,\nCalifornia 94043,\nUSA.",
             "schema:description": "Analytics Provider"
         },
         {
             "resource": "Stripe",
-            "dpv:hasPurpose": ["Service Provision"],
             "schema:name": "Stripe, Inc",
             "schema:address": "Stripe, Inc.,\nCalifornia,\n510 Townsend Street,\nSan Francisco, California 94103,\nUSA.",
             "schema:description": "Secure Payments Provider"
@@ -210,12 +209,14 @@
     "Cookie": [
         {
             "resource": "Cookie1",
+            "schema:name":"loginControl",
             "dpv:hasPurpose": "Access Control",
             "schema:description": "This is a necessary cookie we use to help facilitate our sign up and login features.",
             "Provenance":"First Party"
         },
         {
             "resource": "Cookie2",
+            "schema:name":"_statistics_",
             "dpv:hasPurpose": "Statistics",
             "schema:description": "This is an optional cookie we use this cookie to create and analyse statistics about how you use our website.",
             "Provenance":"First Party"

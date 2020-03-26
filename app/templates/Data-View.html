@@ -3,7 +3,16 @@
 {% block content %}
 
     <div id="#DataView">
-        <p>{{ company }} collects the following data: </p>
+        <p>In order to provide our service we may collect different types of personal data. This data may be directly provided by you, shared by third parties or collected through automatic means.
+        In the case of each personal data item we collect from you, we hope to indicate: 
+        <li>Why we collect that data.</li>
+        <li>What we do with that data.</li>
+        <li>How we collect that data.</li>
+        <li>If we do share that data, who the recipients are.</li>
+        <li>How we store that data.</li>
+        <li>Any safety measures we may take when handling that data.</li> 
+        <li>Our legal basis for collecting, processing and handling that data.</li></p>
+        <p>{{ company }} may collect the following data: </p>
         <ul>
             {% for personalData in data["dpv:PersonalDataHandling"] %}
                 <li><a href="#{{personalData['dpv:hasPersonalDataCategory']|replace(' ','')}}">{{personalData["dpv:hasPersonalDataCategory"] }}</a></li>
