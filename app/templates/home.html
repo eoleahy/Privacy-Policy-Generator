@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href={{url_for('static', filename='style.css')}}>
+    </head>
+    <body>
+        <div id = "wrapper">
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <label for="fileupload"> Select a file to upload</label>
+            <input class="upload" type="submit" value="Submit">
+        </form>
+        <form action="/download/inputExample.json" method="GET">
+            <input class="download" type="submit" value="Download sample file">
+        </form>    
+        <form action="/download/input-skeleton.json" method="GET">
+            <input class="download" type="submit" value="Download blank file">
+        </form>  
+        <p>If you were redirected to this page check your input and try again.</p>
+        </div>
+    </body>
+</html>

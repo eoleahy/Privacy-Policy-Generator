@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, send_file
+from werkzeug.utils import secure_filename, escape
 from description import Description
 from view import View
 from bs4 import BeautifulSoup
@@ -15,10 +16,46 @@ BASE_PATH = os.path.dirname(__file__)
 
 if(sys.platform == "win32"):
     json_path = os.path.join(BASE_PATH, "static\input.json")
+    sample_path = os.path.join(BASE_PATH, "static\inputExample.json")
+    blank_path = os.path.join(BASE_PATH, "static\input-skeleton.json")
 else:
     json_path = os.path.join(BASE_PATH, "static/input.json")
+    sample_path = os.path.join(BASE_PATH, "static/input.json")
+    blank_path = os.path.join(BASE_PATH, "static/input-skeleton.json")
+
+def is_json(file_name):
+    return file_name.lower().split(".")[1] == "json"
 
 @app.route('/', methods=['GET'])
+def home():
+ 
+    return render_template('home.html')
+
+@app.route('/download/<file_name>')
+def download_file(file_name):
+
+    file_name = escape(file_name)
+    if file_name == "inputExample.json":
+        return send_file(sample_path,as_attachment=True)
+    elif file_name == "input-skeleton.json":
+        return send_file(blank_path,as_attachment=True)
+    
+
+@app.route('/upload', methods=['POST'])
+def upload_file():    
+    if(request.method == 'POST'):
+        f = request.files['file']
+        if f and is_json(f.filename):
+            f.save(json_path)
+
+    return redirect((url_for('policy')))
+
+@app.errorhandler(FileNotFoundError)
+def no_file(e):
+    return redirect((url_for('home')))
+
+
+@app.route('/policy', methods=['GET','POST'])
 def policy():
 
     data = {}
@@ -60,11 +97,13 @@ def policy():
     dpvDescriptions.update(Description.descriptions(purposes))
 
     topics = [{"heading": "Personal Data View", "page": "Data-View.html"},
-              {"heading": "Collection View", "page": "Collect-View.html"},
+              {"heading": "Data Collection View", "page": "Collect-View.html"},
               {"heading": "Purpose View", "page": "Purpose-View.html"},
               {"heading": "Data Sharing View", "page": "Share-View.html"},
               {"heading": "Cookies", "page": "cookies.html"},
               {"heading": "Rights", "page": "Rights.html"}]
+
+    os.remove(json_path)
 
     return render_template('policy.html',
                            topics=topics,

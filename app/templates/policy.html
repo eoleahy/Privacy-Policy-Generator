@@ -11,7 +11,13 @@
         .top {
             position: fixed;
             top: 80%;
-            right: 15%;
+            right: 10%;
+            font-family: Arial;
+            color:#ffffff;
+            height: 40px;
+            width: 80px;
+            border-radius: 5px;
+            background-color: #121212;
         }
 
         div.section {
@@ -176,7 +182,7 @@
 
     <div id="top" class="top-section">
 
-        <button id="top-button" class="top" onclick="window.location.href='#top'">Top</button>
+        <button id="top-button" class="top" onclick="window.location.href='#top'">Back to top</button>
 
         <span resource="#{{resource}}" typeof="dpv:DataController">
             <h1><span property="schema:name">{{company}}</span> Privacy Policy</h1>
@@ -185,7 +191,7 @@
             <p>This privacy policy will explain how our organisation collects and uses the personal data we collect from
                 you when you use our website: <a href="https://{{controller['schema:url']}}"
                     property="schema:url">{{controller['schema:url']}}</a>.
-                This privacy policy also applies to any other productes, websites, or services owned or provided by
+                This privacy policy also applies to any other products, websites, or services owned or provided by
                 <b>{{controller['schema:legalName']}}</b></p>
             <p>Email:<a href="mailto:{{controller['schema:email']}}" property="schema:email">
                     {{controller["schema:email"]}}</a></p>
