@@ -13,7 +13,7 @@
             <h4>The data we collect through this method include:</h4>
             <ul>
                 {% for item in data %}
-                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                    <li>
                         <span property="dpv:hasPersonalDataCategory" resource="#{{item|replace(' ','')}}">{{item}}</span>
                     </span></li>
                 {% endfor %}
@@ -23,9 +23,9 @@
             <h4>We collect this data for the following purpose(s):</h4>    
             <ul>
                 {% for item in purp %}
-                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                    <li>
                         <span property="dpv:hasPurpose" resource="#{{item|replace(' ','')}}">{{item}}</span>
-                    </span></li>
+                   </li>
                 {% endfor %}
             </ul>
         
@@ -34,9 +34,9 @@
             <h4>This data is collected to undergo the following processing:</h4>   
             <ul>
                 {% for item in proc %}
-                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                    <li>
                         <span property="dpv:hasProcessing" resource="#{{item|replace(' ','')}}">{{item}}</span>
-                    </span></li>
+                   </li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -45,9 +45,9 @@
             <h5>Storage Location</h5>
             <ul>
                 {% for item in storeL %}
-                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                    <li>
                         <span property="dpv:location">{{item}}</span>
-                    </span></li>
+                    </li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -55,9 +55,9 @@
             <h5>Storage Duration</h5>
             <ul>
                 {% for item in storeD %}
-                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                    <li>
                         <span property="dpv:duration">{{item}}</span>
-                    </span></li>
+                   </li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -65,9 +65,9 @@
             <h4>This data is shared with the following recipients:</h4>
             <ul>
                 {% for item in recip %}
-                    <li><span resource="#{{id}}" typeof="dpv:PersonalDataHandling">
+                    <li>
                         <span property="dpv:hasRecipient" resource="#{{item|replace(' ','')}}">{{item}}</span>
-                    </span></li>
+                    </li>
                 {% endfor %}
             </ul>
         {% endif %}

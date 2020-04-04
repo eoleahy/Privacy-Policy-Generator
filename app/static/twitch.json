@@ -507,6 +507,7 @@
         {
             "resource": "_twitch_session_id",
             "schema:name": "_twitch_session_id",
+            "dpv:hasPersonalDataCategory":["Browser Fingerprint"],
             "dpv:hasPurpose": "Service Optimization",
             "schema:description": "Used to help users navigate within the website and to allow them to travel back to previous pages. You can control these cookies via your browser setting but please note that the Twitch Services may not function smoothly if you do.",
             "Provenance": "First party"
@@ -514,6 +515,7 @@
         {
             "resource": "GoogleAnalytics",
             "schema:name": "Google Analytics",
+            "dpv:hasPersonalDataCategory":["ServiceConsumptionBehaviour"],
             "dpv:hasPurpose": "Sell Targetted Advertisements",
             "schema:description": "Analytics Cookie",
             "Provenance": "Third party"
@@ -521,6 +523,7 @@
         {
             "resource": "DoubleClick",
             "schema:name": "DoubleClick",
+            "dpv:hasPersonalDataCategory": ["Browser Fingerprint","Age","Name","Username"],
             "dpv:hasPurpose": "Sell Targetted Advertisements",
             "schema:description": "Flash Cookie",
             "Provenance": "Third party"

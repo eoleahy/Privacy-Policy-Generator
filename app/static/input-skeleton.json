@@ -44,6 +44,7 @@
         {
             "resource": "",
             "schema:name": "",
+            "dpv:hasPersonalDataCategory":[""],
             "dpv:hasPurpose": "",
             "schema:description": "",
             "Provenance": ""

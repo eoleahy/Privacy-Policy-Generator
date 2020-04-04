@@ -210,6 +210,7 @@
         {
             "resource": "Cookie1",
             "schema:name":"loginControl",
+            "dpv:hasPersonalDataCategory":["Email Address"],
             "dpv:hasPurpose": "Access Control",
             "schema:description": "This is a necessary cookie we use to help facilitate our sign up and login features.",
             "Provenance":"First Party"
@@ -217,6 +218,7 @@
         {
             "resource": "Cookie2",
             "schema:name":"_statistics_",
+            "dpv:hasPersonalDataCategory":["IPAddress"],
             "dpv:hasPurpose": "Statistics",
             "schema:description": "This is an optional cookie we use this cookie to create and analyse statistics about how you use our website.",
             "Provenance":"First Party"
