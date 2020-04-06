@@ -1,0 +1,2782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!doctype html>
+<html xml:lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Eoin Leahy">
+    <meta name="created" content="2020-18-03">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <style>
+        .top {
+            position: fixed;
+            top: 80%;
+            right: 10%;
+            font-family: Arial;
+            color:#ffffff;
+            height: 40px;
+            width: 80px;
+            border-radius: 5px;
+            background-color: #121212;
+        }
+
+        div.section {
+            border: 1px solid black;
+            width: 75pc;
+            margin: auto;
+            display: none;
+            overflow: hidden;
+        }
+
+        .section-wrapper {
+            margin: auto;
+            width: 75pc;
+        }
+
+        article {
+            border: 1px solid grey;
+        }
+
+        div.top-section {
+            border: 1px solid black;
+            width: 75pc;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .section h2 {
+            margin-left: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .section h3 {
+            margin-left: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            display: inline-block;
+        }
+
+        .section p {
+            margin-left: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+
+        }
+        .top-section p {
+            margin-left: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+
+        }
+
+        h4 {
+            margin-left: 10px;
+        }
+
+        h5 {
+            margin-left: 15px;
+            font-size: 15px;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 45px;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        li {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            margin-left: 20px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 500px;
+            background-color: gray;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            left: 110%;
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        .accordion {
+            background-color: #eee;
+            width: 75pc;
+            color: #444;
+            margin: 0 auto;
+            cursor: pointer;
+            padding: 18px;
+            border: 1px;
+            font-size: 15px;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+    </style>
+
+    <title>Privacy Policy</title>
+</head>
+<script>
+    //Credit to W3S @ https://www.w3schools.com/howto/howto_js_accordion.asp
+    function accordion() {
+        let acc = document.getElementsByClassName("accordion");
+        let i;
+        for (i = 0; i < acc.length; i++) {
+
+            acc[i].addEventListener("click", function () {
+
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+
+                }
+            });
+        }
+    }
+</script>
+
+<body onload="accordion()" vocab="http://w3.org/ns/dpv#" vocab="http://schema.org/" prefix="dpv: http://w3.org/ns/dpv#">
+
+    
+    
+    
+    
+
+    <div id="top" class="top-section">
+
+        <button id="top-button" class="top" onclick="window.location.href='#top'">Back to top</button>
+
+        <span resource="#Company" typeof="dpv:DataController">
+            <h1><span property="schema:name">Social Web</span> Privacy Policy</h1>
+
+            <p>Effective date: April 06, 2020</p>
+            <p>This privacy policy will explain how our organisation collects and uses the personal data we collect from
+                you when you use our website: <a href="https://www.socialweb.com"
+                    property="schema:url">www.socialweb.com</a>.
+                This privacy policy also applies to any other products, websites, or services owned or provided by
+                <b>Social Web, LLC</b></p>
+            <p>Email:<a href="mailto:info@socialweb.com" property="schema:email">
+                    info@socialweb.com</a></p>
+            <p>Telephone Number:<span property="schema:telephone"> 656 150 2234</span></p>
+            <p><b><span property="schema:legalName">Social Web, LLC</span></b> is the Data Controller
+                of your personal information, we are located at:<br><span
+                    property="schema:address">150 George&#39;s Dock,
+1st Floor,
+IFSC,
+Dublin 1</span></p>
+        </span>
+        <p>This privacy policy uses terms defined in the <a href=" http://w3.org/ns/dpv#">Data Privacy
+                Vocabulary</a>.</p>
+    </div>
+
+    
+    <div class="section-wrapper">
+    <button class="accordion">Personal Data View</button>
+    <div class="section">
+        
+            <h2>Personal Data View </h2>
+        
+            
+
+    <div id="#DataView">
+        <p>In order to provide our service we may collect different types of personal data. This data may be directly provided by you, shared by third parties or collected through automatic means.
+        In the case of each personal data item we collect from you, we hope to indicate: 
+        <li>Why we collect that data.</li>
+        <li>What we do with that data.</li>
+        <li>How we collect that data.</li>
+        <li>If we do share that data, who the recipients are.</li>
+        <li>How we store that data.</li>
+        <li>Any safety measures we may take when handling that data.</li> 
+        <li>Our legal basis for collecting, processing and handling that data.</li></p>
+        <p>Social Web may collect the following data: </p>
+        <ul>
+            
+                <li><a href="#Name">Name</a></li>
+            
+                <li><a href="#Age">Age</a></li>
+            
+                <li><a href="#EmailAddress">Email Address</a></li>
+            
+                <li><a href="#TelephoneNumber">Telephone Number</a></li>
+            
+                <li><a href="#IPAddress">IPAddress</a></li>
+            
+                <li><a href="#CreditCardNumber">Credit Card Number</a></li>
+            
+                <li><a href="#Password">Password</a></li>
+            
+        </ul>
+        
+            
+            <article>
+    
+    
+    
+
+    <div resource="#Name" id="Name" typeof="Name">
+        <h3>Your Name</h3>
+        
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#Name">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="name">
+<h4 id="dpv:Name"><bdi class="secno">4.1.100 </bdi>Name<a aria-label="§" class="self-link" href="#name"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:Name">dpv:Name</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>A name associated with an individual, e.g., given name, nickname.</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:Identifying">dpv:Identifying</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf">https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-04-04</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-06-04</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/06/04-dpvcg-minutes.html">https://www.w3.org/2019/06/04-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Elmar Kiesling; Harshvardhan J. Pandit, Fajar J. Ekaputra</td>
+</tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+        
+            <h4>Used for purposes:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH1" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Name"></span>
+                <span property ="dpv:hasPurpose" resource ="#IdentityVerification" typeof="dpv:Purpose">Identity Verification</span>
+            </span></li>
+        
+            <li><span resource ="#PDH1" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Name"></span>
+                <span property ="dpv:hasPurpose" resource ="#SellTargettedAdvertisements" typeof="dpv:Purpose">Sell Targetted Advertisements</span>
+            </span></li>
+        
+            <li><span resource ="#PDH1" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Name"></span>
+                <span property ="dpv:hasPurpose" resource ="#CreatePersonalizedRecommendations" typeof="dpv:Purpose">Create Personalized Recommendations</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The processing for your Name includes: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH1" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Name"></span>
+                <span property ="dpv:hasProcessing" resource ="#Collect" typeof="dpv:Processing">Collect</span>
+            </span></li>
+        
+            <li><span resource ="#PDH1" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Name"></span>
+                <span property ="dpv:hasProcessing" resource ="#Store" typeof="dpv:Processing">Store</span>
+            </span></li>
+        
+            <li><span resource ="#PDH1" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Name"></span>
+                <span property ="dpv:hasProcessing" resource ="#Share" typeof="dpv:Processing">Share</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Shared with:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH1" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Name"></span>
+                <span property ="dpv:hasRecipient" resource ="#Amazon" typeof="dpv:Recipient">Amazon</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Data source:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH1" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Name"></span>
+                <span property ="dpv:Collect" resource ="#Explicitprovisionbyuser." typeof="dpv:Collect">Explicit provision by user.</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The storage details of your data is as follows:</h4>
+            <ul>
+                <span resource="#PDH1" typeof ="dpv:PersonalDataHandling">
+                    <li><span property="dpv:duration">Data is stored for as long as you use our service and for up to three months after.</span></li>
+                    <li><span property="dpv:location">Data is stored on our servers on site.</span></li>
+                </span>
+            </ul>
+        
+        
+            <h4>The safety measures we take include:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH1" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Name"></span>
+                <span property ="dpv:hasTechnicalOrganisationalMeasure" resource ="#AuthenticationProcedure" typeof="dpv:TechnicalOrganisationalMeasure">Authentication Procedure</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Legal basis: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH1" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Name"></span>
+                <span property ="dpv:hasLegalBasis" resource ="#Consent" typeof="dpv:LegalBasis">Consent</span>
+            </span></li>
+        
+    </ul>
+
+        
+    </div>
+</article>
+
+        
+            
+            <article>
+    
+    
+    
+
+    <div resource="#Age" id="Age" typeof="Age">
+        <h3>Your Age</h3>
+        
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#Age">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="age">
+<h4 id="dpv:Age"><bdi class="secno">4.1.4 </bdi>Age<a aria-label="§" class="self-link" href="#age"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:Age">dpv:Age</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>Information about an individual's age</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:PhysicalCharacteristic">dpv:PhysicalCharacteristic</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf">https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-04-04</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-06-04</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/06/04-dpvcg-minutes.html">https://www.w3.org/2019/06/04-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Elmar Kiesling; Harshvardhan J. Pandit, Fajar J. Ekaputra</td>
+</tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+        
+            <h4>Used for purposes:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH2" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Age"></span>
+                <span property ="dpv:hasPurpose" resource ="#SellTargettedAdvertisements" typeof="dpv:Purpose">Sell Targetted Advertisements</span>
+            </span></li>
+        
+            <li><span resource ="#PDH2" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Age"></span>
+                <span property ="dpv:hasPurpose" resource ="#CreatePersonalizedRecommendations" typeof="dpv:Purpose">Create Personalized Recommendations</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The processing for your Age includes: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH2" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Age"></span>
+                <span property ="dpv:hasProcessing" resource ="#Collect" typeof="dpv:Processing">Collect</span>
+            </span></li>
+        
+            <li><span resource ="#PDH2" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Age"></span>
+                <span property ="dpv:hasProcessing" resource ="#Store" typeof="dpv:Processing">Store</span>
+            </span></li>
+        
+            <li><span resource ="#PDH2" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Age"></span>
+                <span property ="dpv:hasProcessing" resource ="#Share" typeof="dpv:Processing">Share</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Shared with:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH2" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Age"></span>
+                <span property ="dpv:hasRecipient" resource ="#Amazon" typeof="dpv:Recipient">Amazon</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Data source:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH2" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Age"></span>
+                <span property ="dpv:Collect" resource ="#Explicitprovisionbyuser." typeof="dpv:Collect">Explicit provision by user.</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The storage details of your data is as follows:</h4>
+            <ul>
+                <span resource="#PDH2" typeof ="dpv:PersonalDataHandling">
+                    <li><span property="dpv:duration">Data is stored for as long as you use our service and for up to three months after.</span></li>
+                    <li><span property="dpv:location">Data is stored on our servers on site.</span></li>
+                </span>
+            </ul>
+        
+        
+            <h4>The safety measures we take include:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH2" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Age"></span>
+                <span property ="dpv:hasTechnicalOrganisationalMeasure" resource ="#AuthenticationProcedure" typeof="dpv:TechnicalOrganisationalMeasure">Authentication Procedure</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Legal basis: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH2" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Age"></span>
+                <span property ="dpv:hasLegalBasis" resource ="#Consent" typeof="dpv:LegalBasis">Consent</span>
+            </span></li>
+        
+    </ul>
+
+        
+    </div>
+</article>
+
+        
+            
+            <article>
+    
+    
+    
+
+    <div resource="#EmailAddress" id="EmailAddress" typeof="EmailAddress">
+        <h3>Your Email Address</h3>
+        
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#EmailAddress">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="email-address">
+<h4 id="dpv:EmailAddress"><bdi class="secno">4.1.47 </bdi>Email Address<a aria-label="§" class="self-link" href="#email-address"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:EmailAddress">dpv:EmailAddress</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>Information about an individual's Email address.</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:Contact">dpv:Contact</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf">https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-04-04</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-06-04</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/06/04-dpvcg-minutes.html">https://www.w3.org/2019/06/04-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Elmar Kiesling; Harshvardhan J. Pandit, Fajar J. Ekaputra</td>
+</tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+        
+            <h4>Used for purposes:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:hasPurpose" resource ="#News" typeof="dpv:Purpose">News</span>
+            </span></li>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:hasPurpose" resource ="#EmailMarketing" typeof="dpv:Purpose">Email Marketing</span>
+            </span></li>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:hasPurpose" resource ="#IdentityVerification" typeof="dpv:Purpose">Identity Verification</span>
+            </span></li>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:hasPurpose" resource ="#CustomerCare" typeof="dpv:Purpose">Customer Care</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The processing for your Email Address includes: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:hasProcessing" resource ="#Collect" typeof="dpv:Processing">Collect</span>
+            </span></li>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:hasProcessing" resource ="#Store" typeof="dpv:Processing">Store</span>
+            </span></li>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:hasProcessing" resource ="#Share" typeof="dpv:Processing">Share</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Shared with:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:hasRecipient" resource ="#Amazon" typeof="dpv:Recipient">Amazon</span>
+            </span></li>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:hasRecipient" resource ="#Google" typeof="dpv:Recipient">Google</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Data source:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:Collect" resource ="#Explicitprovisionbyuser." typeof="dpv:Collect">Explicit provision by user.</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The storage details of your data is as follows:</h4>
+            <ul>
+                <span resource="#PDH3" typeof ="dpv:PersonalDataHandling">
+                    <li><span property="dpv:duration">Data is stored for as long as you use our service and for up to three months after.</span></li>
+                    <li><span property="dpv:location">Data is stored on our servers on site.</span></li>
+                </span>
+            </ul>
+        
+        
+            <h4>The safety measures we take include:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:hasTechnicalOrganisationalMeasure" resource ="#AuthenticationProcedure" typeof="dpv:TechnicalOrganisationalMeasure">Authentication Procedure</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Legal basis: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH3" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#EmailAddress"></span>
+                <span property ="dpv:hasLegalBasis" resource ="#Consent" typeof="dpv:LegalBasis">Consent</span>
+            </span></li>
+        
+    </ul>
+
+        
+    </div>
+</article>
+
+        
+            
+            <article>
+    
+    
+    
+
+    <div resource="#TelephoneNumber" id="TelephoneNumber" typeof="TelephoneNumber">
+        <h3>Your Telephone Number</h3>
+        
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#TelephoneNumber">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="telephone-number">
+<h4 id="dpv:TelephoneNumber"><bdi class="secno">4.1.152 </bdi>Telephone Number<a aria-label="§" class="self-link" href="#telephone-number"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:TelephoneNumber">dpv:TelephoneNumber</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>Information about an individual's telephone number.</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:Contact">dpv:Contact</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf">https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-04-04</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-06-04</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/06/04-dpvcg-minutes.html">https://www.w3.org/2019/06/04-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Elmar Kiesling; Harshvardhan J. Pandit, Fajar J. Ekaputra</td>
+</tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+        
+            <h4>Used for purposes:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH4" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#TelephoneNumber"></span>
+                <span property ="dpv:hasPurpose" resource ="#Marketing" typeof="dpv:Purpose">Marketing</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The processing for your Telephone Number includes: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH4" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#TelephoneNumber"></span>
+                <span property ="dpv:hasProcessing" resource ="#Collect" typeof="dpv:Processing">Collect</span>
+            </span></li>
+        
+            <li><span resource ="#PDH4" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#TelephoneNumber"></span>
+                <span property ="dpv:hasProcessing" resource ="#Store" typeof="dpv:Processing">Store</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+        
+            <h4>Data source:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH4" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#TelephoneNumber"></span>
+                <span property ="dpv:Collect" resource ="#Explicitprovisionbyuser." typeof="dpv:Collect">Explicit provision by user.</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The storage details of your data is as follows:</h4>
+            <ul>
+                <span resource="#PDH4" typeof ="dpv:PersonalDataHandling">
+                    <li><span property="dpv:duration">Data is stored for as long as you use our service and for up to three months after.</span></li>
+                    <li><span property="dpv:location">Data is stored on our servers on site.</span></li>
+                </span>
+            </ul>
+        
+        
+            <h4>The safety measures we take include:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH4" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#TelephoneNumber"></span>
+                <span property ="dpv:hasTechnicalOrganisationalMeasure" resource ="#AuthenticationProcedure" typeof="dpv:TechnicalOrganisationalMeasure">Authentication Procedure</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Legal basis: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH4" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#TelephoneNumber"></span>
+                <span property ="dpv:hasLegalBasis" resource ="#Consent" typeof="dpv:LegalBasis">Consent</span>
+            </span></li>
+        
+    </ul>
+
+        
+    </div>
+</article>
+
+        
+            
+            <article>
+    
+    
+    
+
+    <div resource="#IPAddress" id="IPAddress" typeof="IPAddress">
+        <h3>Your IPAddress</h3>
+        
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#IPAddress">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="ipaddress">
+<h4 id="dpv:IPAddress"><bdi class="secno">4.1.78 </bdi>IPAddress<a aria-label="§" class="self-link" href="#ipaddress"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:IPAddress">dpv:IPAddress</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>An Internet protocol (IP) address of a device used by an individual.</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:DeviceBased">dpv:DeviceBased</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf">https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-04-04</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-06-04</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/06/04-dpvcg-minutes.html">https://www.w3.org/2019/06/04-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Elmar Kiesling; Harshvardhan J. Pandit, Fajar J. Ekaputra</td>
+</tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+        
+            <h4>Used for purposes:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:hasPurpose" resource ="#Statistics" typeof="dpv:Purpose">Statistics</span>
+            </span></li>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:hasPurpose" resource ="#Admin" typeof="dpv:Purpose">Admin</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The processing for your IPAddress includes: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:hasProcessing" resource ="#Collect" typeof="dpv:Processing">Collect</span>
+            </span></li>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:hasProcessing" resource ="#Store" typeof="dpv:Processing">Store</span>
+            </span></li>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:hasProcessing" resource ="#Anonymise" typeof="dpv:Processing">Anonymise</span>
+            </span></li>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:hasProcessing" resource ="#Move" typeof="dpv:Processing">Move</span>
+            </span></li>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:hasProcessing" resource ="#Analyse" typeof="dpv:Processing">Analyse</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Shared with:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:hasRecipient" resource ="#Google" typeof="dpv:Recipient">Google</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Data source:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:Collect" resource ="#Automaticcollectionusingsurveillance." typeof="dpv:Collect">Automatic collection using surveillance.</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The storage details of your data is as follows:</h4>
+            <ul>
+                <span resource="#PDH5" typeof ="dpv:PersonalDataHandling">
+                    <li><span property="dpv:duration">Data is stored for as long as you use our service and for up to three months after.</span></li>
+                    <li><span property="dpv:location">Data is stored on our servers on site.</span></li>
+                </span>
+            </ul>
+        
+        
+            <h4>The safety measures we take include:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:hasTechnicalOrganisationalMeasure" resource ="#EncryptioninRest" typeof="dpv:TechnicalOrganisationalMeasure">Encryption in Rest</span>
+            </span></li>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:hasTechnicalOrganisationalMeasure" resource ="#AuthenticationProcedure" typeof="dpv:TechnicalOrganisationalMeasure">Authentication Procedure</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Legal basis: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH5" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#IPAddress"></span>
+                <span property ="dpv:hasLegalBasis" resource ="#Consent" typeof="dpv:LegalBasis">Consent</span>
+            </span></li>
+        
+    </ul>
+
+        
+    </div>
+</article>
+
+        
+            
+            <article>
+    
+    
+    
+
+    <div resource="#CreditCardNumber" id="CreditCardNumber" typeof="CreditCardNumber">
+        <h3>Your Credit Card Number</h3>
+        
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#CreditCardNumber">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="credit-card-number">
+<h4 id="dpv:CreditCardNumber"><bdi class="secno">4.1.27 </bdi>Credit Card Number<a aria-label="§" class="self-link" href="#credit-card-number"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:CreditCardNumber">dpv:CreditCardNumber</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>Information about an individual's credit card number</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:AccountIdentifier">dpv:AccountIdentifier</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf">https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-04-04</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-06-04</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/06/04-dpvcg-minutes.html">https://www.w3.org/2019/06/04-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Elmar Kiesling; Harshvardhan J. Pandit, Fajar J. Ekaputra</td>
+</tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+        
+            <h4>Used for purposes:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH6" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#CreditCardNumber"></span>
+                <span property ="dpv:hasPurpose" resource ="#FraudPreventionandDetection" typeof="dpv:Purpose">Fraud Prevention and Detection</span>
+            </span></li>
+        
+            <li><span resource ="#PDH6" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#CreditCardNumber"></span>
+                <span property ="dpv:hasPurpose" resource ="#ServiceProvision" typeof="dpv:Purpose">Service Provision</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The processing for your Credit Card Number includes: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH6" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#CreditCardNumber"></span>
+                <span property ="dpv:hasProcessing" resource ="#Collect" typeof="dpv:Processing">Collect</span>
+            </span></li>
+        
+            <li><span resource ="#PDH6" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#CreditCardNumber"></span>
+                <span property ="dpv:hasProcessing" resource ="#Store" typeof="dpv:Processing">Store</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Shared with:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH6" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#CreditCardNumber"></span>
+                <span property ="dpv:hasRecipient" resource ="#Stripe" typeof="dpv:Recipient">Stripe</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Data source:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH6" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#CreditCardNumber"></span>
+                <span property ="dpv:Collect" resource ="#Explicitprovisionbyuser." typeof="dpv:Collect">Explicit provision by user.</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The storage details of your data is as follows:</h4>
+            <ul>
+                <span resource="#PDH6" typeof ="dpv:PersonalDataHandling">
+                    <li><span property="dpv:duration">Data is stored for as long as you use our service and for up to three months after.</span></li>
+                    <li><span property="dpv:location">Data is stored on our servers on site.</span></li>
+                </span>
+            </ul>
+        
+        
+            <h4>The safety measures we take include:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH6" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#CreditCardNumber"></span>
+                <span property ="dpv:hasTechnicalOrganisationalMeasure" resource ="#AuthenticationProcedure" typeof="dpv:TechnicalOrganisationalMeasure">Authentication Procedure</span>
+            </span></li>
+        
+            <li><span resource ="#PDH6" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#CreditCardNumber"></span>
+                <span property ="dpv:hasTechnicalOrganisationalMeasure" resource ="#EncryptioninRest" typeof="dpv:TechnicalOrganisationalMeasure">Encryption in Rest</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Legal basis: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH6" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#CreditCardNumber"></span>
+                <span property ="dpv:hasLegalBasis" resource ="#Consent" typeof="dpv:LegalBasis">Consent</span>
+            </span></li>
+        
+    </ul>
+
+        
+    </div>
+</article>
+
+        
+            
+            <article>
+    
+    
+    
+
+    <div resource="#Password" id="Password" typeof="Password">
+        <h3>Your Password</h3>
+        
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#Password">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="password">
+<h4 id="dpv:Password"><bdi class="secno">4.1.107 </bdi>Password<a aria-label="§" class="self-link" href="#password"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:Password">dpv:Password</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>An individual's password used in the process of authenticating the individual as a user accessing a system.</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:Authenticating">dpv:Authenticating</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf">https://enterprivacy.com/wp-content/uploads/2018/09/Categories-of-Personal-Information.pdf</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-04-04</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-06-04</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/06/04-dpvcg-minutes.html">https://www.w3.org/2019/06/04-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Elmar Kiesling; Harshvardhan J. Pandit, Fajar J. Ekaputra</td>
+</tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+        
+            <h4>Used for purposes:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH7" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Password"></span>
+                <span property ="dpv:hasPurpose" resource ="#AccessControl" typeof="dpv:Purpose">Access Control</span>
+            </span></li>
+        
+            <li><span resource ="#PDH7" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Password"></span>
+                <span property ="dpv:hasPurpose" resource ="#Security" typeof="dpv:Purpose">Security</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The processing for your Password includes: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH7" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Password"></span>
+                <span property ="dpv:hasProcessing" resource ="#Collect" typeof="dpv:Processing">Collect</span>
+            </span></li>
+        
+            <li><span resource ="#PDH7" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Password"></span>
+                <span property ="dpv:hasProcessing" resource ="#Store" typeof="dpv:Processing">Store</span>
+            </span></li>
+        
+            <li><span resource ="#PDH7" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Password"></span>
+                <span property ="dpv:hasProcessing" resource ="#Alter" typeof="dpv:Processing">Alter</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+        
+            <h4>Data source:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH7" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Password"></span>
+                <span property ="dpv:Collect" resource ="#Explicitprovisionbyuser." typeof="dpv:Collect">Explicit provision by user.</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>The storage details of your data is as follows:</h4>
+            <ul>
+                <span resource="#PDH7" typeof ="dpv:PersonalDataHandling">
+                    <li><span property="dpv:duration">Data is stored for as long as you use our service and for up to three months after.</span></li>
+                    <li><span property="dpv:location">Data is stored on our servers on site.</span></li>
+                </span>
+            </ul>
+        
+        
+            <h4>The safety measures we take include:</h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH7" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Password"></span>
+                <span property ="dpv:hasTechnicalOrganisationalMeasure" resource ="#EncryptioninRest" typeof="dpv:TechnicalOrganisationalMeasure">Encryption in Rest</span>
+            </span></li>
+        
+            <li><span resource ="#PDH7" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Password"></span>
+                <span property ="dpv:hasTechnicalOrganisationalMeasure" resource ="#AuthenticationProcedure" typeof="dpv:TechnicalOrganisationalMeasure">Authentication Procedure</span>
+            </span></li>
+        
+    </ul>
+
+        
+        
+            <h4>Legal basis: </h4>
+            
+    <ul>
+        
+            <li><span resource ="#PDH7" typeof="dpv:PersonalDataHandling">
+                <span property ="dpv:hasPersonalDataCategory" href="#Password"></span>
+                <span property ="dpv:hasLegalBasis" resource ="#Consent" typeof="dpv:LegalBasis">Consent</span>
+            </span></li>
+        
+    </ul>
+
+        
+    </div>
+</article>
+
+        
+        <h4>This data is subject to the rights defined <a href="#Rights">here</a>.</h4>
+    </div>
+
+    </div>
+</div>
+    
+    <div class="section-wrapper">
+    <button class="accordion">Data Collection View</button>
+    <div class="section">
+        
+            <h2>Data Collection View </h2>
+        
+            
+    <div id = "CollectView">
+        <p>Data sources:</p>
+        
+<ul>
+    
+    <li> Automatic collection using surveillance. </li>
+    
+    <li> Explicit provision by user. </li>
+    
+</ul>
+
+        
+            
+            <article>
+    
+    <div resource = "#Collect:Automaticcollectionusingsurveillance." typeof="dpv:Collect">
+        <h3>Data Source - Automatic collection using surveillance.</h3>
+        
+        
+        
+        
+        
+        
+
+        
+            <h4>The data we collect through this method include:</h4>
+            <ul>
+                
+                    <li>
+                        <span property="dpv:hasPersonalDataCategory" resource="#IPAddress">IPAddress</span>
+                    </span></li>
+                
+            </ul>
+        
+        
+            <h4>We collect this data for the following purpose(s):</h4>    
+            <ul>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#Admin">Admin</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#Statistics">Statistics</span>
+                   </li>
+                
+            </ul>
+        
+        
+        
+            <h4>This data is collected to undergo the following processing:</h4>   
+            <ul>
+                
+                    <li>
+                        <span property="dpv:hasProcessing" resource="#Collect">Collect</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasProcessing" resource="#Store">Store</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasProcessing" resource="#Move">Move</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasProcessing" resource="#Anonymise">Anonymise</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasProcessing" resource="#Analyse">Analyse</span>
+                   </li>
+                
+            </ul>
+        
+        <h4>This data is stored according to the following details:</h4>  
+          
+            <h5>Storage Location</h5>
+            <ul>
+                
+                    <li>
+                        <span property="dpv:location">Data is stored on our servers on site.</span>
+                    </li>
+                
+            </ul>
+        
+          
+            <h5>Storage Duration</h5>
+            <ul>
+                
+                    <li>
+                        <span property="dpv:duration">Data is stored for as long as you use our service and for up to three months after.</span>
+                   </li>
+                
+            </ul>
+        
+          
+            <h4>This data is shared with the following recipients:</h4>
+            <ul>
+                
+                    <li>
+                        <span property="dpv:hasRecipient" resource="#Google">Google</span>
+                    </li>
+                
+            </ul>
+        
+    </div>
+</article>
+        
+            
+            <article>
+    
+    <div resource = "#Collect:Explicitprovisionbyuser." typeof="dpv:Collect">
+        <h3>Data Source - Explicit provision by user.</h3>
+        
+        
+        
+        
+        
+        
+
+        
+            <h4>The data we collect through this method include:</h4>
+            <ul>
+                
+                    <li>
+                        <span property="dpv:hasPersonalDataCategory" resource="#Age">Age</span>
+                    </span></li>
+                
+                    <li>
+                        <span property="dpv:hasPersonalDataCategory" resource="#Password">Password</span>
+                    </span></li>
+                
+                    <li>
+                        <span property="dpv:hasPersonalDataCategory" resource="#Name">Name</span>
+                    </span></li>
+                
+                    <li>
+                        <span property="dpv:hasPersonalDataCategory" resource="#CreditCardNumber">Credit Card Number</span>
+                    </span></li>
+                
+                    <li>
+                        <span property="dpv:hasPersonalDataCategory" resource="#EmailAddress">Email Address</span>
+                    </span></li>
+                
+                    <li>
+                        <span property="dpv:hasPersonalDataCategory" resource="#TelephoneNumber">Telephone Number</span>
+                    </span></li>
+                
+            </ul>
+        
+        
+            <h4>We collect this data for the following purpose(s):</h4>    
+            <ul>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#ServiceProvision">Service Provision</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#CustomerCare">Customer Care</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#CreatePersonalizedRecommendations">Create Personalized Recommendations</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#FraudPreventionandDetection">Fraud Prevention and Detection</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#Marketing">Marketing</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#News">News</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#IdentityVerification">Identity Verification</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#EmailMarketing">Email Marketing</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#Security">Security</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#AccessControl">Access Control</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasPurpose" resource="#SellTargettedAdvertisements">Sell Targetted Advertisements</span>
+                   </li>
+                
+            </ul>
+        
+        
+        
+            <h4>This data is collected to undergo the following processing:</h4>   
+            <ul>
+                
+                    <li>
+                        <span property="dpv:hasProcessing" resource="#Collect">Collect</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasProcessing" resource="#Alter">Alter</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasProcessing" resource="#Store">Store</span>
+                   </li>
+                
+                    <li>
+                        <span property="dpv:hasProcessing" resource="#Share">Share</span>
+                   </li>
+                
+            </ul>
+        
+        <h4>This data is stored according to the following details:</h4>  
+          
+            <h5>Storage Location</h5>
+            <ul>
+                
+                    <li>
+                        <span property="dpv:location">Data is stored on our servers on site.</span>
+                    </li>
+                
+            </ul>
+        
+          
+            <h5>Storage Duration</h5>
+            <ul>
+                
+                    <li>
+                        <span property="dpv:duration">Data is stored for as long as you use our service and for up to three months after.</span>
+                   </li>
+                
+            </ul>
+        
+          
+            <h4>This data is shared with the following recipients:</h4>
+            <ul>
+                
+                    <li>
+                        <span property="dpv:hasRecipient" resource="#Stripe">Stripe</span>
+                    </li>
+                
+                    <li>
+                        <span property="dpv:hasRecipient" resource="#Google">Google</span>
+                    </li>
+                
+                    <li>
+                        <span property="dpv:hasRecipient" resource="#Amazon">Amazon</span>
+                    </li>
+                
+            </ul>
+        
+    </div>
+</article>
+        
+        <h4>This data is subject to the rights defined <a href="#Rights">here</a>.</h4>
+    </div>
+
+    </div>
+</div>
+    
+    <div class="section-wrapper">
+    <button class="accordion">Purpose View</button>
+    <div class="section">
+        
+            <h2>Purpose View </h2>
+        
+            
+    <div id="PurposeView">
+        <p>Social Web collects your data for the following purposes:</p>
+        <ul>
+            
+                <li><a href="#IdentityVerification">Identity Verification</a></li>
+            
+                <li><a href="#SellTargettedAdvertisements">Sell Targetted Advertisements</a></li>
+            
+                <li><a href="#CreatePersonalizedRecommendations">Create Personalized Recommendations</a></li>
+            
+                <li><a href="#News">News</a></li>
+            
+                <li><a href="#EmailMarketing">Email Marketing</a></li>
+            
+                <li><a href="#CustomerCare">Customer Care</a></li>
+            
+                <li><a href="#Marketing">Marketing</a></li>
+            
+                <li><a href="#Statistics">Statistics</a></li>
+            
+                <li><a href="#Admin">Admin</a></li>
+            
+                <li><a href="#FraudPreventionandDetection">Fraud Prevention and Detection</a></li>
+            
+                <li><a href="#ServiceProvision">Service Provision</a></li>
+            
+                <li><a href="#AccessControl">Access Control</a></li>
+            
+        </ul>
+
+        
+            <article>
+
+    
+    <h3>Identity Verification</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#IdentityVerification">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="identity-verification">
+<h4 id="dpv:IdentityVerification"><bdi class="secno">5.1.13 </bdi>Identity Verification<a aria-label="§" class="self-link" href="#identity-verification"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:IdentityVerification">dpv:IdentityVerification</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>To verify and authorise identity</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:Security">dpv:Security</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29">https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2018-12-10</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-04-05</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Harshvardhan J. Pandit, Javier Fernandez, Axel Polleres, Elmar Kiesling, Fajar Ekaputra, Simon Steyskal</td>
+</tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="IdentityVerification" resource ="#Purpose:IdentityVerification" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#EmailAddress">Email Address</span></li>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#Name">Name</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+            <article>
+
+    
+    <h3>Sell Targetted Advertisements</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#SellTargettedAdvertisements">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="sell-targetted-advertisements">
+<h4 id="dpv:SellTargettedAdvertisements"><bdi class="secno">5.1.29 </bdi>Sell Targetted Advertisements<a aria-label="§" class="self-link" href="#sell-targetted-advertisements"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:SellTargettedAdvertisements">dpv:SellTargettedAdvertisements</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>To sell or provide targetted advertisements about the user to Third Parties</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:CommercialInterest">dpv:CommercialInterest</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29">https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2018-12-10</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-04-05</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Harshvardhan J. Pandit, Javier Fernandez, Axel Polleres, Elmar Kiesling, Fajar Ekaputra, Simon Steyskal</td>
+</tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="SellTargettedAdvertisements" resource ="#Purpose:SellTargettedAdvertisements" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#Age">Age</span></li>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#Name">Name</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Share">Share</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+            <article>
+
+    
+    <h3>Create Personalized Recommendations</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#CreatePersonalizedRecommendations">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="create-personalized-recommendations">
+<h4 id="dpv:CreatePersonalizedRecommendations"><bdi class="secno">5.1.8 </bdi>Create Personalized Recommendations<a aria-label="§" class="self-link" href="#create-personalized-recommendations"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:CreatePersonalizedRecommendations">dpv:CreatePersonalizedRecommendations</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>Create and provide personalised recommendations to the individual.</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:ServicePersonalization">dpv:ServicePersonalization</a></td>
+</tr>
+<tr><td>Status:</td>
+<td>proposed</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-11-25</td>
+</tr>
+<tr><td>Contributor:</td>
+<td>Harshvardhan J. Pandit, Rudy Jacob</td>
+</tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="CreatePersonalizedRecommendations" resource ="#Purpose:CreatePersonalizedRecommendations" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#Age">Age</span></li>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#Name">Name</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+            <article>
+
+    
+    <h3>News</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#News">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <p>Description not found</p>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="News" resource ="#Purpose:News" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#EmailAddress">Email Address</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+            <article>
+
+    
+    <h3>Email Marketing</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#EmailMarketing">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <p>Description not found</p>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="EmailMarketing" resource ="#Purpose:EmailMarketing" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#EmailAddress">Email Address</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Share">Share</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+            <article>
+
+    
+    <h3>Customer Care</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#CustomerCare">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="customer-care">
+<h4 id="dpv:CustomerCare"><bdi class="secno">5.1.10 </bdi>Customer Care<a aria-label="§" class="self-link" href="#customer-care"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:CustomerCare">dpv:CustomerCare</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>Processes related to providing assistance for customer satisfaction</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:ServiceProvision">dpv:ServiceProvision</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29">https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2018-12-10</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-04-05</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Harshvardhan J. Pandit, Javier Fernandez, Axel Polleres, Elmar Kiesling, Fajar Ekaputra, Simon Steyskal</td>
+</tr>
+<tr>
+<td>Related Terms:</td>
+<td>
+ svpu:Feedback
+
+</td></tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="CustomerCare" resource ="#Purpose:CustomerCare" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#EmailAddress">Email Address</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+            <article>
+
+    
+    <h3>Marketing</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#Marketing">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <p>Description not found</p>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="Marketing" resource ="#Purpose:Marketing" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#TelephoneNumber">Telephone Number</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+            <article>
+
+    
+    <h3>Statistics</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#Statistics">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <p>Description not found</p>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="Statistics" resource ="#Purpose:Statistics" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#IPAddress">IPAddress</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Share">Share</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Anonymise">Anonymise</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+            <article>
+
+    
+    <h3>Admin</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#Admin">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <p>Description not found</p>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="Admin" resource ="#Purpose:Admin" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#IPAddress">IPAddress</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Anonymise">Anonymise</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+            <article>
+
+    
+    <h3>Fraud Prevention and Detection</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#FraudPreventionandDetection">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="fraud-prevention-and-detection">
+<h4 id="dpv:FraudPreventionAndDetection"><bdi class="secno">5.1.12 </bdi>Fraud Prevention And Detection<a aria-label="§" class="self-link" href="#fraud-prevention-and-detection"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:FraudPreventionAndDetection">dpv:FraudPreventionAndDetection</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>To detect and prevent fraud</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:Security">dpv:Security</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29">https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2018-12-10</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-04-05</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Harshvardhan J. Pandit, Javier Fernandez, Axel Polleres, Elmar Kiesling, Fajar Ekaputra, Simon Steyskal</td>
+</tr>
+<tr>
+<td>Related Terms:</td>
+<td>
+ svpu:Government
+
+</td></tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="FraudPreventionandDetection" resource ="#Purpose:FraudPreventionandDetection" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#CreditCardNumber">Credit Card Number</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+            <article>
+
+    
+    <h3>Service Provision</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#ServiceProvision">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="service-provision">
+<h4 id="dpv:ServiceProvision"><bdi class="secno">5.1.32 </bdi>Service Provision<a aria-label="§" class="self-link" href="#service-provision"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:ServiceProvision">dpv:ServiceProvision</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>Provision of service or activity</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:Purpose">dpv:Purpose</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29">https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2018-12-10</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-04-05</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Harshvardhan J. Pandit, Javier Fernandez, Axel Polleres, Elmar Kiesling, Fajar Ekaputra, Simon Steyskal</td>
+</tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="ServiceProvision" resource ="#Purpose:ServiceProvision" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#CreditCardNumber">Credit Card Number</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Share">Share</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+            <article>
+
+    
+    <h3>Access Control</h3>
+    
+    <div class="tooltip"><a class="link" href="http://w3.org/ns/dpv#AccessControl">&#x1F6C8</a>
+        
+        <span class="tooltiptext">
+            
+                <section id="access-control">
+<h4 id="dpv:AccessControl"><bdi class="secno">5.1.2 </bdi>Access Control<a aria-label="§" class="self-link" href="#access-control"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:AccessControl">dpv:AccessControl</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>To conduct or enforce access control</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:Security">dpv:Security</a></td>
+</tr>
+<tr>
+<td>Source:</td>
+<td><a href="https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29">https://www.w3.org/community/dpvcg/wiki/Purposes_for_handling_Personal_Data#High-level_categories_.28to-be-discussed.29</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>accepted</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2018-12-10</td>
+</tr>
+<tr>
+<td>Date Approved:</td>
+<td>2019-04-05</td>
+</tr>
+<tr>
+<td>Approval Resolution:</td>
+<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Harshvardhan J. Pandit, Javier Fernandez, Axel Polleres, Elmar Kiesling, Fajar Ekaputra, Simon Steyskal</td>
+</tr>
+<tr>
+<td>Related Terms:</td>
+<td>
+ svpu:Login
+
+</td></tr>
+</tbody>
+</table>
+</section>
+            
+        </span>
+        
+    </div>
+
+
+    <span id="AccessControl" resource ="#Purpose:AccessControl" typeof="dpv:Purpose">
+        <h4>Personal data required for this purpose: </h4>
+        <ul>
+            
+                <li><span property="dpv:hasPersonalDataCategory" resource="#Password">Password</span></li>
+            
+        </ul>
+        <h4>For this purpose the data must undergo the following processing:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasProcessing" resource="#Collect">Collect</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Store">Store</span></li>
+            
+            <li><span property="dpv:hasProcessing" resource="#Alter">Alter</span></li>
+            
+        </ul>
+        <h4>The legal basis for this purpose is:</h4>
+        <ul>
+            
+            <li><span property="dpv:hasLegalBasis" resource="#Consent">Consent</span></li>
+            
+        </ul>
+    </span>
+</article>
+        
+    </div>
+    <h4>This data is subject to the rights defined <a href="#Rights">here</a>.</h4>
+
+    </div>
+</div>
+    
+    <div class="section-wrapper">
+    <button class="accordion">Data Sharing View</button>
+    <div class="section">
+        
+            <h2>Data Sharing View </h2>
+        
+            
+    
+    <div id = "ShareView">
+        <p> We disclose your personal data to the following recipients: </p>
+        <ul>
+            
+                <li>Amazon.com, Inc</li>
+            
+                <li>Google LLC</li>
+            
+                <li>Stripe, Inc</li>
+            
+        </ul>
+
+        
+            <article>
+    
+    <span resource="#Amazon" typeof="dpv:Recipient">
+        <h3><span property="schema:name">Amazon.com, Inc</span></h3>
+        <p><span property="schema:description">Data storage Provider</span></p>
+
+        
+            <h4>Data we share with Amazon.com, Inc:</h4>
+            <ul>
+                
+                    <li><span property="dpv:hasPersonalDataCategory" resource="#Age">Age</span></li>
+                
+                    <li><span property="dpv:hasPersonalDataCategory" resource="#EmailAddress">Email Address</span></li>
+                
+                    <li><span property="dpv:hasPersonalDataCategory" resource="#Name">Name</span></li>
+                
+            </ul>
+        
+
+              
+        <h4>Amazon.com, Inc's contact details are as follows:</h4>
+        
+            <h4><span property="schema:address">410 Terry Ave.</br>North Seattle,</br>WA,</br>USA</span></h4>
+        
+    </span>
+</article>
+        
+            <article>
+    
+    <span resource="#Google" typeof="dpv:Recipient">
+        <h3><span property="schema:name">Google LLC</span></h3>
+        <p><span property="schema:description">Analytics Provider</span></p>
+
+        
+            <h4>Data we share with Google LLC:</h4>
+            <ul>
+                
+                    <li><span property="dpv:hasPersonalDataCategory" resource="#IPAddress">IPAddress</span></li>
+                
+                    <li><span property="dpv:hasPersonalDataCategory" resource="#EmailAddress">Email Address</span></li>
+                
+            </ul>
+        
+
+              
+        <h4>Google LLC's contact details are as follows:</h4>
+        
+            <h4><span property="schema:address">Google LLC,</br>1600 Amphitheatre Pkwy,</br>Mountain View,</br>California 94043,</br>USA.</span></h4>
+        
+    </span>
+</article>
+        
+            <article>
+    
+    <span resource="#Stripe" typeof="dpv:Recipient">
+        <h3><span property="schema:name">Stripe, Inc</span></h3>
+        <p><span property="schema:description">Secure Payments Provider</span></p>
+
+        
+            <h4>Data we share with Stripe, Inc:</h4>
+            <ul>
+                
+                    <li><span property="dpv:hasPersonalDataCategory" resource="#CreditCardNumber">Credit Card Number</span></li>
+                
+            </ul>
+        
+
+              
+        <h4>Stripe, Inc's contact details are as follows:</h4>
+        
+            <h4><span property="schema:address">Stripe, Inc.,</br>California,</br>510 Townsend Street,</br>San Francisco, California 94103,</br>USA.</span></h4>
+        
+    </span>
+</article>
+        
+    </div>
+    <h4>This data is subject to the rights defined <a href="#Rights">here</a>.</h4>
+
+    </div>
+</div>
+    
+    <div class="section-wrapper">
+    <button class="accordion">Cookies</button>
+    <div class="section">
+        
+            <h2>Cookies </h2>
+        
+            
+    
+        <h3>What are cookies?</h3>
+        <p>Cookies are text files placed on your computer to collect standard
+            Internet log information and visitor behavior information. When you visit our websites,
+            we may collect information from you automatically through cookies or similar technology.</p>
+
+        <p> For further information visit <a href="allaboutcookies.org">allaboutcookies.org</a></p>
+
+        <h3>How do we use cookies?</h3>
+        <p>The cookies we use include the following:</p>
+            
+                <article>
+                    <span resource="#Cookie1" typeof="dpv:Store">
+                        <h3><span property="schema:name">loginControl</span></h3>
+                        <p>This cookie collects the following data:
+                            <ul>
+                                
+                                <li>
+                                    <span property="dpv:hasPersonalDataCategory">IPAddress</span>
+                                </li>
+                                
+                            </ul>
+                        </span></p>
+                        <p>Data collected by this cookie is collected for the following purpose: <span property="dpv:hasPurpose"
+                                href="#AccessControl">Access Control</span></p>
+                        <p><span property="schema:description">This is a necessary cookie we use to help facilitate our sign up and login features.</span></p>
+                        <p>Cookie Provenance: First Party</p>
+                    </span>
+                </article>
+            
+                <article>
+                    <span resource="#Cookie2" typeof="dpv:Store">
+                        <h3><span property="schema:name">_statistics_</span></h3>
+                        <p>This cookie collects the following data:
+                            <ul>
+                                
+                                <li>
+                                    <span property="dpv:hasPersonalDataCategory">IPAddress</span>
+                                </li>
+                                
+                            </ul>
+                        </span></p>
+                        <p>Data collected by this cookie is collected for the following purpose: <span property="dpv:hasPurpose"
+                                href="#Statistics">Statistics</span></p>
+                        <p><span property="schema:description">This is an optional cookie we use this cookie to create and analyse statistics about how you use our website.</span></p>
+                        <p>Cookie Provenance: First Party</p>
+                    </span>
+                </article>
+            
+        <h3>How to manage cookies</h3>
+        <p>You can set your browser not to accept cookies, and the above website tells you how to remove cookies from
+            your browser. However, in a few cases, some of you website features may not function as a result.
+        </p>
+        
+
+    </div>
+</div>
+    
+    <div class="section-wrapper">
+    <button class="accordion">Rights</button>
+    <div class="section">
+        
+            <h2>Rights </h2>
+        
+            
+
+    <div id="Rights">
+        <p>Social Web would like to make sure you are fully aware of all of your data protection rights.
+            Every user is entitled to the following: </p>
+
+        <h3>The Right to access</h3>
+        <p>You have the right to request Social Web for copies of your personal data.
+            We may charge you a small fee for this service.</p>
+
+        <h3>The Right to rectification</h3>
+        <p>You have the right to request that Social Web
+            correct any information that you believe is inaccurate.
+            You also have the right to request Social Web to complete information you believe is incomplete.</p>
+
+        <h3>The Right to erasure</h3>
+        <p>You have the right to request that Social Web
+            erase your personal data, under certain conditions.</p>
+
+        <h3>The Right to restrict processing</h3>
+        <p>You have the right to request that Social Web
+            restrict the processing of your personal data, under certain conditions.</p>
+
+        <h3>The Right to object to processing</h3>
+        <p>You have the right to object to Social Web's processing
+            of your personal data, under certain conditions.</p>
+
+        <h3>The Right to data portability</h3>
+        <p>You have the right to request that Social Web
+            transfer the data that we have collected to another organization, or directly to you, under certain conditions.
+        </p>
+
+        <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights,
+            please contact us.
+        </p>
+
+        <p>If you have any questions about Social Web's privacy policy,
+            the data we hold on you, or you would like us to exercise one of your data protection rights,
+            please do not hesitate to contact us.</p>
+
+
+        <h3>Changes to our policy.</h3>
+        <p>Social Web keeps its privacy policy under regular review and places any updates on this web page. This privacy
+            was last updated on April 06, 2020.</p>
+
+    </div>
+
+    </div>
+</div>
+    
+</body>
+
+</html>

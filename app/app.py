@@ -28,8 +28,11 @@ def is_json(file_name):
 
 @app.route('/', methods=['GET'])
 def home():
- 
     return render_template('home.html')
+
+@app.route('/sample',methods=['GET'])
+def sample():
+    return render_template('sample-policy.html')
 
 @app.route('/download/<file_name>')
 def download_file(file_name):
