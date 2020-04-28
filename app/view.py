@@ -3,6 +3,20 @@ class View:
     @staticmethod
     def create_collect_view(data,collect_set):
 
+        """
+        Creates a view for the instances of collection.
+
+        @type data: dict
+        @param data: The uploaded input data
+
+        @type collect_set: set
+        @param collect_set: A set of every instance of data collection
+
+        @rtype collect_view: dict
+        @return collect_view: A data structure representing the collection views.
+        The keys are instance of data collection, the values are the properties of that data collection.
+        """
+
         collect_view = {}
         for collect in collect_set:
             collect_view[collect] = {}

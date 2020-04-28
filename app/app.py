@@ -48,7 +48,7 @@ def download_file(file_name):
 def upload_file():    
     if(request.method == 'POST'):
         f = request.files['file']
-        if f and is_json(f.filename):
+        if f and is_json(f.filename): #If file is valid save it
             f.save(json_path)
 
     return redirect((url_for('policy')))
